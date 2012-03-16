@@ -1,0 +1,159 @@
+<play>
+  <stage>
+    <model>WMDSoulpepperClean</model>
+  </stage>
+  <cast>
+    <character id="Shawn">
+      <name>Shawn</name>
+      <color>0.005340739 0.0122074 0.5453352</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="CapePony">
+      <name>CapePony</name>
+      <color>1 0.88 0.79</color>
+      <model>SoundEmitterPrefab</model>
+    </character>
+    <character id="Background">
+      <name>Background</name>
+      <color>1 0.88 0.79</color>
+      <model>SoundEmitterPrefab</model>
+    </character>
+    <character id="DVP">
+      <name>DVP</name>
+      <color>1 0.88 0.79</color>
+      <model>SoundEmitterPrefab</model>
+    </character>
+    <character id="CapePony2">
+      <name>CapePony2</name>
+      <color>1 0.88 0.79</color>
+      <model>SoundEmitterPrefab</model>
+    </character>
+    <character id="Sasha">
+      <name>Sasha</name>
+      <color>0.1 0.3 0.3</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Glidden">
+      <name>Glidden</name>
+      <color>0.71 0.16 0.51</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Cape">
+      <name>Cape</name>
+      <color>0.1 0.1 0.1</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Dog">
+      <name>Dog</name>
+      <color>1 0.88 0.79</color>
+      <model>SoundEmitterPrefab</model>
+    </character>
+  </cast>
+  <acts>
+    <act id="act1">
+      <name>Act 1</name>
+      <scenes>
+        <scene id="scene1">
+          <name>Chapter 1</name>
+          <destinations>
+            <destination character="Shawn" endTime="0">-33.3656 -0.9271947 -1.591295</destination>
+            <destination character="Shawn" endTime="0.01">-33.3656 -0.9271947 -1.651295</destination>
+            <destination character="CapePony" endTime="0">-36.91843 0.8128008 -6.489841</destination>
+            <destination character="Background" endTime="0">-36.75605 4.419556 -7.954614</destination>
+            <destination character="DVP" endTime="0">-33.64227 0.1555176 -4.115548</destination>
+            <destination character="CapePony2" endTime="0">-41.25522 0.4572754 -4.172048</destination>
+            <destination character="Sasha" endTime="0">-37.01872 0 4.015071</destination>
+            <destination character="Sasha" endTime="0.01">-37.01872 0 3.975071</destination>
+            <destination character="Glidden" endTime="0">-43.29488 0 -7.37555</destination>
+            <destination character="Glidden" endTime="78">-43.29488 0 -7.37555</destination>
+            <destination character="Glidden" endTime="79">-41.68003 1.015995 -7.279342</destination>
+            <destination character="Glidden" endTime="82.5">-41.54296 1.015995 -7.28199</destination>
+            <destination character="Glidden" endTime="84.5">-39.39543 1.015994 -6.960989</destination>
+            <destination character="Glidden" endTime="105">-39.39543 1.015994 -6.960989</destination>
+            <destination character="Cape" endTime="0">-31.17908 0 11.26013</destination>
+            <destination character="Cape" endTime="9">-31.3329 0 -2.92046</destination>
+            <destination character="Cape" endTime="12">-32.65947 0 -3.682665</destination>
+            <destination character="Cape" endTime="16">-33.12166 0 -5.020733</destination>
+            <destination character="Cape" endTime="20">-33.75719 0 -5.276032</destination>
+            <destination character="Cape" endTime="22">-34.0438 1.015991 -5.569046</destination>
+            <destination character="Cape" endTime="23">-34.05781 1.015991 -5.278102</destination>
+            <destination character="Cape" endTime="25">-34.64449 1.015991 -5.246225</destination>
+            <destination character="Cape" endTime="26.3">-34.93406 0.8128034 -6.176087</destination>
+            <destination character="Cape" endTime="28">-36.26871 0.8128008 -6.489591</destination>
+            <destination character="Cape" endTime="30">-36.25011 0.8127987 -6.753904</destination>
+            <destination character="Cape" endTime="37">-36.25011 0.8127987 -6.753904</destination>
+            <destination character="Cape" endTime="37.5">-36.31329 0.812803 -6.231297</destination>
+            <destination character="Cape" endTime="60">-36.31329 0.812803 -6.231297</destination>
+            <destination character="Cape" endTime="61">-36.29553 0 -5.575248</destination>
+            <destination character="Cape" endTime="62.5">-38.83449 0 -4.4351</destination>
+            <destination character="Cape" endTime="63">-38.86972 0 -4.146108</destination>
+            <destination character="Cape" endTime="83">-38.86972 0 -4.146108</destination>
+            <destination character="Cape" endTime="86">-36.65499 0 -4.825143</destination>
+            <destination character="Cape" endTime="90">-34.97916 0 -4.95137</destination>
+            <destination character="Cape" endTime="91">-35.23505 0 -5.127087</destination>
+            <destination character="Dog" endTime="0">-43.44579 0 -7.938581</destination>
+          </destinations>
+          <actions />
+          <lines>
+            <line character="Background" startTime="0" pace="18">Background Chords.</line>
+            <line character="Dog" startTime="36.63334" pace="1">I’m not gonna hurt you.</line>
+            <line character="Cape" startTime="38.7" pace="1">Who’s that? A cop? There’s nobody! Just ahhhhh! A white dog! Beside me! How did it...</line>
+            <line character="Dog" startTime="43.8" pace="1">YOU’RE JUMPING TO HELL.</line>
+            <line character="Cape" startTime="46.06667" pace="1">BUT I’M LIVING IN HELL…..ANYWAY.</line>
+            <line character="Dog" startTime="47.9381" pace="1">YOU’RE LIVING IN HELL, CAUSE YOU AINT DONE YOUR MISSION.</line>
+            <line character="Cape" startTime="51.16667" pace="1">What’s that?</line>
+            <line character="Dog" startTime="51.93095" pace="0.6904762">TO SAVE YOUR FATHER FROM DEATH. TO SAVE YOUR FATHER FROM DEATH.</line>
+            <line character="Cape" startTime="55.77856" pace="4.857143">The dog….spoke!!!</line>
+            <line character="Cape" startTime="62.97857" pace="64.21429">(Drumming.)</line>
+            <line character="Glidden" startTime="82.5" pace="2">OUT OF THE TUNNEL, […]</line>
+          </lines>
+          <beats>0</beats>
+        </scene>
+      </scenes>
+    </act>
+  </acts>
+  <annotations>
+    <annotation startTime="0" sd="false" endTime="20" character="DVP" image="file://fig1.jpg">Paul Dexxus. Prince Edward Viaduct. 2008. Digital Photograph. Wikipedia. Web. 22 October 2011.</annotation>
+    <annotation startTime="55.77856" sd="false" endTime="63" character="CapePony" image="file://fig2.jpg">von Tiedemann, Cylla. [Mike Ross and Michaela Washburn in White Biting Dog.] 2011. Digital photograph. "White Biting Dog".  "Photo Gallery." Soulpepper. Soulpepper Theatre Company, 2011. Web. 22 October 2011.</annotation>
+    <annotation startTime="65" sd="false" endTime="70" character="CapePony2" image="file://fig2.jpg">von Tiedemann, Cylla. [Mike Ross and Michaela Washburn in White Biting Dog.] 2011. Digital photograph. "White Biting Dog".  "Photo Gallery." Soulpepper. Soulpepper Theatre Company, 2011. Web. 22 October 2011.</annotation>
+    <annotation startTime="92" sd="false" endTime="97">Read, Kelly, associate technical director. Technical Drawings for White Biting Dog. Soulpepper Theatre, Toronto, 2011.</annotation>
+    <annotation startTime="98" sd="false" endTime="103">White Biting Dog. By Judith Thompson. Dir. Nancy Palk. Perf. Gregory Prest, Fiona Reid, Mike Ross, Michaela Washburn, Joseph Ziegler. Performance. Soulpepper Theatre, Toronto. 15 August 2011.</annotation>
+  </annotations>
+  <views>
+    <view id="0">
+      <location>-4.385894 3.342669 -1.299346</location>
+      <lookAt>-1.910699 -0.3874767 0.9276303</lookAt>
+      <name>Risers L</name>
+    </view>
+    <view id="1">
+      <location>-1.891978 3.203951 -6.497033</location>
+      <lookAt>0.1781867 -0.2721663 -3.559172</lookAt>
+      <name>HL</name>
+    </view>
+    <view id="2">
+      <location>3.351589 2.359602 -0.9326224</location>
+      <lookAt>-0.228111 -0.424998 1.17255</lookAt>
+      <name>Risers</name>
+    </view>
+    <view id="3">
+      <location>5.116447 1.706296 -5.578904</location>
+      <lookAt>2.196338 -1.078587 -2.626381</lookAt>
+      <name>HR Stage</name>
+    </view>
+    <view id="4">
+      <location>7.861344 4.324086 -8.35428</location>
+      <lookAt>5.16193 1.120389 -5.624904</lookAt>
+      <name>HR Zout</name>
+    </view>
+    <view id="5">
+      <location>8.653896 4.658271 -1.02129</location>
+      <lookAt>5.997387 0.4251146 -0.868488</lookAt>
+      <name>FHR</name>
+    </view>
+    <view id="HL ZOut">
+      <location>-2.566607 4.295998 -7.45443</location>
+      <lookAt>-0.8351558 0.3004479 -4.997265</lookAt>
+      <name>HL ZOut</name>
+    </view>
+  </views>
+</play>

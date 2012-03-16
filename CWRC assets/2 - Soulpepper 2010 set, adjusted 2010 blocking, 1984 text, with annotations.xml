@@ -1,0 +1,137 @@
+<play>
+  <stage>
+    <model>WMDSoulpepperClean</model>
+  </stage>
+  <cast>
+    <character id="Glidden">
+      <name>Glidden</name>
+      <color>0.71 0.16 0.51</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="USLGirder">
+      <name>USLGirder</name>
+      <color>1 0.88 0.79</color>
+      <model>SoundEmitterPrefab</model>
+    </character>
+    <character id="SRGirder">
+      <name>SRGirder</name>
+      <color>1 0.88 0.79</color>
+      <model>SoundEmitterPrefab</model>
+    </character>
+    <character id="Cape">
+      <name>Cape</name>
+      <color>0.1 0.1 0.1</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Sidewalk">
+      <name>Sidewalk</name>
+      <color>1 0.88 0.79</color>
+      <model>SoundEmitterPrefab</model>
+    </character>
+    <character id="Shawn">
+      <name>Shawn</name>
+      <color>0.005340739 0.0122074 0.5453352</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Sasha">
+      <name>Sasha</name>
+      <color>0.1 0.3 0.3</color>
+      <model>PersonBigPrefab</model>
+    </character>
+  </cast>
+  <acts>
+    <act id="act1">
+      <name>Act 1</name>
+      <scenes>
+        <scene id="scene1">
+          <name>Chapter 1</name>
+          <destinations>
+            <destination character="USLGirder" endTime="0">-41.25522 0.4572754 -4.172048</destination>
+            <destination character="Sidewalk" endTime="0">-31.9827 -0.9272348 -2.078778</destination>
+            <destination character="SRGirder" endTime="0">-33.64227 0.1555176 -4.115548</destination>
+            <destination character="Cape" endTime="0">-31.17908 0 11.26013</destination>
+            <destination character="Cape" endTime="10">-31.3329 0 -2.92046</destination>
+            <destination character="Cape" endTime="20">-37.67734 0 -3.333933</destination>
+            <destination character="Cape" endTime="22">-37.65781 0 -2.907458</destination>
+            <destination character="Cape" endTime="66">-37.65781 0 -2.907458</destination>
+            <destination character="Cape" endTime="71">-37.25333 0 -4.904986</destination>
+            <destination character="Cape" endTime="77">-35.26315 0 -5.056698</destination>
+            <destination character="Cape" endTime="78">-35.40664 0 -5.334548</destination>
+            <destination character="Glidden" endTime="0">-43.29488 0 -7.37555</destination>
+            <destination character="Glidden" endTime="63">-41.68003 1.015995 -7.279342</destination>
+            <destination character="Glidden" endTime="65.5">-41.54296 1.015995 -7.28199</destination>
+            <destination character="Glidden" endTime="67">-39.39543 1.015994 -6.960989</destination>
+            <destination character="Glidden" endTime="91">-39.39543 1.015994 -6.960989</destination>
+            <destination character="Shawn" endTime="0">-33.3656 -0.9271947 -1.511295</destination>
+            <destination character="Shawn" endTime="0.01">-33.3656 -0.9271947 -1.611295</destination>
+            <destination character="Sasha" endTime="0">-37.01872 0 4.075071</destination>
+            <destination character="Sasha" endTime="0.01">-37.01872 0 3.975071</destination>
+          </destinations>
+          <actions />
+          <lines>
+            <line character="Cape" startTime="22" pace="0.8203957">Did it even happen? Sure it happened. It happened, I’m not crazy, I know! I arrived at the Bloor Street bridge, and I climbed up on the wall, right? And I was gonna do it, I was just about to jump when I heard this drum sound, as if the whole city knew, boom boom boom boom BOOM BOOM BOOM BOOM BOOM BOOM (speaks in small strange voice) “I’m not gonna hurt you.”</line>
+            <line character="Cape" startTime="41" pace="1">Who’s that? A cop? There’s nobody! Just! A white dog! Beside me! How did it…</line>
+            <line character="Cape" startTime="46" pace="1">“YOU’RE JUMPING TO HELL” the dog, the dog spoke.</line>
+            <line character="Cape" startTime="49" pace="2">So I…answered-</line>
+            <line character="Cape" startTime="50.5" pace="1">“BUT I’M LIVING IN HELL…ANYWAY.”</line>
+            <line character="Cape" startTime="52.5" pace="0.75">“YOU’RE LIVING IN HELL, ‘CAUSE YOU AIN’T DONE YOUR MISSION.”</line>
+            <line character="Cape" startTime="55" pace="2">“WHAT’S THAT?”</line>
+            <line character="Cape" startTime="56.5" pace="0.65">“TO SAVE YOUR FATHER FROM DEATH, TO SAVE YOUR FATHER FROM DEATH.”</line>
+            <line character="Cape" startTime="59" pace="1">The dog…spoke! I’m not kidding! This dog actually spoke she saved me from the plunge; it was the weirdest-</line>
+            <line character="Glidden" startTime="65" pace="5.533333">OUT OF THE TUNNEL, […]</line>
+          </lines>
+          <beats>0</beats>
+        </scene>
+      </scenes>
+    </act>
+  </acts>
+  <annotations>
+    <annotation startTime="0" sd="false" endTime="9">White Biting Dog. Archival video. Dir. Bill Glassco. Perf. Jackie Burroughs, Clare Coulter, Hardee T. Lineham, Stephen Ouimette, Larry Reynolds. Tarragon Theatre Private Collection, 1984. VHS.</annotation>
+    <annotation startTime="10" sd="false" endTime="20" character="Sidewalk" image="file://fig3b.jpg">"The sidewalk comes to function as a metonymy of the external forces that penetrate and destroy...the sidewalk is located in the midst of the audience and literally connects the fictional world of the play with the real world outside the auditorium" (Nunn 27, 28)</annotation>
+    <annotation startTime="40" sd="false" endTime="41" character="Cape">(Turns quickly.)</annotation>
+    <annotation startTime="50" sd="false" endTime="57" character="SRGirder" image="file://fig4.jpg">Stage Right Girder                                          .</annotation>
+    <annotation startTime="58" sd="false" endTime="64" character="USLGirder" image="file://fig4.jpg">Upstage Left Girder                                          .</annotation>
+        <annotation startTime="64.5" sd="false" endTime="65.5" character="Glidden">(GLIDDEN rushes out of bed, and out of his room onto the landing.)</annotation>
+    <annotation startTime="70" sd="false" endTime="75">LePage, Sue, designer. Technical Drawings for White Biting Dog. Tarragon Theatre, Toronto, 1984. L.W. Conolly Theatre Archives, Guelph, Ontario.</annotation>
+    <annotation startTime="75" sd="false" endTime="80">Marshall, Raymond, stage manager. White Biting Dog. By Judith Thompson. Promptscript. L.W. Conolly Theatre Archives. Guelph, Ontario.</annotation>
+    <annotation startTime="80" sd="false" endTime="85">Nunn, Robert. "Spatial Metaphors in the Plays of Judith Thompson." Judith Thompson.  Critical Perspectives in Canadian Theatre. Vol. 3. Toronto: Playwrights Canada Press, 2005. 20-40. Print.</annotation>
+    <annotation startTime="85" sd="false" endTime="90">Read, Kelly, associate technical director. Technical Drawings for White Biting Dog. Soulpepper Theatre, Toronto, 2011.</annotation>
+  </annotations>
+  <views>
+    <view id="0">
+      <location>-4.385894 3.342669 -1.299346</location>
+      <lookAt>-1.910699 -0.3874767 0.9276303</lookAt>
+      <name>Risers L</name>
+    </view>
+    <view id="1">
+      <location>-1.891978 3.203951 -6.497033</location>
+      <lookAt>0.1781867 -0.2721663 -3.559172</lookAt>
+      <name>HL</name>
+    </view>
+    <view id="2">
+      <location>3.351589 2.359602 -0.9326224</location>
+      <lookAt>-0.228111 -0.424998 1.17255</lookAt>
+      <name>Risers</name>
+    </view>
+    <view id="3">
+      <location>5.116447 1.706296 -5.578904</location>
+      <lookAt>2.196338 -1.078587 -2.626381</lookAt>
+      <name>HR Stage</name>
+    </view>
+    <view id="4">
+      <location>7.861344 4.324086 -8.35428</location>
+      <lookAt>5.16193 1.120389 -5.624904</lookAt>
+      <name>HR Zout</name>
+    </view>
+    <view id="5">
+      <location>8.653896 4.658271 -1.02129</location>
+      <lookAt>5.997387 0.4251146 -0.868488</lookAt>
+      <name>FHR</name>
+    </view>
+    <view id="HL ZOut">
+      <location>-2.566607 4.295998 -7.45443</location>
+      <lookAt>-0.8351558 0.3004479 -4.997265</lookAt>
+      <name>HL ZOut</name>
+    </view>
+  </views>
+</play>

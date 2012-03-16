@@ -1,0 +1,130 @@
+fileFormatVersion: 1
+guid: 5bb6274ec7ebc432bb447426f7e134f8
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+    clips:
+      idle:
+        firstFrame: 1
+        lastFrame: 2
+        loop: 0
+        wrapMode: 0
+      sit:
+        firstFrame: 1
+        lastFrame: 24
+        loop: 0
+        wrapMode: 0
+      negSit:
+        firstFrame: 25
+        lastFrame: 49
+        loop: 0
+        wrapMode: 0
+      kneel:
+        firstFrame: 50
+        lastFrame: 74
+        loop: 0
+        wrapMode: 0
+      negKneel:
+        firstFrame: 75
+        lastFrame: 99
+        loop: 0
+        wrapMode: 0
+      lay:
+        firstFrame: 100
+        lastFrame: 124
+        loop: 0
+        wrapMode: 0
+      negLay:
+        firstFrame: 125
+        lastFrame: 149
+        loop: 0
+        wrapMode: 0
+      fastSit:
+        firstFrame: 23
+        lastFrame: 24
+        loop: 0
+        wrapMode: 0
+      fastKneel:
+        firstFrame: 73
+        lastFrame: 74
+        loop: 0
+        wrapMode: 0
+      fastLay:
+        firstFrame: 123
+        lastFrame: 124
+        loop: 0
+        wrapMode: 0
+  nodeInfo:
+    hips:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    chest:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    feet:
+    - 100004
+    - 400004
+    - 3300004
+    - 2300004
+    body:
+    - 100006
+    - 400006
+    head:
+    - 100008
+    - 400008
+    - 3300006
+    - 2300006
+    //RootNode:
+    - 100010
+    - 400010
+    - 11100000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Obj
+    4300002: Obj1
+    4300004: Obj5
+    4300006: Obj6
+    4300008: polySurface1
+    4300010: head
+    4300012: chest
+    4300014: hips
+    4300016: feet
+    4300018: transform4
+    4300020: transform3
+    4300022: transform2
+    4300024: transform1
+    7400000: Take 001 //// PersonBig
+    7400002: idle //// PersonBig
+    7400004: sit //// PersonBig
+    7400006: negSit //// PersonBig
+    7400008: kneel //// PersonBig
+    7400010: negKneel //// PersonBig
+    7400012: lay //// PersonBig
+    7400014: negLay //// PersonBig
+    7400016: fastIdle //// PersonBig
+    7400018: fastSit //// PersonBig
+    7400020: fastKneel //// PersonBig
+    7400022: fastLay //// PersonBig

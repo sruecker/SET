@@ -1,0 +1,60 @@
+fileFormatVersion: 1
+guid: 71377bec1ef8e41d6b5b814de7eec0e0
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 1
+    swapUVs: 0
+    generateSecondaryUV: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    stageBoundary:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    - 6400000
+    stage:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    - 6400002
+    //RootNode:
+    - 100018
+    - 400018
+    - 11100000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: pasted__pCube4
+    4300002: pCube2
+    4300004: pCube1
+    4300006: pCube3
+    4300008: pCube4
+    4300010: pPyramid1
+    4300012: pasted__pPyramid1
+    4300014: pCube5
+    4300016: pasted__pCube5
+    4300018: stage
+    4300020: stageBoundary
+    7400000: Take 001 //// Simple

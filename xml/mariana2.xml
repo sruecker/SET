@@ -1,0 +1,36 @@
+<play>
+  <stage>
+    <model>CastleSet</model>
+  </stage>
+  <cast>
+    <character id="Mario">
+      <name>Mario</name>
+      <color>0.16 0.51 0.71</color>
+      <model>PersonBigPrefab</model>
+    </character>
+  </cast>
+  <acts>
+    <act id="act1">
+      <name>Act 1</name>
+      <scenes>
+        <scene id="scene1">
+          <name>Chapter 1</name>
+          <destinations>
+            <destination character="Mario" endTime="0">2.9258 2.547397 0.1169651</destination>
+          </destinations>
+          <actions />
+          <lines>
+            <line character="Mario" startTime="0" pace="1">I wonder if the princess is on that castle!</line>
+          </lines>
+          <beats>0 1 5 15 17 20 30 35</beats>
+        </scene>
+      </scenes>
+    </act>
+  </acts>
+  <annotations>
+    <annotation startTime="0" sd="true" endTime="14" character="Mario">This is my first stage direction</annotation>
+    <annotation startTime="1" sd="false" endTime="14">This is my first annotation</annotation>
+    <annotation startTime="7" sd="false" endTime="9" character="Mario">This is the second annotation</annotation>
+  </annotations>
+  <views />
+</play>

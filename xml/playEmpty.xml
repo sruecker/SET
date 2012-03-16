@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<play>
+  <stage>
+	<model>TofA</model>
+  </stage>
+  <cast>
+    <character id="Default">
+        <name>Default Character</name>
+        <color>0.71 0.16 0.51</color>
+        <model>PersonBigPrefab</model>
+    </character>
+  </cast>
+  <acts>
+    <act id="act1">
+        <name>Act 1</name>
+        <scenes>
+            <scene id="scene1">
+                <name>Scene 1</name>
+                <destinations>
+                    <destination character="Default" endTime="1">0 0 0</destination>
+                </destinations>
+                <beats>1</beats>
+            </scene>
+        </scenes>
+    </act>
+  </acts>
+  <annotations>
+  </annotations>
+  <views></views>
+</play>

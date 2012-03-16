@@ -1,0 +1,165 @@
+<play>
+  <stage>	
+	<model>TofA</model>
+	<set>Caesar</set>
+  </stage>
+  <cast>
+    <character id="Stewie">
+      <name>Stewie</name>
+      <color>1 0.88 0.79</color>
+      <model>PersonSmallPrefab</model>
+    </character>
+    <character id="Fido">
+      <name>Fido</name>
+      <color>0.56 0.39 0.25</color>
+      <model>AnimalBigPrefab</model>
+    </character>
+    <character id="Mariana">
+      <name>Mariana</name>
+      <color>0.16 0.51 0.71</color>
+      <model>PersonMediumPrefab</model>
+    </character>
+    <character id="Felix">
+      <name>Felix</name>
+      <color>0.1 0.1 0.1</color>
+      <model>AnimalSmallPrefab</model>
+    </character>
+    <character id="Omar">
+      <name>Omar Rodriguez</name>
+      <color>0.71 0.16 0.51</color>
+      <model>PersonBigPrefab</model>
+    </character>
+  </cast>
+  <acts>
+    <act id="act1">
+      <name>Act 1</name>
+      <scenes>
+        <scene id="scene1">
+          <name>Chapter 1</name>
+          <destinations>
+            <destination character="Stewie" endTime="0">1.516036 -0.4856454 -3.027631</destination>
+            <destination character="Fido" endTime="0">0.5735412 -0.02692038 4.051609</destination>
+            <destination character="Mariana" endTime="0">0.5641065 -0.4856454 -3.4856</destination>
+            <destination character="Felix" endTime="0">2.841995 -0.02692032 3.474333</destination>
+            <destination character="Omar" endTime="0">-1.767673 -0.4856454 -3.948915</destination>
+          </destinations>
+          <lines>
+            <line character="Felix" startTime="1" pace="1">Miau</line>
+            <line character="Fido" startTime="1" pace="1">Woof Woof</line>
+            <line character="Omar" startTime="1" pace="1">Hello all!</line>
+            <line character="Stewie" startTime="2.5" pace="1">[Baby sounds]</line>
+            <line character="Omar" startTime="6" pace="1">This is the first demo using the SET name.</line>
+            <line character="Omar" startTime="12" pace="1">As you can see there are many changes to the GUI.</line>
+          </lines>
+          <beats>0 1 5 6 12</beats>
+        </scene>
+      </scenes>
+    </act>
+    <act id="act2">
+      <name>Act 2</name>
+      <scenes>
+        <scene id="scene2">
+          <name>Chapter 2</name>
+          <destinations>
+            <destination character="Stewie" endTime="15.3">2.998052 -0.02692038 3.455246</destination>
+            <destination character="Stewie" endTime="36.99666">2.979175 -0.4856454 -0.9979188</destination>
+            <destination character="Fido" endTime="15.3">-1000000 -1000000 -1000000</destination>
+            <destination character="Mariana" endTime="15.3">-1.672637 -0.1770971 -1.462726</destination>
+            <destination character="Mariana" endTime="36.99666">-1.331056 -0.19372 -1.907814</destination>
+            <destination character="Felix" endTime="15.3">-1000000 -1000000 -1000000</destination>
+            <destination character="Omar" endTime="15.3">-2.50047 -0.2687197 -1.6983</destination>
+            <destination character="Omar" endTime="27.3389">-0.8562186 -0.4856454 -3.742593</destination>
+          </destinations>
+          <lines>
+            <line character="Omar" startTime="18" pace="1">On the lower right corner you will see the speeches section. With it we can see all the characters lines as well as modify them.</line>
+            <line character="Omar" startTime="26.26786" pace="0.3261905">There is also an annotations section. Right now the annotations are only linked to time.</line>
+            <line character="Mariana" startTime="31" pace="1">And dont forget the new models !</line>
+            <line character="Mariana" startTime="32" pace="0.5480296">The models used on this demo are the latest created by shawn. You can compare them to the old model which is still being used for the Director camera.</line>
+          </lines>
+          <beats>18 23 27 31 32 33 35 38</beats>
+        </scene>
+        <scene id="scene3">
+          <name>Chapter 3</name>
+          <destinations>
+            <destination character="Stewie" endTime="39">-0.6517187 0.041275 -1.78246</destination>
+            <destination character="Stewie" endTime="40.7">-1000000 -1000000 -1000000</destination>
+            <destination character="Fido" endTime="38">3.582561 0.041275 -2.031323</destination>
+            <destination character="Fido" endTime="40.7">-1000000 -1000000 -1000000</destination>
+            <destination character="Mariana" endTime="38">-1.315561 0.041275 -1.509543</destination>
+            <destination character="Mariana" endTime="40.7">-1000000 -1000000 -1000000</destination>
+            <destination character="Felix" endTime="38">2.867794 0.04127499 -1.934375</destination>
+            <destination character="Felix" endTime="40.7">2.84033 -0.4856454 -1.894561</destination>
+            <destination character="Omar" endTime="38">-1.836776 0.041275 -0.8713962</destination>
+            <destination character="Omar" endTime="40.7">-1000000 -1000000 -1000000</destination>
+          </destinations>
+          <lines>
+            <line character="Omar" startTime="44" pace="1">Going back to the line editing. you can do so and see the changes as they are being performed on the characters speech bubble!</line>
+            <line character="Mariana" startTime="48" pace="1">Neat !</line>
+            <line character="Omar" startTime="53" pace="1">Some changes were made to the keyboard controls and some more are needed to diferentiate between wrighting and changing the camera position and current time.</line>
+            <line character="Omar" startTime="61" pace="1">Any advice is welcome. Have fun playing with this demo!</line>
+            <line character="Omar" startTime="69" pace="1">Thank you very much for your time.</line>
+          </lines>
+          <beats>38 44 48 55 65 77</beats>
+        </scene>
+        <scene id="scene4">
+          <name>Chapter 4</name>
+          <destinations>
+            <destination character="Stewie" endTime="77">-1000000 -1000000 -1000000</destination>
+            <destination character="Fido" endTime="77">-1000000 -1000000 -1000000</destination>
+            <destination character="Mariana" endTime="77.3039">2.114655 -0.4856454 -1.814129</destination>
+            <destination character="Mariana" endTime="81.49666">3.592733 -0.4856454 -1.582467</destination>
+            <destination character="Felix" endTime="77">-1000000 -1000000 -1000000</destination>
+            <destination character="Omar" endTime="77">2.130236 -0.4856454 -2.416602</destination>
+            <destination character="Omar" endTime="82.38815">3.56914 -0.4856454 -2.177547</destination>
+          </destinations>
+          <lines>
+            <line character="Mariana" startTime="77" pace="1">I think that is it.</line>
+            <line character="Omar" startTime="81" pace="1">Yes, pretty much.</line>
+          </lines>
+          <beats>77 80 81 84</beats>
+        </scene>
+      </scenes>
+    </act>
+    <act id="act3">
+      <name>Act 3</name>
+      <scenes>
+        <scene id="scene5">
+          <name>Chapter 5</name>
+          <destinations>
+            <destination character="Stewie" endTime="84">-1.30255 -0.4856454 -0.787765</destination>
+            <destination character="Fido" endTime="84">2.354674 -0.4856454 -3.033707</destination>
+            <destination character="Fido" endTime="84.17112">2.354674 -0.4856454 -3.033707</destination>
+            <destination character="Fido" endTime="84.17112">-1000000 -1000000 -1000000</destination>
+            <destination character="Mariana" endTime="84.33984">2.015457 -0.4856454 -0.6926936</destination>
+            <destination character="Mariana" endTime="87.72074">1.210489 -0.4856454 -2.374813</destination>
+            <destination character="Felix" endTime="84">-0.3661262 -0.4856454 -2.787818</destination>
+            <destination character="Felix" endTime="84.17112">-0.3661262 -0.4856454 -2.787818</destination>
+            <destination character="Felix" endTime="84.17112">-1000000 -1000000 -1000000</destination>
+            <destination character="Omar" endTime="84.17112">2.88619 -0.4856454 -0.5660706</destination>
+            <destination character="Omar" endTime="84.17112">2.88619 -0.4856454 -0.5660706</destination>
+            <destination character="Omar" endTime="84.17112">-1000000 -1000000 -1000000</destination>
+          </destinations>
+          <lines>
+            <line character="Stewie" startTime="86" pace="1">Bye Bye!</line>
+            <line character="Mariana" startTime="86" pace="1">Enjoy!</line>
+            <line character="Omar" startTime="86.5" pace="1">Enjoy!</line>
+          </lines>
+          <beats>86.5 89</beats>
+        </scene>
+      </scenes>
+    </act>
+  </acts>
+  <annotations>
+    <annotation startTime="1" header="first header">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</annotation>
+    <annotation startTime="9" endTime="11">Morbi sit amet felis massa, eget tincidunt diam. Nulla ac lectus est. Phasellus ut enim arcu.</annotation>
+    <annotation startTime="14" character="Mariana">Aliquam feugiat metus euismod est luctus commodo. In dignissim lorem quis velit scelerisque accumsan.</annotation>
+    <annotation startTime="23" endTime="27" character="Omar" header="Omar is doing something">Nam sed elit eget risus interdum sagittis. Nunc euismod enim eget lorem pharetra pulvinar.</annotation>
+    <annotation startTime="27">Etiam ullamcorper, augue vitae pulvinar dictum, felis tellus congue augue, sit amet consectetur orci nisl nec diam. Nullam sit amet arcu dolor, bibendum iaculis ipsum.</annotation>
+    <annotation startTime="32">Nullam pulvinar, orci vitae dapibus luctus, eros dolor faucibus velit, auctor viverra risus odio id risus. Morbi posuere nibh in erat varius porta. Phasellus venenatis congue augue nec eleifend.</annotation>
+    <annotation startTime="45">Nulla facilisi. Phasellus tempus, ante nec tristique cursus, dui augue posuere risus, id suscipit risus purus id quam.</annotation>
+    <annotation startTime="56">Morbi enim massa, blandit eget vulputate id, vestibulum sed libero.</annotation>
+    <annotation startTime="77">In ornare scelerisque nisl, at viverra libero cursus vitae.</annotation>
+    <annotation startTime="80">Curabitur eu tellus ac odio iaculis condimentum ac nec sapien.</annotation>
+  </annotations>
+  <views />
+</play>

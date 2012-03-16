@@ -1,0 +1,61 @@
+fileFormatVersion: 1
+guid: 8e6860afd34b54ca4a1e623437ccf4cc
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 1
+    swapUVs: 0
+    generateSecondaryUV: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    White_Biting_Dog___Soulpepper_Shell:Mesh:
+    - 100002
+    - 400002
+    - 3300000
+    - 2300000
+    - 6400000
+    group1:
+    - 100004
+    - 400004
+    group:
+    - 100006
+    - 400006
+    White_Biting_Dog___SoulPepper_Optional_Seats:Mesh:
+    - 100008
+    - 400008
+    - 3300002
+    - 2300002
+    - 6400002
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: WBDSoulpepperClean
+    4300002: WMDSoulpepperClean
+    4300004: WMDSoulpepperClearMesh
+    4300006: WMDSoulpepperClean1
+    4300008: WMDSoulpepperClean:Mesh
+    4300010: White_Biting_Dog___Soulpepper_Shell:Mesh
+    4300012: White_Biting_Dog___SoulPepper_Optional_Seats:Mesh

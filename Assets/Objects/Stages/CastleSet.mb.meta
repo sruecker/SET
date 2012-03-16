@@ -1,0 +1,144 @@
+fileFormatVersion: 1
+guid: 4ecff986e369b41dcb83d927bfa0f7f7
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 1
+    swapUVs: 0
+    generateSecondaryUV: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    polySurface1:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    - 6400002
+    justTower2:Tower:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    - 6400004
+    //RootNode:
+    - 100006
+    - 400006
+    - 11100000
+    Bed1:
+    - 100008
+    - 400008
+    - 3300004
+    - 2300004
+    - 6400008
+    Chest:
+    - 100010
+    - 400010
+    - 3300006
+    - 2300006
+    - 6400006
+    SouthScaffold:
+    - 100012
+    - 400012
+    - 3300008
+    - 2300008
+    - 6400012
+    NorthScaffold:
+    - 100014
+    - 400014
+    - 3300010
+    - 2300010
+    - 6400000
+    EastScaffold:
+    - 100016
+    - 400016
+    - 3300012
+    - 2300012
+    - 6400020
+    NorthEastScaffold:
+    - 100020
+    - 400020
+    - 3300016
+    - 2300016
+    - 6400018
+    WestScaffold:
+    - 100022
+    - 400022
+    - 3300018
+    - 2300018
+    - 6400016
+    stageBoundary:
+    - 100086
+    - 400086
+    - 3300082
+    - 2300082
+    - 6400082
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Chest
+    4300002: CastleTower
+    4300004: Bed1
+    4300006: NorthScaffold
+    4300008: SouthScaffold
+    4300010: EastScaffold
+    4300012: WestScaffold
+    4300014: NorthEastScaffold
+    4300016: transform10
+    4300018: transform9
+    4300020: polySurface1
+    4300022: tower3D:polySurface35
+    4300024: tower3D:polySurface36
+    4300026: tower3D:polySurface37
+    4300028: tower3D:polySurface38
+    4300030: tower3D:polySurface39
+    4300032: tower3D:polySurface40
+    4300034: tower3D:polySurface41
+    4300036: tower3D:polySurface42
+    4300038: tower3D:polySurface43
+    4300040: tower3D:polySurface44
+    4300042: tower3D:polySurface45
+    4300044: tower3D:polySurface46
+    4300046: tower3D:polySurface47
+    4300048: tower3D:polySurface48
+    4300050: tower3D:polySurface49
+    4300052: tower3D:polySurface50
+    4300054: tower3D:polySurface51
+    4300056: tower3D:polySurface52
+    4300058: tower3D:polySurface53
+    4300060: tower3D:polySurface54
+    4300062: tower3D:polySurface55
+    4300064: tower3D:polySurface56
+    4300066: tower3D:polySurface57
+    4300068: tower3D:polySurface58
+    4300070: tower3D:polySurface59
+    4300072: tower3D:polySurface60
+    4300074: tower3D:polySurface61
+    4300076: tower3D:polySurface62
+    4300078: tower3D:polySurface63
+    4300080: tower3D:polySurface64
+    4300082: tower3D:polySurface65
+    4300084: tower3D:polySurface66
+    4300086: tower3D:polySurface67
+    4300088: stageBoundary
+    4300090: Tower
+    4300092: justTower1:Tower
+    4300094: justTower2:Tower

@@ -1,0 +1,118 @@
+fileFormatVersion: 1
+guid: b88de4e4962d8410f9f25ddc4106336d
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+    clips:
+      idle:
+        firstFrame: 1
+        lastFrame: 2
+        loop: 0
+        wrapMode: 0
+      sit:
+        firstFrame: 1
+        lastFrame: 24
+        loop: 0
+        wrapMode: 0
+      negSit:
+        firstFrame: 25
+        lastFrame: 49
+        loop: 0
+        wrapMode: 0
+      kneel:
+        firstFrame: 50
+        lastFrame: 74
+        loop: 0
+        wrapMode: 0
+      negKneel:
+        firstFrame: 75
+        lastFrame: 99
+        loop: 0
+        wrapMode: 0
+      lay:
+        firstFrame: 100
+        lastFrame: 124
+        loop: 0
+        wrapMode: 0
+      negLay:
+        firstFrame: 125
+        lastFrame: 149
+        loop: 0
+        wrapMode: 0
+      fastSit:
+        firstFrame: 23
+        lastFrame: 24
+        loop: 0
+        wrapMode: 0
+      fastKneel:
+        firstFrame: 73
+        lastFrame: 74
+        loop: 0
+        wrapMode: 0
+      fastLay:
+        firstFrame: 123
+        lastFrame: 124
+        loop: 0
+        wrapMode: 0
+  nodeInfo:
+    chest:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    feet:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    head:
+    - 100004
+    - 400004
+    - 3300004
+    - 2300004
+    //RootNode:
+    - 100006
+    - 400006
+    - 11100000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Obj3
+    4300002: Obj4
+    4300004: Obj5
+    4300006: polySurface1
+    4300008: chest
+    4300010: head
+    4300012: feet
+    4300014: transform3
+    4300016: transform2
+    4300018: transform1
+    7400000: Take 001 //// PersonSmall
+    7400002: idle //// PersonSmall
+    7400004: sit //// PersonSmall
+    7400006: negSit //// PersonSmall
+    7400008: kneel //// PersonSmall
+    7400010: negKneel //// PersonSmall
+    7400012: lay //// PersonSmall
+    7400014: negLay //// PersonSmall
+    7400016: fastSit //// PersonSmall
+    7400018: fastKneel //// PersonSmall
+    7400020: fastLay //// PersonSmall

@@ -1,0 +1,20 @@
+<play>
+  <stage>
+    <model>TofA</model>
+  </stage>
+  <cast>
+  </cast>
+  <acts>
+    <act id="act1">
+      <name>Act 1</name>
+      <scenes>
+        <scene id="scene1">
+          <name>Chapter 1</name>
+        </scene>
+      </scenes>
+    </act>
+  </acts>
+  <annotations />
+  <views>
+  </views>
+</play>

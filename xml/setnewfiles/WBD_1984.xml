@@ -1,0 +1,77 @@
+<play>
+	<stage>
+		<model>TofA</model>
+	</stage>
+	<cast>
+		<character id="Character1">
+			<name>Cape</name>
+			<color>0.839093 0.726578 0.6910493</color>
+			<model>PersonBigPrefab</model>
+		</character>
+		<character id="Character2">
+			<name>Glidden</name>
+			<color>0.9099953 0.7482334 0.010117</color>
+			<model>PersonBigPrefab</model>
+		</character>
+		<character id="Peace">
+			<name>Peace</name>
+			<color>-0.9099953 0.7482334 -0.010117</color>
+			<model>PersonBigPrefab</model>
+		</character>
+	</cast>
+	<acts>
+		<act id="act1">
+			<name>White Biting Dog</name>
+			<scenes>
+				<scene id="Scene1">
+					<name>Scene 1</name>
+					<destinations>
+						<destination character="Character1" endTime="0.05691057">-11.18387 2.927315 -3.033763</destination>
+						<destination character="Character2" endTime="0.08536585">-10.75275 2.927315 -2.851365</destination>
+						<destination character="Peace" endTime="0">-5.337574 2.454815 -6.320055</destination>
+						<destination character="Peace" endTime="0.5691057">-5.337574 2.454815 -6.320055</destination>
+						<destination character="Peace" endTime="4.04065">-8.442203 2.454815 -3.237483</destination>
+					</destinations>
+					<actions> </actions>
+					<lines>
+						<line character="Character1" startTime="0.03333334" pace="1.015873">Did it ever happen? Sure it happened. It happened, I'm not crazy it's here,</line>
+						<line character="Character1" startTime="4.569106" pace="1.015873">(pointing to head) all here, in my memory-yeah. Yeah I- arrive at the Bloor Street</line>
+						<line character="Character1" pace="1" startTime="5"> Viaduct, and uh--- yeah, I see the wall. I walk...walk.. extruheemly slowly towards the</line>
+						<line character="Character1" pace="1" startTime="6">wall, my legs...shaking..and climb up. I look down and...I don't want to jump on the</line>
+						<line character="Character1" pace="1" startTime="7">cars, and cause other deaths, so I...move..along I see my face when they find me-no</line>
+						<line character="Character1" pace="1" startTime="8">marks just one long yellow bruise there (temple)...(steps sideways)- I..hear that sound.</line>
+						<line character="Character1" pace="1" startTime="9">Ever been in a geriatrics ward in the middle of the night? (They all) A grind (their) my</line>
+						<line character="Character1" pace="1" startTime="10">teeth- (that's what it sounded like) This grinding teeth sound. Then, and then the drum</line>
+						<line character="Character1" pace="1" startTime="11">sound, as if the whole city knew, boom boom boom boom boom BOOM BOOM BOOM</line>
+						<line character="Character1" pace="1" startTime="12">BOOM BOOM BOOM........(small strange voice) "I'm not gonna hurt you." (turns quickly) </line>
+						<line character="Character1" pace="1" startTime="13">Who's that? A cop? There's nobody! Just ahhhhh! A white dog! Beside me!</line>
+						<line character="Character1" pace="1" startTime="14">How did it..</line>
+						<line character="Character1" pace="1" startTime="15">"YOU'RE JUMPING TO HELL" the dog, the dog spoke.</line>
+						<line character="Character1" pace="1" startTime="16">So I answered--</line>
+						<line character="Character1" pace="1" startTime="17">"BUT I'M LIVING IN HELL...ANYWAY."</line>
+						<line character="Character1" pace="1" startTime="18">"YOU'RE LIVING IN HELL, CAUSE YOU AINT DONE YOUR MISSION."</line>
+						<line character="Character1" pace="1" startTime="19">"What's that?"</line>
+						<line character="Character1" pace="1" startTime="20">"TO SAVE YOUR FATHER FROM DEATH. TO SAVE YOUR FATHER</line>
+						<line character="Character1" pace="1" startTime="21">FROM DEATH."</line>
+						<line character="Character1" pace="1" startTime="22">The dog...spoke!!! I-My father? My father, to me, was just a (sick) old man we had</line>
+						<line character="Character1" pace="1" startTime="23">dinner with once a month (since my mother left him a couple years ago); he he'd cook up</line>
+						<line character="Character1" pace="1" startTime="24">some chops and we'd sit around and...try to think of something to say...he-way dying,</line>
+						<line character="Character1" pace="1" startTime="25">but all fathers die. I just didn't...think..much about it, I</line>
+						<line character="Character2" pace="1" startTime="26"> OUT OF THE TUNNEL</line>
+					</lines>
+					<beats>0 1 5 15 17 20 30 35</beats>
+				</scene>
+			</scenes>
+		</act>
+	</acts>
+	<annotations>
+		<annotation startTime="0" sd="false" endTime="14" character="Peace">Peace all in black</annotation>
+	</annotations>
+	<views>
+		<view id="1">
+			<location>-1.891978 3.203951 -6.497033</location>
+			<lookAt>0.1781867 -0.2721663 -3.559172</lookAt>
+			<name>HL</name>
+		</view>
+	</views>
+</play>

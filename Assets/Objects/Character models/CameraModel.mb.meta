@@ -1,0 +1,51 @@
+fileFormatVersion: 1
+guid: 639ccda15136d4d75992422970c9d323
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 2
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    group:
+    - 100002
+    - 400002
+    polySurface5:
+    - 100004
+    - 400004
+    - 3300000
+    - 2300000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: transform1
+    4300002: transform2
+    4300004: transform4
+    4300006: transform3
+    4300008: transform5
+    4300010: transform6
+    4300012: transform9
+    4300014: transform7
+    4300016: transform8
+    4300018: transform10
+    4300020: polySurface5
+    7400000: Take 001 //// CameraModel

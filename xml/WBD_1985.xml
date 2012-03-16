@@ -1,0 +1,134 @@
+<play>
+  <stage>
+    <model>TofA</model>
+  </stage>
+  <cast>
+    <character id="Character1">
+      <name>Cape</name>
+      <color>0.839093 0.726578 0.6910493</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Character2">
+      <name>Glidden</name>
+      <color>0.9099953 0.7482334 0.010117</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Peace">
+      <name>Peace</name>
+      <color>-0.9099953 0.7482334 -0.010117</color>
+      <model>PersonBigPrefab</model>
+    </character>
+  </cast>
+  <acts>
+    <act id="act1">
+      <name>White Biting Dog</name>
+      <scenes>
+        <scene id="Scene1">
+          <name>Scene 1</name>
+          <destinations>
+            <destination character="Character1" endTime="0">-3.998909 -0.4856454 -1.234096</destination>
+            <destination character="Character1" endTime="0.8907349">-3.949615 -0.4856454 -1.368025</destination>
+            <destination character="Character1" endTime="1.78147">-3.689436 -0.4856454 -1.884821</destination>
+            <destination character="Character1" endTime="2.672204">-2.992422 -0.4856454 -2.74146</destination>
+            <destination character="Character1" endTime="3.562939">-2.40186 -0.4856454 -3.283974</destination>
+            <destination character="Character1" endTime="4.453674">-1.468382 -0.4856454 -4.141492</destination>
+            <destination character="Character1" endTime="5.344409">-0.9871994 -0.4856454 -4.597344</destination>
+            <destination character="Character1" endTime="6.235144">-0.9493676 -0.4856454 -4.576821</destination>
+            <destination character="Character1" endTime="7.125878">-0.9561954 -0.4856454 -4.556601</destination>
+            <destination character="Character1" endTime="8.016613">-0.9561954 -0.4856454 -4.556601</destination>
+            <destination character="Character1" endTime="8.907348">-0.9561954 -0.4856454 -4.556601</destination>
+            <destination character="Character1" endTime="9.798082">-0.9561954 -0.4856454 -4.556601</destination>
+            <destination character="Character1" endTime="10.68882">-0.9561954 -0.4856454 -4.556601</destination>
+            <destination character="Character1" endTime="11.57955">-0.8993037 -0.4856454 -4.525742</destination>
+            <destination character="Character1" endTime="12.47029">-0.7004788 -0.4856454 -4.48934</destination>
+            <destination character="Character1" endTime="13.36102">-0.1805328 -0.4856454 -4.438192</destination>
+            <destination character="Character1" endTime="14.25176">0.3849294 -0.4856454 -4.220828</destination>
+            <destination character="Character1" endTime="15.14249">0.5035434 -1.004324 -3.268383</destination>
+            <destination character="Character1" endTime="16.03323">1.008188 -0.4856454 -3.926858</destination>
+            <destination character="Character1" endTime="16.92396">2.535004 -0.4856454 -2.492395</destination>
+            <destination character="Character1" endTime="17.8147">2.611705 -0.4856454 -2.325166</destination>
+            <destination character="Character1" endTime="18.70543">2.611705 -0.4856454 -2.325166</destination>
+            <destination character="Character1" endTime="19.59617">2.611705 -0.4856454 -2.325166</destination>
+            <destination character="Character1" endTime="20.4869">2.611705 -0.4856454 -2.325166</destination>
+            <destination character="Character1" endTime="21.37764">2.611705 -0.4856454 -2.325166</destination>
+            <destination character="Character1" endTime="22.26838">2.5878 -0.4856454 -2.261231</destination>
+            <destination character="Character1" endTime="23.15911">2.589621 -0.4856454 -2.234345</destination>
+            <destination character="Character1" endTime="24.04985">2.728536 -0.4856454 -1.782321</destination>
+            <destination character="Character1" endTime="24.94058">2.807086 -0.4856454 -1.540844</destination>
+            <destination character="Character1" endTime="25.83132">2.848783 -0.4856454 -1.40121</destination>
+            <destination character="Character1" endTime="26.72205">2.840875 -0.4856454 -1.375864</destination>
+            <destination character="Character1" endTime="27.61279">2.861988 -0.4856454 -1.364405</destination>
+            <destination character="Character1" endTime="28.50352">2.861988 -0.4856454 -1.364405</destination>
+            <destination character="Character2" endTime="0.08536585">-10.75275 2.927315 -2.851365</destination>
+            <destination character="Character2" endTime="0.1078029">-0.8455637 -0.4856454 -3.858359</destination>
+            <destination character="Character2" endTime="1.03933">-0.7581737 -0.4856454 -3.756329</destination>
+            <destination character="Character2" endTime="1.970858">-0.09356724 -0.4856454 -3.531423</destination>
+            <destination character="Character2" endTime="2.902385">0.3456579 -0.8501577 -2.741815</destination>
+            <destination character="Character2" endTime="3.833912">0.7281184 -0.4856454 -3.269817</destination>
+            <destination character="Character2" endTime="4.76544">0.643406 -0.8467851 -2.615431</destination>
+            <destination character="Character2" endTime="5.696967">0.995975 -0.4856454 -3.150305</destination>
+            <destination character="Character2" endTime="6.628494">0.6790884 -0.8409421 -2.579581</destination>
+            <destination character="Character2" endTime="7.560021">1.023307 -0.4856454 -3.109729</destination>
+            <destination character="Character2" endTime="8.491549">0.6790884 -0.8409421 -2.579581</destination>
+            <destination character="Character2" endTime="9.423076">1.023307 -0.4856454 -3.109729</destination>
+            <destination character="Character2" endTime="10.3546">0.6790884 -0.8409421 -2.579581</destination>
+            <destination character="Character2" endTime="11.28613">1.023307 -0.4856454 -3.109729</destination>
+            <destination character="Character2" endTime="12.21766">0.6790884 -0.8409421 -2.579581</destination>
+            <destination character="Character2" endTime="13.14918">1.023307 -0.4856454 -3.109729</destination>
+            <destination character="Character2" endTime="14.08071">0.8390217 -0.8071454 -2.389909</destination>
+            <destination character="Character2" endTime="15.01224">1.140255 -0.4856454 -2.888963</destination>
+            <destination character="Character2" endTime="15.94377">0.4517109 -1.832318 0.001670361</destination>
+            <destination character="Character2" endTime="16.87529">1.559633 -0.4856454 -2.303516</destination>
+            <destination character="Character2" endTime="17.80682">2.067551 -0.4856454 -1.941912</destination>
+            <destination character="Character2" endTime="18.73835">2.078529 -0.4856454 -1.90694</destination>
+            <destination character="Character2" endTime="19.66988">2.078529 -0.4856454 -1.90694</destination>
+            <destination character="Character2" endTime="20.60141">2.078529 -0.4856454 -1.90694</destination>
+            <destination character="Character2" endTime="21.53293">2.078529 -0.4856454 -1.90694</destination>
+            <destination character="Character2" endTime="22.46446">2.078529 -0.4856454 -1.90694</destination>
+            <destination character="Character2" endTime="23.39599">2.078529 -0.4856454 -1.90694</destination>
+            <destination character="Peace" endTime="0">-5.337574 2.454815 -6.320055</destination>
+            <destination character="Peace" endTime="0.2156057">2.954549 -0.4856454 -2.893126</destination>
+            <destination character="Peace" endTime="2.238193">3.008807 -0.4856454 -2.863704</destination>
+            <destination character="Peace" endTime="4.26078">3.008807 -0.4856454 -2.863704</destination>
+            <destination character="Peace" endTime="6.283368">3.008807 -0.4856454 -2.863704</destination>
+            <destination character="Peace" endTime="8.305955">3.008807 -0.4856454 -2.863704</destination>
+            <destination character="Peace" endTime="10.32854">3.00239 -0.4856454 -2.845319</destination>
+            <destination character="Peace" endTime="12.35113">2.973824 -0.4856454 -2.794593</destination>
+            <destination character="Peace" endTime="14.37372">2.997559 -0.4856454 -2.577396</destination>
+            <destination character="Peace" endTime="16.3963">3.053809 -0.4856454 -2.309333</destination>
+            <destination character="Peace" endTime="18.41889">3.055005 -0.4856454 -2.135372</destination>
+            <destination character="Peace" endTime="20.44148">3.112433 -0.4856454 -1.950805</destination>
+            <destination character="Peace" endTime="22.46406">3.24881 -0.4856454 -1.664918</destination>
+            <destination character="Peace" endTime="24.48665">3.339419 -0.4856454 -1.61577</destination>
+            <destination character="Peace" endTime="26.50924">3.349488 -0.4856454 -1.610315</destination>
+          </destinations>
+          <actions />
+          <lines>
+            <line character="Character1" startTime="0.03333334" pace="1.015873">Did it ever happen? Sure it happened. It happened, I'm not crazy, I know! I arrived</line>
+            <line character="Character1" startTime="4.569106" pace="1.015873">at the Bloor Street bridge, and I climbed up the wall, right? And I was gonna do</line>
+            <line character="Character1" startTime="6" pace="1">it, I was just about to jump when I heard this drum sound, as if the whole city knew,</line>
+            <line character="Character1" startTime="7" pace="1">boom boom boom boom BOOM BOOM BOOM BOOM BOOM BOOM (speaks in</line>
+            <line character="Character1" startTime="8" pace="1">small strange voice) "I'm not gonna hurt you." (turns quickly) Who's that? A cop?</line>
+            <line character="Character1" startTime="9" pace="1">There's nobody! Just! A white dog! Beside me! How did it...</line>
+            <line character="Character1" startTime="10" pace="1">"YOU'RE JUMPING TO HELL" the dog, the dog spoke</line>
+            <line character="Character1" startTime="11" pace="1">So I...answered-</line>
+            <line character="Character1" startTime="12" pace="1">"BUT I'M LIVING IN HELL...ANYWAY."</line>
+            <line character="Character1" startTime="13" pace="1">"YOU'RE LIVING IN HELL, 'CAUSE YOU AIN'T DONE YOUR MISSION."</line>
+            <line character="Character1" startTime="14" pace="1">"WHAT'S THAT?"</line>
+            <line character="Character1" startTime="15" pace="1">"TO SAVE YOU FATHER FROM DEATH, TO SAVE YOUR FATHER FROM</line>
+            <line character="Character1" startTime="16" pace="1">DEATH."</line>
+            <line character="Character1" startTime="17" pace="1">The dog...spoke! I'm not kidding! This dog actually spoke she saved me from the</line>
+            <line character="Character1" startTime="18" pace="1">plunge; it was the weirdest-</line>
+            <line character="Character2" startTime="19" pace="1">(GLIDDEN rushes out of bed, and out of his room onto the landing.)</line>
+            <line character="Character2" startTime="20" pace="1">OUT OF THE TUNNEL</line>
+          </lines>
+          <beats>0 1 5 15 17 20 30 35</beats>
+        </scene>
+      </scenes>
+    </act>
+  </acts>
+  <annotations>
+    <annotation startTime="0" sd="false" endTime="14" character="Peace">Peace all in black</annotation>
+  </annotations>
+  <views />
+</play>

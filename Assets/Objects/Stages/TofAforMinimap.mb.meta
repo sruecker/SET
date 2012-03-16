@@ -1,0 +1,103 @@
+fileFormatVersion: 1
+guid: b5bd26b345bd74c3d9f84924ab6fb704
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    areaLight2:
+    - 100000
+    - 400000
+    persp1:
+    - 100002
+    - 400002
+    //RootNode:
+    - 100004
+    - 400004
+    - 11100000
+    top1:
+    - 100006
+    - 400006
+    areaLight1:
+    - 100008
+    - 400008
+    backStageLight:
+    - 100010
+    - 400010
+    ambientLight1:
+    - 100012
+    - 400012
+    pCube1:
+    - 100014
+    - 400014
+    - 3300000
+    - 2300000
+    backWall:
+    - 100016
+    - 400016
+    - 3300002
+    - 2300002
+    canopyLight:
+    - 100018
+    - 400018
+    stageStructures:
+    - 100020
+    - 400020
+    - 3300004
+    - 2300004
+    canopyUpLight:
+    - 100022
+    - 400022
+    outsideHallway:
+    - 100024
+    - 400024
+    - 3300006
+    - 2300006
+    mainStageFloor:
+    - 100026
+    - 400026
+    - 3300008
+    - 2300008
+    outsideHallwayFloor:
+    - 100028
+    - 400028
+    - 3300010
+    - 2300010
+    transform:
+    - 100030
+    - 400030
+    seatingArea:
+    - 100032
+    - 400032
+    - 3300012
+    - 2300012
+    TofA:
+    - 100034
+    - 400034
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: seatingArea
+    4300002: mainStageFloor
+    4300004: outsideHallway
+    4300006: outsideHallwayFloor
+    4300008: stageStructures
+    4300010: backWall
+    4300012: pCube1

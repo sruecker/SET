@@ -1,0 +1,58 @@
+fileFormatVersion: 1
+guid: 3ef8218b02e824c14909269f3d4ec664
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 1
+    swapUVs: 0
+    generateSecondaryUV: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    MapPlane:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    - 6400000
+    TowerPlane:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    - 6400002
+    //RootNode:
+    - 100004
+    - 400004
+    - 11100000
+    stageBoundary:
+    - 100006
+    - 400006
+    - 3300004
+    - 2300004
+    - 6400004
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: MapPlane
+    4300002: TowerPlane
+    4300004: pCube1
+    4300006: stageBoundary

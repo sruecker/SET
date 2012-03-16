@@ -1,0 +1,227 @@
+fileFormatVersion: 1
+guid: f9dbfcc0081d64178b6e9405a3590a84
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 1
+    swapUVs: 0
+    generateSecondaryUV: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    Caesar:Obj23:
+    - 100002
+    - 400002
+    - 3300000
+    - 2300000
+    - 6400024
+    Caesar:Obj28:
+    - 100004
+    - 400004
+    - 3300002
+    - 2300002
+    - 6400034
+    Caesar:Obj24:
+    - 100006
+    - 400006
+    - 3300004
+    - 2300004
+    - 6400026
+    Caesar:Obj30:
+    - 100008
+    - 400008
+    - 3300006
+    - 2300006
+    - 6400044
+    Caesar:backGroundDecor:
+    - 100010
+    - 400010
+    Caesar:Obj13:
+    - 100012
+    - 400012
+    - 3300008
+    - 2300008
+    - 6400000
+    Caesar:Obj21:
+    - 100014
+    - 400014
+    - 3300010
+    - 2300010
+    - 6400020
+    Caesar:Obj20:
+    - 100016
+    - 400016
+    - 3300012
+    - 2300012
+    - 6400042
+    Caesar:Obj18:
+    - 100018
+    - 400018
+    - 3300014
+    - 2300014
+    - 6400038
+    Caesar:Obj25:
+    - 100020
+    - 400020
+    - 3300016
+    - 2300016
+    - 6400028
+    Caesar:Obj19:
+    - 100022
+    - 400022
+    - 3300018
+    - 2300018
+    - 6400040
+    Caesar:Obj16:
+    - 100024
+    - 400024
+    - 3300020
+    - 2300020
+    - 6400004
+    Caesar:Obj17:
+    - 100026
+    - 400026
+    - 3300022
+    - 2300022
+    - 6400036
+    Caesar:Obj29:
+    - 100028
+    - 400028
+    - 3300024
+    - 2300024
+    - 6400012
+    Caesar:Obj14:
+    - 100030
+    - 400030
+    - 3300026
+    - 2300026
+    - 6400048
+    Caesar:Obj2:
+    - 100032
+    - 400032
+    - 3300028
+    - 2300028
+    - 6400046
+    Caesar:Obj15:
+    - 100034
+    - 400034
+    - 3300030
+    - 2300030
+    - 6400002
+    Caesar:Obj26:
+    - 100036
+    - 400036
+    - 3300032
+    - 2300032
+    - 6400030
+    Caesar:Obj22:
+    - 100038
+    - 400038
+    - 3300034
+    - 2300034
+    - 6400022
+    Caesar:Obj27:
+    - 100040
+    - 400040
+    - 3300036
+    - 2300036
+    - 6400032
+    Caesar:Obj8:
+    - 100042
+    - 400042
+    - 3300038
+    - 2300038
+    - 6400010
+    Caesar:debree:
+    - 100044
+    - 400044
+    Caesar:Obj6:
+    - 100046
+    - 400046
+    - 3300040
+    - 2300040
+    - 6400006
+    Caesar:Obj9:
+    - 100048
+    - 400048
+    - 3300042
+    - 2300042
+    - 6400050
+    Caesar:Obj4:
+    - 100050
+    - 400050
+    - 3300044
+    - 2300044
+    - 6400016
+    Caesar:Obj5:
+    - 100052
+    - 400052
+    - 3300046
+    - 2300046
+    - 6400018
+    Caesar:Obj7:
+    - 100054
+    - 400054
+    - 3300048
+    - 2300048
+    - 6400008
+    Caesar:statue:
+    - 100056
+    - 400056
+    Caesar:Obj3:
+    - 100058
+    - 400058
+    - 3300050
+    - 2300050
+    - 6400014
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Caesar:Obj3
+    4300002: Caesar:Obj5
+    4300004: Caesar:Obj4
+    4300006: Caesar:Obj7
+    4300008: Caesar:Obj6
+    4300010: Caesar:Obj8
+    4300012: Caesar:Obj9
+    4300014: Caesar:Obj22
+    4300016: Caesar:Obj26
+    4300018: Caesar:Obj27
+    4300020: Caesar:Obj2
+    4300022: Caesar:Obj14
+    4300024: Caesar:Obj15
+    4300026: Caesar:Obj17
+    4300028: Caesar:Obj16
+    4300030: Caesar:Obj29
+    4300032: Caesar:Obj28
+    4300034: Caesar:Obj23
+    4300036: Caesar:Obj24
+    4300038: Caesar:Obj25
+    4300040: Caesar:Obj19
+    4300042: Caesar:Obj20
+    4300044: Caesar:Obj21
+    4300046: Caesar:Obj18
+    4300048: Caesar:Obj30
+    4300050: Caesar:Obj13

@@ -1,0 +1,499 @@
+<play>
+  <stage>
+    <model>Simple</model>
+  </stage>
+  <cast>
+    <character id="Brutus">
+      <name>Brutus</name>
+      <color>0.1 0.1 0.1</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Caesar">
+      <name>Caesar</name>
+      <color>0.005340739 0.0122074 0.5453352</color>
+      <model>TreePrefab</model>
+    </character>
+    <character id="Cassius">
+      <name>Cassius</name>
+      <color>0.1 0.3 0.3</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Decius">
+      <name>Decius</name>
+      <color>0.71 0.16 0.51</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Casca">
+      <name>Casca</name>
+      <color>0.56 0.39 0.25</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Metellus">
+      <name>Metellus</name>
+      <color>0.16 0.51 0.71</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Cinna">
+      <name>Cinna</name>
+      <color>1 0.88 0.79</color>
+      <model>SoundEmitterPrefab</model>
+    </character>
+  </cast>
+  <acts>
+    <act id="act1">
+      <name>Act 1</name>
+      <scenes>
+        <scene id="scene1">
+          <name>Chapter 1</name>
+          <destinations>
+            <destination character="Brutus" endTime="0">2.460793 0.09637716 0.4043785</destination>
+            <destination character="Brutus" endTime="1.599913">2.516868 0.09637716 0.2704599</destination>
+            <destination character="Brutus" endTime="3.199826">2.637352 0.09637716 0.01894999</destination>
+            <destination character="Brutus" endTime="4.799739">3.015759 0.09637716 -0.6075716</destination>
+            <destination character="Brutus" endTime="6.399652">3.401402 0.09637713 -1.218272</destination>
+            <destination character="Brutus" endTime="7.999564">3.737967 0.09637716 -1.751258</destination>
+            <destination character="Brutus" endTime="9.599477">3.93956 0.09637713 -1.990741</destination>
+            <destination character="Brutus" endTime="11.19939">4.083068 0.09637716 -2.102055</destination>
+            <destination character="Brutus" endTime="12.7993">4.173455 0.09637713 -2.076178</destination>
+            <destination character="Brutus" endTime="14.39921">4.202117 0.09637716 -2.060636</destination>
+            <destination character="Brutus" endTime="15.99913">4.297631 0.09637716 -2.008834</destination>
+            <destination character="Brutus" endTime="17.59904">4.440907 0.09637719 -1.931131</destination>
+            <destination character="Brutus" endTime="19.19895">4.482265 0.09637716 -1.672267</destination>
+            <destination character="Brutus" endTime="20.79887">4.546211 0.09637716 -1.46529</destination>
+            <destination character="Brutus" endTime="22.39878">4.540954 0.09637719 -1.211666</destination>
+            <destination character="Brutus" endTime="23.99869">4.557309 0.09637716 -1.096628</destination>
+            <destination character="Brutus" endTime="25.5986">4.557309 0.09637716 -1.096628</destination>
+            <destination character="Brutus" endTime="27.19852">4.557309 0.09637716 -1.096628</destination>
+            <destination character="Brutus" endTime="28.79843">4.557309 0.09637716 -1.096628</destination>
+            <destination character="Brutus" endTime="30.39834">4.515355 0.09637719 -1.038349</destination>
+            <destination character="Brutus" endTime="31.99825">4.7026 0.09637713 -0.8545368</destination>
+            <destination character="Brutus" endTime="33.59817">4.853518 0.09637716 -0.7171438</destination>
+            <destination character="Brutus" endTime="35.19808">4.96376 0.09637713 -0.6012423</destination>
+            <destination character="Brutus" endTime="36.798">5.070395 0.09637719 -0.4294574</destination>
+            <destination character="Brutus" endTime="38.39791">5.301281 0.09637716 -0.06908393</destination>
+            <destination character="Brutus" endTime="39.99783">5.408624 0.09637716 0.01922154</destination>
+            <destination character="Brutus" endTime="41.59774">5.449398 0.09637716 0.102005</destination>
+            <destination character="Brutus" endTime="43.19765">5.449398 0.09637716 0.102005</destination>
+            <destination character="Brutus" endTime="44.79757">5.449398 0.09637716 0.102005</destination>
+            <destination character="Brutus" endTime="46.39748">5.449398 0.09637716 0.102005</destination>
+            <destination character="Brutus" endTime="47.9974">5.357279 0.09637716 0.3332396</destination>
+            <destination character="Brutus" endTime="49.59731">5.331939 0.09637716 0.7854376</destination>
+            <destination character="Brutus" endTime="51.19723">5.436174 0.09637716 1.125217</destination>
+            <destination character="Brutus" endTime="52.79714">5.579629 0.09637716 1.576122</destination>
+            <destination character="Brutus" endTime="54.39706">5.658827 0.09637716 1.893798</destination>
+            <destination character="Brutus" endTime="55.99697">5.76862 0.09637716 2.15688</destination>
+            <destination character="Brutus" endTime="57.59689">5.9857 0.09637716 2.484556</destination>
+            <destination character="Brutus" endTime="59.1968">6.296268 0.09637716 2.610472</destination>
+            <destination character="Brutus" endTime="60.79671">6.690817 0.09637716 2.698498</destination>
+            <destination character="Brutus" endTime="62.39663">7.097588 0.09637713 2.877631</destination>
+            <destination character="Brutus" endTime="63.99654">7.263697 0.09637716 2.967733</destination>
+            <destination character="Brutus" endTime="65.59646">7.387178 0.09637716 2.993489</destination>
+            <destination character="Brutus" endTime="67.19637">7.387178 0.09637716 2.993489</destination>
+            <destination character="Brutus" endTime="68.79629">7.387178 0.09637716 2.993489</destination>
+            <destination character="Brutus" endTime="70.3962">7.387178 0.09637716 2.993489</destination>
+            <destination character="Brutus" endTime="71.99612">7.387178 0.09637716 2.993489</destination>
+            <destination character="Brutus" endTime="73.59603">7.478903 0.09637716 2.840953</destination>
+            <destination character="Brutus" endTime="75.19595">7.862368 0.09637716 2.587656</destination>
+            <destination character="Brutus" endTime="76.79586">8.120899 0.09637716 2.402705</destination>
+            <destination character="Brutus" endTime="78.39577">8.30254 0.09637716 2.159013</destination>
+            <destination character="Brutus" endTime="79.99569">8.372665 0.09637713 2.032974</destination>
+            <destination character="Brutus" endTime="81.5956">8.491954 0.09637716 1.813419</destination>
+            <destination character="Brutus" endTime="83.19552">8.614517 0.09637716 1.463959</destination>
+            <destination character="Brutus" endTime="84.79543">8.62606 0.09637716 1.384972</destination>
+            <destination character="Brutus" endTime="86.39535">8.673597 0.09637716 1.135799</destination>
+            <destination character="Brutus" endTime="87.99526">8.711967 0.09637716 0.9463472</destination>
+            <destination character="Brutus" endTime="89.59518">8.73565 0.09637716 0.7818491</destination>
+            <destination character="Brutus" endTime="91.19509">8.74556 0.09637719 0.7130301</destination>
+            <destination character="Brutus" endTime="92.79501">8.725863 0.09637713 0.7023497</destination>
+            <destination character="Brutus" endTime="94.39492">8.660414 0.09637716 0.6423585</destination>
+            <destination character="Brutus" endTime="95.99483">8.582956 0.09637716 0.5275686</destination>
+            <destination character="Brutus" endTime="97.59475">8.512514 0.09637716 0.4414057</destination>
+            <destination character="Brutus" endTime="99.19466">8.230144 0.09637716 0.2407639</destination>
+            <destination character="Brutus" endTime="100.7946">8.099184 0.09637716 0.05290914</destination>
+            <destination character="Brutus" endTime="102.3945">8.060961 0.09637713 -0.01380706</destination>
+            <destination character="Brutus" endTime="103.9944">8.037238 0.09637716 -0.04950142</destination>
+            <destination character="Brutus" endTime="105.5943">7.540571 0.09637716 -1.606829</destination>
+            <destination character="Brutus" endTime="107.1942">7.555063 0.09637716 -1.564359</destination>
+            <destination character="Brutus" endTime="108.7942">7.555063 0.09637716 -1.564359</destination>
+            <destination character="Brutus" endTime="110.3941">7.553035 0.09637719 -1.530567</destination>
+            <destination character="Brutus" endTime="111.994">7.872171 0.09637716 -1.304615</destination>
+            <destination character="Brutus" endTime="113.5939">8.512349 0.09637716 -0.7948775</destination>
+            <destination character="Brutus" endTime="115.1938">8.671329 0.09637719 -0.6902239</destination>
+            <destination character="Brutus" endTime="116.7937">8.659765 0.09637716 -0.6779807</destination>
+            <destination character="Brutus" endTime="118.3936">8.659765 0.09637716 -0.6779807</destination>
+            <destination character="Brutus" endTime="119.9936">8.659765 0.09637716 -0.6779807</destination>
+            <destination character="Brutus" endTime="121.5935">8.659765 0.09637716 -0.6779807</destination>
+            <destination character="Brutus" endTime="123.1934">8.659765 0.09637716 -0.6779807</destination>
+            <destination character="Brutus" endTime="124.7933">8.702559 0.09637716 -0.6547692</destination>
+            <destination character="Brutus" endTime="126.3932">8.771048 0.09637716 -0.6176288</destination>
+            <destination character="Brutus" endTime="127.9931">8.890881 0.09637716 -0.552633</destination>
+            <destination character="Brutus" endTime="129.593">8.908009 0.09637716 -0.5433543</destination>
+            <destination character="Brutus" endTime="131.1929">8.925121 0.09637716 -0.5340686</destination>
+            <destination character="Brutus" endTime="132.7929">8.925121 0.09637716 -0.5340686</destination>
+            <destination character="Brutus" endTime="134.3928">8.9276 0.09637716 -0.5512354</destination>
+            <destination character="Caesar" endTime="0">3.941963 0.09637716 2.433658</destination>
+            <destination character="Caesar" endTime="2.92952">3.983956 0.09637716 2.456423</destination>
+            <destination character="Caesar" endTime="5.85904">4.025932 0.09637716 2.47918</destination>
+            <destination character="Caesar" endTime="8.788561">4.211998 0.09637716 2.432891</destination>
+            <destination character="Caesar" endTime="11.71808">4.440677 0.09637713 2.365206</destination>
+            <destination character="Caesar" endTime="14.6476">4.756463 0.09637719 2.21292</destination>
+            <destination character="Caesar" endTime="17.57712">4.979865 0.09637716 2.02489</destination>
+            <destination character="Caesar" endTime="20.50664">5.28741 0.09637716 1.813739</destination>
+            <destination character="Caesar" endTime="23.43616">5.590733 0.09637716 1.620688</destination>
+            <destination character="Caesar" endTime="26.36568">5.745025 0.09637716 1.40236</destination>
+            <destination character="Caesar" endTime="29.2952">5.820004 0.09637716 1.26135</destination>
+            <destination character="Caesar" endTime="32.22472">5.963902 0.09637716 0.8906763</destination>
+            <destination character="Caesar" endTime="35.15424">6.243354 0.09637716 0.2066989</destination>
+            <destination character="Caesar" endTime="38.08376">4.986788 0.09637719 -0.9435341</destination>
+            <destination character="Caesar" endTime="41.01328">4.858229 0.09637716 -0.658478</destination>
+            <destination character="Caesar" endTime="43.9428">4.795852 0.09637713 -0.4029105</destination>
+            <destination character="Caesar" endTime="46.87232">4.733524 0.09637716 -0.1629474</destination>
+            <destination character="Caesar" endTime="49.80184">4.719791 0.09637716 -0.04442811</destination>
+            <destination character="Caesar" endTime="52.73136">4.672177 0.09637716 0.1569391</destination>
+            <destination character="Caesar" endTime="55.66088">4.661412 0.09637713 0.352962</destination>
+            <destination character="Caesar" endTime="58.5904">4.740256 0.09637716 0.5341468</destination>
+            <destination character="Caesar" endTime="61.51992">4.804017 0.09637716 0.6391106</destination>
+            <destination character="Caesar" endTime="64.44944">4.916075 0.09637716 0.7711098</destination>
+            <destination character="Caesar" endTime="67.37896">5.082585 0.09637716 0.861413</destination>
+            <destination character="Caesar" endTime="70.30848">5.447303 0.09637716 0.8827142</destination>
+            <destination character="Caesar" endTime="73.238">5.639953 0.09637716 0.8156354</destination>
+            <destination character="Caesar" endTime="76.16752">5.805 0.09637716 0.7055197</destination>
+            <destination character="Caesar" endTime="79.09704">5.998195 0.09637716 0.4609493</destination>
+            <destination character="Caesar" endTime="82.02656">6.188549 0.09637716 0.09127283</destination>
+            <destination character="Caesar" endTime="84.95608">4.876171 0.09637713 -1.2107</destination>
+            <destination character="Caesar" endTime="87.8856">4.686831 0.09637713 -1.158764</destination>
+            <destination character="Caesar" endTime="90.81512">4.554206 0.09637716 -1.151655</destination>
+            <destination character="Caesar" endTime="93.74464">4.451811 0.09637716 -1.207188</destination>
+            <destination character="Caesar" endTime="96.67416">4.117653 0.09637716 -1.467455</destination>
+            <destination character="Caesar" endTime="99.60368">4.040637 0.09637716 -1.587099</destination>
+            <destination character="Caesar" endTime="102.5332">3.984534 0.09637716 -1.744823</destination>
+            <destination character="Caesar" endTime="105.4627">3.865915 0.09637716 -1.957892</destination>
+            <destination character="Caesar" endTime="108.3922">3.891187 0.09637716 -2.112429</destination>
+            <destination character="Caesar" endTime="111.3218">3.881526 0.09637716 -2.117671</destination>
+            <destination character="Caesar" endTime="114.2513">3.853293 0.09637716 -2.226666</destination>
+            <destination character="Caesar" endTime="117.1808">3.848706 0.09637713 -2.252302</destination>
+            <destination character="Caesar" endTime="120.1103">3.858608 0.09637716 -2.292912</destination>
+            <destination character="Caesar" endTime="123.0398">3.858608 0.09637716 -2.292912</destination>
+            <destination character="Caesar" endTime="125.9694">7.326026 0.09637719 -1.723185</destination>
+            <destination character="Caesar" endTime="128.8989">7.533303 0.09637716 -1.55875</destination>
+            <destination character="Caesar" endTime="131.8284">7.5499 0.09637716 -1.549743</destination>
+            <destination character="Caesar" endTime="134.7579">7.5499 0.09637716 -1.549743</destination>
+            <destination character="Caesar" endTime="137.6874">7.5499 0.09637716 -1.549743</destination>
+            <destination character="Caesar" endTime="140.617">7.593274 0.09637716 -1.560974</destination>
+            <destination character="Caesar" endTime="143.5465">7.982175 0.09637719 -1.384529</destination>
+            <destination character="Caesar" endTime="146.476">8.657983 0.09637716 -1.06921</destination>
+            <destination character="Caesar" endTime="149.4055">8.674362 0.09637716 -1.060332</destination>
+            <destination character="Caesar" endTime="152.335">8.674362 0.09637716 -1.060332</destination>
+            <destination character="Caesar" endTime="155.2646">8.674362 0.09637716 -1.060332</destination>
+            <destination character="Caesar" endTime="158.1941">8.674362 0.09637716 -1.060332</destination>
+            <destination character="Cassius" endTime="0">2.438996 0.09637716 -2.947074</destination>
+            <destination character="Cassius" endTime="2.682892">2.492371 0.09637716 -2.987897</destination>
+            <destination character="Cassius" endTime="5.365784">2.527546 0.09637716 -3.0148</destination>
+            <destination character="Cassius" endTime="8.048676">2.638774 0.09637716 -3.112112</destination>
+            <destination character="Cassius" endTime="10.73157">2.672572 0.09637716 -3.137913</destination>
+            <destination character="Cassius" endTime="13.41446">2.731946 0.09637716 -3.171158</destination>
+            <destination character="Cassius" endTime="16.09735">2.76494 0.09637713 -3.196396</destination>
+            <destination character="Cassius" endTime="18.78024">2.850495 0.09637716 -3.213997</destination>
+            <destination character="Cassius" endTime="21.46313">2.868789 0.09637716 -3.204066</destination>
+            <destination character="Cassius" endTime="24.14603">2.871001 0.09637716 -3.181631</destination>
+            <destination character="Cassius" endTime="26.82892">2.882428 0.09637716 -3.154113</destination>
+            <destination character="Cassius" endTime="29.51181">2.884671 0.09637716 -3.131463</destination>
+            <destination character="Cassius" endTime="32.1947">2.879974 0.09637716 -3.090872</destination>
+            <destination character="Cassius" endTime="34.87759">2.935481 0.09637716 -3.060771</destination>
+            <destination character="Cassius" endTime="37.56049">2.912389 0.09637716 -3.029759</destination>
+            <destination character="Cassius" endTime="40.24338">2.791634 0.09637716 -2.894406</destination>
+            <destination character="Cassius" endTime="42.92627">2.725553 0.09637716 -2.815021</destination>
+            <destination character="Cassius" endTime="45.60916">2.675461 0.09637716 -2.748072</destination>
+            <destination character="Cassius" endTime="48.29205">2.622624 0.09637716 -2.704964</destination>
+            <destination character="Cassius" endTime="50.97495">2.604856 0.09637716 -2.690461</destination>
+            <destination character="Cassius" endTime="53.65784">2.604856 0.09637716 -2.690461</destination>
+            <destination character="Cassius" endTime="56.34073">2.604856 0.09637716 -2.690461</destination>
+            <destination character="Cassius" endTime="59.02362">2.604856 0.09637716 -2.690461</destination>
+            <destination character="Cassius" endTime="61.70651">2.486477 0.09637713 -2.607342</destination>
+            <destination character="Cassius" endTime="64.3894">2.460964 0.09637719 -2.545905</destination>
+            <destination character="Cassius" endTime="67.0723">2.37839 0.09637716 -2.436822</destination>
+            <destination character="Cassius" endTime="69.75519">2.256011 0.09637716 -2.236394</destination>
+            <destination character="Cassius" endTime="72.43808">2.167678 0.09637716 -2.089404</destination>
+            <destination character="Cassius" endTime="75.12097">2.107801 0.09637716 -1.949156</destination>
+            <destination character="Cassius" endTime="77.80386">2.077714 0.09637716 -1.847303</destination>
+            <destination character="Cassius" endTime="80.48676">2.079895 0.09637716 -1.725412</destination>
+            <destination character="Cassius" endTime="83.16965">2.091447 0.09637716 -1.688575</destination>
+            <destination character="Cassius" endTime="85.85254">2.146472 0.09637716 -1.658732</destination>
+            <destination character="Cassius" endTime="88.53543">2.202379 0.09637716 -1.597679</destination>
+            <destination character="Cassius" endTime="91.21832">2.269643 0.09637716 -1.530281</destination>
+            <destination character="Cassius" endTime="93.90121">2.403841 0.09637716 -1.426434</destination>
+            <destination character="Cassius" endTime="96.58411">2.590502 0.09637716 -1.356267</destination>
+            <destination character="Cassius" endTime="99.267">2.762745 0.09637719 -1.324502</destination>
+            <destination character="Cassius" endTime="101.9499">2.795764 0.09637716 -1.306599</destination>
+            <destination character="Cassius" endTime="104.6328">2.826229 0.09637719 -1.320649</destination>
+            <destination character="Cassius" endTime="107.3157">2.90578 0.09637713 -1.36826</destination>
+            <destination character="Cassius" endTime="109.9986">2.973277 0.09637716 -1.420988</destination>
+            <destination character="Cassius" endTime="112.6815">3.01053 0.09637716 -1.459569</destination>
+            <destination character="Cassius" endTime="115.3643">3.088235 0.09637716 -1.590145</destination>
+            <destination character="Cassius" endTime="118.0472">3.153177 0.09637716 -1.722411</destination>
+            <destination character="Cassius" endTime="120.7301">3.243543 0.09637716 -1.862487</destination>
+            <destination character="Cassius" endTime="123.413">3.297533 0.09637716 -1.964293</destination>
+            <destination character="Cassius" endTime="126.0959">3.307194 0.09637716 -2.036167</destination>
+            <destination character="Cassius" endTime="128.7788">3.306757 0.09637716 -2.112408</destination>
+            <destination character="Cassius" endTime="131.4617">3.306323 0.09637716 -2.18754</destination>
+            <destination character="Cassius" endTime="134.1446">3.279776 0.09637716 -2.251289</destination>
+            <destination character="Cassius" endTime="136.8275">3.2666 0.09637716 -2.282924</destination>
+            <destination character="Cassius" endTime="139.5104">3.273088 0.09637716 -2.303784</destination>
+            <destination character="Cassius" endTime="142.1933">3.269772 0.09637716 -2.329851</destination>
+            <destination character="Cassius" endTime="144.8762">3.285975 0.09637716 -2.345209</destination>
+            <destination character="Cassius" endTime="147.5591">3.298729 0.09637716 -2.38624</destination>
+            <destination character="Cassius" endTime="150.2419">3.311375 0.09637716 -2.426883</destination>
+            <destination character="Decius" endTime="0">4.142441 -1.006527 10.25055</destination>
+            <destination character="Decius" endTime="6.847159">4.377926 -1.006527 9.996256</destination>
+            <destination character="Decius" endTime="13.69432">4.610393 -1.006527 9.572343</destination>
+            <destination character="Decius" endTime="20.54148">4.748677 -1.006527 9.123277</destination>
+            <destination character="Decius" endTime="27.38864">4.900909 -1.006527 8.705926</destination>
+            <destination character="Decius" endTime="34.23579">5.045789 -1.006527 8.385127</destination>
+            <destination character="Decius" endTime="41.08295">5.224299 -1.006527 8.022125</destination>
+            <destination character="Decius" endTime="47.93011">5.397473 -1.006527 7.893648</destination>
+            <destination character="Decius" endTime="54.77728">5.566876 -1.006527 7.767962</destination>
+            <destination character="Decius" endTime="61.62444">5.679573 -1.006527 7.757631</destination>
+            <destination character="Decius" endTime="68.4716">5.893881 -1.006527 8.017307</destination>
+            <destination character="Decius" endTime="75.31876">5.898059 -1.006527 8.691785</destination>
+            <destination character="Decius" endTime="82.16592">5.929044 -1.006527 9.022092</destination>
+            <destination character="Decius" endTime="89.01308">5.923033 -1.006527 9.424309</destination>
+            <destination character="Decius" endTime="95.86024">5.94647 -1.006527 9.520036</destination>
+            <destination character="Decius" endTime="102.7074">6.000348 -1.006527 9.887737</destination>
+            <destination character="Decius" endTime="109.5546">6.150391 -1.006527 10.0554</destination>
+            <destination character="Decius" endTime="116.4017">6.434068 -1.006527 10.03738</destination>
+            <destination character="Decius" endTime="123.2489">6.512076 -1.006527 9.994689</destination>
+            <destination character="Decius" endTime="130.096">6.54818 -1.006527 9.929984</destination>
+            <destination character="Decius" endTime="136.9432">6.619563 -1.006527 9.802066</destination>
+            <destination character="Decius" endTime="143.7903">6.654819 -1.006527 9.738855</destination>
+            <destination character="Decius" endTime="150.6375">6.6695 -1.006527 9.66511</destination>
+            <destination character="Decius" endTime="157.4846">6.704301 -1.006527 9.602883</destination>
+            <destination character="Casca" endTime="0">-4.12851 -1.006527 10.29178</destination>
+            <destination character="Casca" endTime="6.787748">-3.75381 -1.006527 9.686763</destination>
+            <destination character="Casca" endTime="13.5755">-2.786224 -1.006527 8.383322</destination>
+            <destination character="Casca" endTime="20.36324">-2.211088 -1.006527 7.608565</destination>
+            <destination character="Casca" endTime="27.15099">-1.68782 -1.006527 7.284413</destination>
+            <destination character="Casca" endTime="33.93874">-1.430438 -1.006527 7.228152</destination>
+            <destination character="Casca" endTime="40.72649">-1.34162 -1.006527 7.276317</destination>
+            <destination character="Casca" endTime="47.51423">-1.458532 -1.006527 7.708838</destination>
+            <destination character="Casca" endTime="54.30198">-1.361104 -1.006527 8.069545</destination>
+            <destination character="Casca" endTime="61.08973">-1.140212 -1.006527 8.399043</destination>
+            <destination character="Casca" endTime="67.87747">-0.4493394 -1.006527 9.095306</destination>
+            <destination character="Casca" endTime="74.66522">-0.07405615 -1.006527 9.083551</destination>
+            <destination character="Casca" endTime="81.45297">0.6375849 -1.006527 8.447248</destination>
+            <destination character="Casca" endTime="88.24072">1.153106 -1.006527 7.608225</destination>
+            <destination character="Casca" endTime="95.02847">1.48819 -1.006527 7.440603</destination>
+            <destination character="Casca" endTime="101.8162">1.793976 -1.006527 7.520846</destination>
+            <destination character="Casca" endTime="108.604">2.068117 -1.006527 7.500276</destination>
+            <destination character="Casca" endTime="115.3917">2.150707 -1.006527 7.545058</destination>
+            <destination character="Casca" endTime="122.1795">2.265299 -1.006527 7.523579</destination>
+            <destination character="Casca" endTime="128.9672">2.326985 -1.006527 7.557033</destination>
+            <destination character="Casca" endTime="135.755">2.388674 -1.006527 7.590489</destination>
+            <destination character="Casca" endTime="142.5427">2.512066 -1.006527 7.657413</destination>
+            <destination character="Casca" endTime="149.3305">2.553198 -1.006527 7.679727</destination>
+            <destination character="Casca" endTime="156.1182">2.553198 -1.006527 7.679727</destination>
+            <destination character="Cinna" endTime="0">4.07518 0.09637716 1.84345</destination>
+            <destination character="Cinna" endTime="2.217232">4.048475 0.09637716 1.828958</destination>
+            <destination character="Cinna" endTime="4.434464">4.08045 0.09637716 1.712083</destination>
+            <destination character="Cinna" endTime="6.651695">4.147055 0.09637716 1.360635</destination>
+            <destination character="Cinna" endTime="8.868927">4.21888 0.09637716 1.153075</destination>
+            <destination character="Cinna" endTime="11.08616">4.247165 0.09637716 0.777076</destination>
+            <destination character="Cinna" endTime="13.30339">4.338048 0.09637716 0.4219201</destination>
+            <destination character="Cinna" endTime="15.52062">4.449239 0.09637716 0.1698555</destination>
+            <destination character="Cinna" endTime="17.73785">4.588784 0.09637716 -0.0514462</destination>
+            <destination character="Cinna" endTime="19.95509">4.670524 0.09637719 -0.2281828</destination>
+            <destination character="Cinna" endTime="22.17232">4.8129 0.09637716 -0.4527655</destination>
+            <destination character="Cinna" endTime="24.38955">4.929376 0.09637716 -0.5916233</destination>
+            <destination character="Cinna" endTime="26.60678">5.164455 0.09637716 -0.7673481</destination>
+            <destination character="Cinna" endTime="28.82401">5.609848 0.09637716 -0.6056232</destination>
+            <destination character="Cinna" endTime="31.04124">5.674186 0.09637713 -0.3276083</destination>
+            <destination character="Cinna" endTime="33.25848">5.697992 0.09637716 -0.03121591</destination>
+            <destination character="Cinna" endTime="35.47571">5.622022 0.09637716 0.2878501</destination>
+            <destination character="Cinna" endTime="37.69294">5.496658 0.09637716 0.5710984</destination>
+            <destination character="Cinna" endTime="39.91017">5.378707 0.09637716 0.8108066</destination>
+            <destination character="Cinna" endTime="42.1274">5.284771 0.09637716 0.9710679</destination>
+            <destination character="Cinna" endTime="44.34464">5.180224 0.09637716 1.059278</destination>
+            <destination character="Cinna" endTime="46.56187">5.347989 0.09637716 0.9341319</destination>
+            <destination character="Cinna" endTime="48.7791">5.597058 0.09637716 0.6917206</destination>
+            <destination character="Cinna" endTime="50.99633">5.911931 0.09637719 0.1432829</destination>
+            <destination character="Cinna" endTime="53.21356">6.008497 0.09637716 -0.146292</destination>
+            <destination character="Cinna" endTime="55.43079">5.966844 0.09637716 -0.2238615</destination>
+            <destination character="Cinna" endTime="57.64803">5.861207 0.09637716 -0.1426497</destination>
+            <destination character="Cinna" endTime="59.86526">5.652454 0.09637713 0.3980761</destination>
+            <destination character="Cinna" endTime="62.08249">5.633864 0.09637716 1.018792</destination>
+            <destination character="Cinna" endTime="64.29972">5.759162 0.09637719 1.300387</destination>
+            <destination character="Cinna" endTime="66.51695">5.927042 0.09637713 1.319402</destination>
+            <destination character="Cinna" endTime="68.73418">6.159257 0.09637716 1.029979</destination>
+            <destination character="Cinna" endTime="70.95142">6.319923 0.09637716 0.6974262</destination>
+            <destination character="Cinna" endTime="73.16865">6.395744 0.09637716 0.3763717</destination>
+            <destination character="Cinna" endTime="75.38588">6.275551 0.09637713 0.6733547</destination>
+            <destination character="Cinna" endTime="77.60311">6.081171 0.09637713 1.33177</destination>
+            <destination character="Cinna" endTime="79.82034">6.229798 0.09637719 1.776861</destination>
+            <destination character="Cinna" endTime="82.03757">6.459748 0.09637713 1.86415</destination>
+            <destination character="Cinna" endTime="84.25481">6.577706 0.09637716 1.853962</destination>
+            <destination character="Cinna" endTime="86.47204">6.714112 0.09637716 1.782174</destination>
+            <destination character="Cinna" endTime="88.68927">6.882767 0.09637716 1.731216</destination>
+            <destination character="Cinna" endTime="90.9065">6.882767 0.09637716 1.731216</destination>
+            <destination character="Cinna" endTime="93.12373">6.619771 0.09637716 1.51859</destination>
+            <destination character="Cinna" endTime="95.34097">6.584602 0.09637716 1.499516</destination>
+            <destination character="Cinna" endTime="97.5582">6.584602 0.09637716 1.499516</destination>
+            <destination character="Cinna" endTime="99.77543">6.584602 0.09637716 1.499516</destination>
+            <destination character="Cinna" endTime="101.9927">6.584602 0.09637716 1.499516</destination>
+            <destination character="Cinna" endTime="104.2099">6.602858 0.09637716 1.405899</destination>
+            <destination character="Cinna" endTime="106.4271">6.914102 0.09637716 1.241934</destination>
+            <destination character="Cinna" endTime="108.6444">7.101629 0.09637716 1.059396</destination>
+            <destination character="Cinna" endTime="110.8616">7.229676 0.09637719 0.8874288</destination>
+            <destination character="Cinna" endTime="113.0788">7.310152 0.09637716 0.6995754</destination>
+            <destination character="Cinna" endTime="115.2961">7.404842 0.09637716 0.5834486</destination>
+            <destination character="Cinna" endTime="117.5133">7.632418 0.09637716 0.3608608</destination>
+            <destination character="Cinna" endTime="119.7305">7.743068 0.09637716 0.604399</destination>
+            <destination character="Cinna" endTime="121.9477">7.843961 0.09637716 1.017488</destination>
+            <destination character="Cinna" endTime="124.165">7.857305 0.09637716 1.169035</destination>
+            <destination character="Cinna" endTime="126.3822">7.747967 0.09637713 1.379183</destination>
+            <destination character="Cinna" endTime="128.5994">7.444297 0.09637713 1.338441</destination>
+            <destination character="Cinna" endTime="130.8167">7.388671 0.09637716 1.308277</destination>
+            <destination character="Cinna" endTime="133.0339">7.460383 0.09637716 1.042165</destination>
+            <destination character="Cinna" endTime="135.2511">7.73228 0.09637716 0.7885847</destination>
+            <destination character="Cinna" endTime="137.4684">8.056152 0.09637716 0.8009344</destination>
+            <destination character="Cinna" endTime="139.6856">8.148772 0.09637716 0.8511612</destination>
+            <destination character="Cinna" endTime="141.9028">8.148772 0.09637716 0.8511612</destination>
+            <destination character="Cinna" endTime="144.12">8.148772 0.09637716 0.8511612</destination>
+            <destination character="Cinna" endTime="146.3372">8.148772 0.09637716 0.8511612</destination>
+            <destination character="Cinna" endTime="148.5545">8.148772 0.09637716 0.8511612</destination>
+            <destination character="Cinna" endTime="150.7717">8.148772 0.09637716 0.8511612</destination>
+            <destination character="Cinna" endTime="152.9889">8.179034 0.09637716 0.814232</destination>
+            <destination character="Cinna" endTime="155.2061">8.385742 0.09637716 0.2083136</destination>
+            <destination character="Cinna" endTime="157.4234">8.450989 0.09637716 0.08461452</destination>
+            <destination character="Cinna" endTime="159.6406">8.477263 0.09637716 0.05433297</destination>
+            <destination character="Cinna" endTime="161.8578">8.481117 0.09637716 0.1458837</destination>
+            <destination character="Cinna" endTime="164.075">8.548599 0.09637716 0.6062088</destination>
+            <destination character="Metellus" endTime="0">-7.262614 -1.006527 9.450293</destination>
+            <destination character="Metellus" endTime="3.401616">-7.289979 -1.006527 9.435456</destination>
+            <destination character="Metellus" endTime="6.803232">-7.280327 -1.006527 9.293927</destination>
+            <destination character="Metellus" endTime="10.20485">-7.002753 -1.006527 8.872386</destination>
+            <destination character="Metellus" endTime="13.60646">-6.979152 -1.006527 8.47099</destination>
+            <destination character="Metellus" endTime="17.00808">-6.545804 -1.006527 7.78588</destination>
+            <destination character="Metellus" endTime="20.40969">-6.350132 -1.006527 7.393428</destination>
+            <destination character="Metellus" endTime="23.81131">-6.060894 -1.006527 6.952833</destination>
+            <destination character="Metellus" endTime="27.21292">-5.834084 -1.006527 6.617232</destination>
+            <destination character="Metellus" endTime="30.61454">-5.663435 -1.006527 6.376617</destination>
+            <destination character="Metellus" endTime="34.01616">-2.330895 0.09637716 3.24738</destination>
+            <destination character="Metellus" endTime="37.41777">-2.240875 0.09637716 3.052468</destination>
+            <destination character="Metellus" endTime="40.81939">-1.847147 0.09637713 2.571216</destination>
+            <destination character="Metellus" endTime="44.221">-1.750593 0.09637713 2.403418</destination>
+            <destination character="Metellus" endTime="47.62262">-1.419124 0.09637716 2.089935</destination>
+            <destination character="Metellus" endTime="51.02423">-1.193456 0.09637716 1.87652</destination>
+            <destination character="Metellus" endTime="54.42585">-0.8867812 0.09637713 1.656849</destination>
+            <destination character="Metellus" endTime="57.82746">-0.3508382 0.09637713 1.169021</destination>
+            <destination character="Metellus" endTime="61.22908">0.1913247 0.09637719 0.6516389</destination>
+            <destination character="Metellus" endTime="64.63069">0.5363839 0.09637719 0.3429675</destination>
+            <destination character="Metellus" endTime="68.03231">0.6135874 0.09637716 0.2896192</destination>
+            <destination character="Metellus" endTime="71.43393">0.7207241 0.09637716 0.2072389</destination>
+            <destination character="Metellus" endTime="74.83555">0.7784483 0.09637716 0.1923251</destination>
+            <destination character="Metellus" endTime="78.23717">0.8054261 0.09637713 0.2069695</destination>
+            <destination character="Metellus" endTime="81.63879">0.8458886 0.09637716 0.228905</destination>
+            <destination character="Metellus" endTime="85.04041">0.8863654 0.09637713 0.2508533</destination>
+            <destination character="Metellus" endTime="88.44202">0.8831239 0.09637716 0.2953091</destination>
+            <destination character="Metellus" endTime="91.84364">0.866282 0.09637719 0.3327016</destination>
+            <destination character="Metellus" endTime="95.24526">0.8493342 0.09637716 0.3703377</destination>
+            <destination character="Metellus" endTime="98.64688">0.8629546 0.09637716 0.3777298</destination>
+            <destination character="Metellus" endTime="102.0485">0.815109 0.09637716 0.4463569</destination>
+            <destination character="Metellus" endTime="105.4501">0.7840555 0.09637716 0.4772941</destination>
+            <destination character="Metellus" endTime="108.8517">0.7840555 0.09637716 0.4772941</destination>
+            <destination character="Metellus" endTime="112.2534">0.7840555 0.09637716 0.4772941</destination>
+            <destination character="Metellus" endTime="115.655">0.7840555 0.09637716 0.4772941</destination>
+            <destination character="Metellus" endTime="119.0566">0.7840555 0.09637716 0.4772941</destination>
+            <destination character="Metellus" endTime="122.4582">0.7840555 0.09637716 0.4772941</destination>
+            <destination character="Metellus" endTime="125.8598">7.477131 0.09637719 -1.429294</destination>
+            <destination character="Metellus" endTime="129.2614">7.86367 0.09637716 -1.109734</destination>
+            <destination character="Metellus" endTime="132.6631">7.995971 0.09637719 -0.9819829</destination>
+            <destination character="Metellus" endTime="136.0647">8.115586 0.09637716 -1.06491</destination>
+            <destination character="Metellus" endTime="139.4663">8.679302 0.09637716 -0.9892516</destination>
+            <destination character="Metellus" endTime="142.8679">8.869091 0.09637716 -0.8863218</destination>
+            <destination character="Metellus" endTime="146.2695">8.877348 0.09637716 -0.8818405</destination>
+            <destination character="Metellus" endTime="149.6711">8.877348 0.09637716 -0.8818405</destination>
+            <destination character="Metellus" endTime="153.0727">8.877348 0.09637716 -0.8818405</destination>
+            <destination character="Metellus" endTime="156.4743">8.874073 0.09637716 -0.9179518</destination>
+          </destinations>
+          <actions />
+          <lines>
+            <line character="Metellus" startTime="0" pace="1">Most high, most mighty, and most puissant Caesar!  Metellus Cimber throws before thy seat an humble heart.</line>
+            <line character="Caesar" startTime="7" pace="1.6">I must prevent thee, Cimber.  These couchings and these lowly courtesies might fire the bloof of ordinary men, and turn preordinance and first decree into the lane of children.  Be not fond to think that Caesar bears such rebel blood that will be thawd from the true quality with that which melteth fools--I mean sweet words, low-crooked curtsies, and base spaniel fawning.</line>
+            <line character="Caesar" startTime="40" pace="1.65">Thy brother by decree is banished.</line>
+            <line character="Caesar" startTime="43" pace="1">If thou doest bend, and pray, and fawn for him, I spurn thee like a cur out of my way!</line>
+            <line character="Caesar" startTime="50" pace="1.5">Know, Caesar doth not wrong, nor without cause will he be satisfied.</line>
+            <line character="Metellus" startTime="55.5" pace="1">Is there no voice more worthy than my own to sound more sweetly in great Caesar's ears for the repealing of my banished brother?</line>
+            <line character="Brutus" startTime="64" pace="1">I kiss thy hand, but not in flattery, Caesar, desiring thee, that Publius Cimber may have an immediate freedom of repeal.</line>
+            <line character="Caesar" startTime="71" pace="1">What, Brutus?</line>
+            <line character="Cassius" startTime="71.8" pace="1.6">Pardon, Caesar!  Caesar, pardon!</line>
+            <line character="Cassius" startTime="74.4" pace="1">As low as to thy foot doth Cassius fall to beg enfranchisement for Publius Cimber.</line>
+            <line character="Caesar" startTime="78.4" pace="0.95">I could be well moved, if I were as you.  If I could pray to move, prayers would move me.  But I am constant as the northern star, of whose true fixed and resting quality, there is no fellow in the firmanment.</line>
+            <line character="Caesar" startTime="91" pace="1.65">The skies are painted with unnumbered sparks; they are all fire, and every one doth shine; but there's but one in all doth hold his place.  So in the world: 'tis furnished well with men, and men are flesh and blood, and apprehensive; yet in the number I do know but one that unassailable holds on his rank unshaked of motion, and that I am he, let me a little show it, even in this:</line>
+            <line character="Caesar" startTime="128.7" pace="0.7">That I was constant Cimber should be banished, and constant do remain to keep him so.</line>
+            <line character="Cinna" startTime="132" pace="1.5">O Caesar--</line>
+            <line character="Caesar" startTime="133.5" pace="0.7">Hence!  Wilt thou lift up Olympus?</line>
+            <line character="Decius" startTime="135" pace="1.75">Great Caesar--</line>
+            <line character="Caesar" startTime="136" pace="1.75">Doth not Brutus bootless kneel?</line>
+            <line character="Casca" startTime="139" pace="1">Speak, hands, for me!</line>
+            <line character="Casca" startTime="141" pace="2">Ah!</line>
+            <line character="Caesar" startTime="141" pace="3">Argh!</line>
+            <line character="Caesar" startTime="141.8" pace="3">Uh!</line>
+            <line character="Cinna" startTime="141.8" pace="2">Ah!</line>
+            <line character="Decius" startTime="143.5" pace="3">Gahhh!</line>
+            <line character="Cassius" startTime="145" pace="3">Aahh!</line>
+            <line character="Caesar" startTime="145" pace="3">Aahh!</line>
+            <line character="Metellus" startTime="147" pace="2">Uh! Guh!</line>
+            <line character="Cassius" startTime="148.5" pace="3">Uh!</line>
+            <line character="Caesar" startTime="149" pace="2">Ugh.</line>
+            <line character="Caesar" startTime="150" pace="3">(Exasperated breath.)</line>
+            <line character="Caesar" startTime="152.5" pace="2">Et tu Brute?---</line>
+            <line character="Brutus" startTime="155" pace="1">Ahhhhh! (Slits Caesar's throat.  He falls.)</line>
+            <line character="Caesar" startTime="157.4" pace="3">(Exasperated breaths.) Then fall, Caesar! (More of Terry's exasperated breaths.  Much  more of Terry's exasperated breaths.)</line>
+          </lines>
+          <beats>0</beats>
+        </scene>
+      </scenes>
+    </act>
+  </acts>
+  <annotations>
+    <annotation startTime="0" sd="true" endTime="14" character="Romeo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non risus dui. Suspendisse at tortor non lacus posuere fermentum. Integer tincidunt, diam at placerat lobortis, elit velit cursus urna, eget elementum nisl quam sit amet nibh. Sed malesuada tortor eu est hendrerit a feugiat lacus lobortis.</annotation>
+    <annotation startTime="1" sd="false" endTime="14">Praesent molestie sollicitudin dolor, id molestie nulla gravida ut. Pellentesque arcu arcu, volutpat placerat iaculis nec, interdum sed mauris. Vestibulum vel libero nunc, ac iaculis justo. Pellentesque volutpat malesuada augue at imperdiet.</annotation>
+    <annotation startTime="7" sd="false" endTime="9" character="Juliet">Etiam auctor erat ac mauris malesuada id venenatis tortor rhoncus. Donec aliquam tincidunt blandit. Sed non nisi at tellus faucibus consequat ac vitae nulla.</annotation>
+  </annotations>
+  <views>
+    <view id="0">
+      <location>-4.385894 3.342669 -1.299346</location>
+      <lookAt>-1.910699 -0.3874767 0.9276303</lookAt>
+      <name>Risers L</name>
+    </view>
+    <view id="1">
+      <location>-1.891978 3.203951 -6.497033</location>
+      <lookAt>0.1781867 -0.2721663 -3.559172</lookAt>
+      <name>HL</name>
+    </view>
+    <view id="2">
+      <location>3.351589 2.359602 -0.9326224</location>
+      <lookAt>-0.228111 -0.424998 1.17255</lookAt>
+      <name>Risers</name>
+    </view>
+    <view id="3">
+      <location>5.116447 1.706296 -5.578904</location>
+      <lookAt>2.196338 -1.078587 -2.626381</lookAt>
+      <name>HR Stage</name>
+    </view>
+    <view id="4">
+      <location>7.861344 4.324086 -8.35428</location>
+      <lookAt>5.16193 1.120389 -5.624904</lookAt>
+      <name>HR Zout</name>
+    </view>
+    <view id="5">
+      <location>8.653896 4.658271 -1.02129</location>
+      <lookAt>5.997387 0.4251146 -0.868488</lookAt>
+      <name>FHR</name>
+    </view>
+    <view id="HL ZOut">
+      <location>-2.566607 4.295998 -7.45443</location>
+      <lookAt>-0.8351558 0.3004479 -4.997265</lookAt>
+      <name>HL ZOut</name>
+    </view>
+  </views>
+</play>

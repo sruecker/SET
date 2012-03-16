@@ -1,0 +1,28 @@
+<play>
+  <stage>
+    <model>CastleSet</model>
+  </stage>
+  <cast>
+    <character id="Character0">
+      <name>Character 0</name>
+      <color>0.000857711 0.4177545 0.6763434</color>
+      <model>PersonBigPrefab</model>
+    </character>
+  </cast>
+  <acts>
+    <act id="act1">
+      <name>Act 1</name>
+      <scenes>
+        <scene id="scene1">
+          <name>Chapter 1</name>
+          <destinations>
+            <destination character="Character0" endTime="0">-2.9258 2.547397 0.1169651</destination>
+          </destinations>
+          <actions />
+        </scene>
+      </scenes>
+    </act>
+  </acts>
+  <annotations />
+  <views />
+</play>

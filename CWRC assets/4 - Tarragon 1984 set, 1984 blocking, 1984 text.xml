@@ -1,0 +1,129 @@
+<play>
+  <stage>
+    <model>WMDTarragon</model>
+  </stage>
+  <cast>
+    <character id="Cape">
+      <name>Cape</name>
+      <color>0.1 0.1 0.1</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Glidden">
+      <name>Glidden</name>
+      <color>0.71 0.16 0.51</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Drum">
+      <name>Drum</name>
+      <color>1 0.88 0.79</color>
+      <model>SoundEmitterPrefab</model>
+    </character>
+    <character id="Shawn">
+      <name>Shawn</name>
+      <color>0.005340739 0.0122074 0.5453352</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Sasha">
+      <name>Sasha</name>
+      <color>0.1 0.3 0.3</color>
+      <model>PersonBigPrefab</model>
+    </character>
+  </cast>
+  <acts>
+    <act id="act1">
+      <name>Act 1</name>
+      <scenes>
+        <scene id="scene1">
+          <name>Chapter 1</name>
+          <destinations>
+            <destination character="Cape" endTime="0">43.65727 2.228121 5.735919</destination>
+            <destination character="Cape" endTime="1">43.64655 2.151921 5.374255</destination>
+            <destination character="Cape" endTime="2">43.63411 1.999521 4.881875</destination>
+            <destination character="Cape" endTime="3">43.56084 1.847121 4.496723</destination>
+            <destination character="Cape" endTime="4">43.59761 1.69472 4.136457</destination>
+            <destination character="Cape" endTime="10">43.62294 1.701298 0.670083</destination>
+            <destination character="Cape" endTime="18">40.47729 1.999518 -3.825433</destination>
+            <destination character="Cape" endTime="19">40.80915 1.999518 -4.188439</destination>
+            <destination character="Cape" endTime="20">41.08627 2.151917 -4.524505</destination>
+            <destination character="Cape" endTime="21">41.78809 2.151917 -4.469587</destination>
+            <destination character="Cape" endTime="21.5">41.9705 1.999517 -4.256694</destination>
+            <destination character="Cape" endTime="22">42.13433 1.847117 -3.999479</destination>
+            <destination character="Cape" endTime="22.5">42.33337 1.694717 -3.804562</destination>
+            <destination character="Cape" endTime="23">42.54338 1.542318 -3.471776</destination>
+            <destination character="Cape" endTime="27">43.65178 1.542318 -2.033417</destination>
+            <destination character="Cape" endTime="29">43.6888 1.542318 -1.482165</destination>
+            <destination character="Glidden" endTime="0">42.84801 2.761517 -6.68069</destination>
+            <destination character="Glidden" endTime="74">42.84801 2.761517 -6.68069</destination>
+            <destination character="Glidden" endTime="75">44.11436 2.761517 -6.634009</destination>
+            <destination character="Glidden" endTime="76">44.10764 2.761517 -5.211236</destination>
+            <destination character="Glidden" endTime="95">44.10764 2.761517 -5.211236</destination>
+            <destination character="Drum" endTime="0">47.6722 1.542316 -7.540915</destination>
+            <destination character="Shawn" endTime="0">47.73663 1.085119 0.9182244</destination>
+            <destination character="Shawn" endTime="0.01">47.65663 1.085119 0.8182244</destination>
+            <destination character="Sasha" endTime="0">42.74641 1.69472 3.939822</destination>
+            <destination character="Sasha" endTime="0.01">42.74641 1.69472 3.839822</destination>
+          </destinations>
+          <actions />
+          <lines>
+            <line character="Drum" startTime="0" pace="105.3333">Drumming.</line>
+            <line character="Cape" startTime="32" pace="0.8203957">Did it even happen? Sure it happened. It happened, I’m not crazy, I know! I arrived at the Bloor Street bridge, and I climbed up on the wall, right? And I was gonna do it, I was just about to jump when I heard this drum sound, as if the whole city knew, boom boom boom boom BOOM BOOM BOOM BOOM BOOM BOOM (speaks in small strange voice) “I’m not gonna hurt you.”</line>
+            <line character="Cape" startTime="51" pace="1">Who’s that? A cop? There’s nobody! Just! A white dog! Beside me! How did it…</line>
+            <line character="Cape" startTime="56" pace="1">“YOU’RE JUMPING TO HELL” the dog, the dog spoke.</line>
+            <line character="Cape" startTime="59" pace="2">So I…answered-</line>
+            <line character="Cape" startTime="60.5" pace="1">“BUT I’M LIVING IN HELL…ANYWAY.”</line>
+            <line character="Cape" startTime="62.5" pace="0.75">“YOU’RE LIVING IN HELL, ‘CAUSE YOU AIN’T DONE YOUR MISSION.”</line>
+            <line character="Cape" startTime="65" pace="2">“WHAT’S THAT?”</line>
+            <line character="Cape" startTime="66.5" pace="0.65">“TO SAVE YOUR FATHER FROM DEATH, TO SAVE YOUR FATHER FROM DEATH.”</line>
+            <line character="Cape" startTime="69.36667" pace="0.6491228">The dog…spoke! I’m not kidding! This dog actually spoke she saved me from the plunge; it was the weirdest-</line>
+            <line character="Glidden" startTime="73.36667" pace="5.533333">OUT OF THE TUNNEL, […]</line>
+          </lines>
+          <beats>0</beats>
+        </scene>
+      </scenes>
+    </act>
+  </acts>
+  <annotations>
+    <annotation startTime="50" sd="false" endTime="51" character="Cape">(Turns quickly.)</annotation>
+    <annotation startTime="73.5" sd="false" endTime="74.5" character="Glidden">(GLIDDEN rushes out of bed, and out of his room onto the landing.)</annotation>
+    <annotation startTime="80" sd="false" endTime="85">LePage, Sue, designer. Technical Drawings for White Biting Dog. Tarragon Theatre, Toronto, 1984. L.W. Conolly Theatre Archives, Guelph, Ontario.</annotation>
+    <annotation startTime="85" sd="false" endTime="90">Marshall, Raymond, stage manager. White Biting Dog. By Judith Thompson. Promptscript. L.W. Conolly Theatre Archives. Guelph, Ontario.</annotation>
+    <annotation startTime="90" sd="false" endTime="95">White Biting Dog. Archival video. Dir. Bill Glassco. Perf. Jackie Burroughs, Clare Coulter, Hardee T. Lineham, Stephen Ouimette, Larry Reynolds. Tarragon Theatre Private Collection, 1984. VHS.</annotation>
+  </annotations>
+  <views>
+    <view id="0">
+      <location>-4.385894 3.342669 -1.299346</location>
+      <lookAt>-1.910699 -0.3874767 0.9276303</lookAt>
+      <name>Risers L</name>
+    </view>
+    <view id="1">
+      <location>-1.891978 3.203951 -6.497033</location>
+      <lookAt>0.1781867 -0.2721663 -3.559172</lookAt>
+      <name>HL</name>
+    </view>
+    <view id="2">
+      <location>3.351589 2.359602 -0.9326224</location>
+      <lookAt>-0.228111 -0.424998 1.17255</lookAt>
+      <name>Risers</name>
+    </view>
+    <view id="3">
+      <location>5.116447 1.706296 -5.578904</location>
+      <lookAt>2.196338 -1.078587 -2.626381</lookAt>
+      <name>HR Stage</name>
+    </view>
+    <view id="4">
+      <location>7.861344 4.324086 -8.35428</location>
+      <lookAt>5.16193 1.120389 -5.624904</lookAt>
+      <name>HR Zout</name>
+    </view>
+    <view id="5">
+      <location>8.653896 4.658271 -1.02129</location>
+      <lookAt>5.997387 0.4251146 -0.868488</lookAt>
+      <name>FHR</name>
+    </view>
+    <view id="HL ZOut">
+      <location>-2.566607 4.295998 -7.45443</location>
+      <lookAt>-0.8351558 0.3004479 -4.997265</lookAt>
+      <name>HL ZOut</name>
+    </view>
+  </views>
+</play>

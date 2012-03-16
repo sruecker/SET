@@ -1,0 +1,120 @@
+fileFormatVersion: 1
+guid: 726df60f19c434afcbdd2d198600472e
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 1
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    backStageLight:
+    - 100000
+    - 400000
+    ambientLight1:
+    - 100002
+    - 400002
+    //RootNode:
+    - 100004
+    - 400004
+    - 11100000
+    canopyLight:
+    - 100006
+    - 400006
+    canopyUpLight:
+    - 100008
+    - 400008
+    mainStageFloor:
+    - 100010
+    - 400010
+    - 3300000
+    - 2300000
+    - 6400012
+    seatingArea:
+    - 100012
+    - 400012
+    - 3300002
+    - 2300002
+    - 6400014
+    backWall:
+    - 100014
+    - 400014
+    - 3300004
+    - 2300004
+    - 6400000
+    transform:
+    - 100016
+    - 400016
+    stageStructures:
+    - 100018
+    - 400018
+    - 3300006
+    - 2300006
+    - 6400002
+    outsideHallway:
+    - 100020
+    - 400020
+    - 3300008
+    - 2300008
+    - 6400010
+    canopy:
+    - 100022
+    - 400022
+    - 3300010
+    - 2300010
+    - 6400006
+    outsideHallwayFloor:
+    - 100024
+    - 400024
+    - 3300012
+    - 2300012
+    - 6400004
+    innerCieling:
+    - 100026
+    - 400026
+    - 3300014
+    - 2300014
+    - 6400008
+    TofA:
+    - 100028
+    - 400028
+    stageBoundary:
+    - 100030
+    - 400030
+    - 3300016
+    - 2300016
+    - 6400016
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: TofAFixed:seatingArea
+    4300002: TofAFixed:mainStageFloor
+    4300004: TofAFixed:outsideHallway
+    4300006: TofAFixed:innerCieling
+    4300008: TofAFixed:canopy
+    4300010: TofAFixed:outsideHallwayFloor
+    4300012: TofAFixed:stageStructures
+    4300014: TofAFixed:BackWall
+    4300016: seatingArea
+    4300018: mainStageFloor
+    4300020: outsideHallway
+    4300022: innerCieling
+    4300024: canopy
+    4300026: outsideHallwayFloor
+    4300028: stageStructures
+    4300030: backWall
+    4300032: stageBoundary

@@ -1,0 +1,271 @@
+fileFormatVersion: 1
+guid: c027c1783ab38405ba5f1ad24461b81e
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    Caesar:backGroundDecor:
+    - 100000
+    - 400000
+    Caesar:Obj30:
+    - 100002
+    - 400002
+    - 3300000
+    - 2300000
+    Caesar:Obj18:
+    - 100004
+    - 400004
+    - 3300002
+    - 2300002
+    Caesar:Obj19:
+    - 100006
+    - 400006
+    - 3300004
+    - 2300004
+    Caesar:Obj21:
+    - 100008
+    - 400008
+    - 3300006
+    - 2300006
+    Caesar:Obj20:
+    - 100010
+    - 400010
+    - 3300008
+    - 2300008
+    Caesar:Obj23:
+    - 100012
+    - 400012
+    - 3300010
+    - 2300010
+    Caesar:Obj24:
+    - 100014
+    - 400014
+    - 3300012
+    - 2300012
+    Caesar:Obj25:
+    - 100016
+    - 400016
+    - 3300014
+    - 2300014
+    Caesar:Obj29:
+    - 100018
+    - 400018
+    - 3300016
+    - 2300016
+    Caesar:Obj16:
+    - 100020
+    - 400020
+    - 3300018
+    - 2300018
+    Caesar:Obj28:
+    - 100022
+    - 400022
+    - 3300020
+    - 2300020
+    Caesar:Obj15:
+    - 100024
+    - 400024
+    - 3300022
+    - 2300022
+    Caesar:Obj14:
+    - 100026
+    - 400026
+    - 3300024
+    - 2300024
+    Caesar:Obj17:
+    - 100028
+    - 400028
+    - 3300026
+    - 2300026
+    Caesar:Obj27:
+    - 100030
+    - 400030
+    - 3300028
+    - 2300028
+    Caesar:Obj26:
+    - 100032
+    - 400032
+    - 3300030
+    - 2300030
+    Caesar:Obj2:
+    - 100034
+    - 400034
+    - 3300032
+    - 2300032
+    Caesar:debree:
+    - 100036
+    - 400036
+    Caesar:Obj22:
+    - 100038
+    - 400038
+    - 3300034
+    - 2300034
+    Caesar:Obj8:
+    - 100040
+    - 400040
+    - 3300036
+    - 2300036
+    Caesar:Obj6:
+    - 100042
+    - 400042
+    - 3300038
+    - 2300038
+    Caesar:Obj9:
+    - 100044
+    - 400044
+    - 3300040
+    - 2300040
+    Caesar:Obj4:
+    - 100046
+    - 400046
+    - 3300042
+    - 2300042
+    Caesar:Obj5:
+    - 100048
+    - 400048
+    - 3300044
+    - 2300044
+    Caesar:Obj7:
+    - 100050
+    - 400050
+    - 3300046
+    - 2300046
+    Caesar:statue:
+    - 100052
+    - 400052
+    stageBoundary:
+    - 100054
+    - 400054
+    - 3300048
+    - 2300048
+    Caesar:Obj3:
+    - 100056
+    - 400056
+    - 3300050
+    - 2300050
+    backStageLight:
+    - 100058
+    - 400058
+    group:
+    - 100060
+    - 400060
+    backWall:
+    - 100062
+    - 400062
+    - 3300052
+    - 2300052
+    ambientLight1:
+    - 100064
+    - 400064
+    canopyLight:
+    - 100066
+    - 400066
+    stageStructures:
+    - 100068
+    - 400068
+    - 3300054
+    - 2300054
+    canopyUpLight:
+    - 100070
+    - 400070
+    canopy:
+    - 100072
+    - 400072
+    - 3300056
+    - 2300056
+    innerCieling:
+    - 100074
+    - 400074
+    - 3300058
+    - 2300058
+    outsideHallwayFloor:
+    - 100076
+    - 400076
+    - 3300060
+    - 2300060
+    seatingArea:
+    - 100078
+    - 400078
+    - 3300062
+    - 2300062
+    transform:
+    - 100080
+    - 400080
+    outsideHallway:
+    - 100082
+    - 400082
+    - 3300064
+    - 2300064
+    Caesar:Obj13:
+    - 100084
+    - 400084
+    - 3300066
+    - 2300066
+    //RootNode:
+    - 100086
+    - 400086
+    - 11100000
+    mainStageFloor:
+    - 100088
+    - 400088
+    - 3300068
+    - 2300068
+    TofA:
+    - 100090
+    - 400090
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: seatingArea
+    4300002: mainStageFloor
+    4300004: outsideHallway
+    4300006: innerCieling
+    4300008: canopy
+    4300010: outsideHallwayFloor
+    4300012: stageStructures
+    4300014: backWall
+    4300016: stageBoundary
+    4300018: Caesar:Obj3
+    4300020: Caesar:Obj5
+    4300022: Caesar:Obj4
+    4300024: Caesar:Obj7
+    4300026: Caesar:Obj6
+    4300028: Caesar:Obj8
+    4300030: Caesar:Obj9
+    4300032: Caesar:Obj22
+    4300034: Caesar:Obj26
+    4300036: Caesar:Obj27
+    4300038: Caesar:Obj2
+    4300040: Caesar:Obj14
+    4300042: Caesar:Obj15
+    4300044: Caesar:Obj17
+    4300046: Caesar:Obj16
+    4300048: Caesar:Obj29
+    4300050: Caesar:Obj28
+    4300052: Caesar:Obj23
+    4300054: Caesar:Obj24
+    4300056: Caesar:Obj25
+    4300058: Caesar:Obj19
+    4300060: Caesar:Obj20
+    4300062: Caesar:Obj21
+    4300064: Caesar:Obj18
+    4300066: Caesar:Obj30
+    4300068: Caesar:Obj13

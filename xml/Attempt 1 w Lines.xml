@@ -1,0 +1,214 @@
+<play>
+  <stage>
+    <model>TofA</model>
+    <set>Caesar</set>
+  </stage>
+  <cast>
+    <character id="Brutus">
+      <name>Brutus</name>
+      <color>0.1 0.1 0.1</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Caesar">
+      <name>Caesar</name>
+      <color>0.005340739 0.0122074 0.5453352</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Cassius">
+      <name>Cassius</name>
+      <color>0.1 0.3 0.3</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Decius">
+      <name>Decius</name>
+      <color>0.71 0.16 0.51</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Casca">
+      <name>Casca</name>
+      <color>0.56 0.39 0.25</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Cinna">
+      <name>Cinna</name>
+      <color>1 0.88 0.79</color>
+      <model>PersonBigPrefab</model>
+    </character>
+    <character id="Metellus">
+      <name>Metellus</name>
+      <color>0.16 0.51 0.71</color>
+      <model>PersonBigPrefab</model>
+    </character>
+  </cast>
+  <acts>
+    <act id="act1">
+      <name>Act 1</name>
+      <scenes>
+        <scene id="scene1">
+          <name>Chapter 1</name>
+          <destinations>
+            <destination character="Brutus" endTime="0">-2.373102 0.1478295 -0.3390169</destination>
+            <destination character="Brutus" endTime="64.41059">-2.373102 0.1478295 -0.3390169</destination>
+            <destination character="Brutus" endTime="66.32064">-1.216038 -0.1537012 -1.603194</destination>
+            <destination character="Brutus" endTime="66.94769">-1.204316 -0.2250008 -2.323171</destination>
+            <destination character="Brutus" endTime="67.64474">-0.5676675 -0.3871232 -2.828506</destination>
+            <destination character="Brutus" endTime="70.97474">2.343947 -0.4856454 -2.575701</destination>
+            <destination character="Brutus" endTime="142.5744">2.343947 -0.4856454 -2.575701</destination>
+            <destination character="Brutus" endTime="144.1818">1.305003 -0.4856454 -1.422039</destination>
+            <destination character="Brutus" endTime="148.6992">1.305003 -0.4856454 -1.422039</destination>
+            <destination character="Brutus" endTime="149.4975">1.157563 -0.4856454 -1.88255</destination>
+            <destination character="Caesar" endTime="0">2.096809 -0.4856454 -3.187147</destination>
+            <destination character="Caesar" endTime="46.44671">2.096809 -0.4856454 -3.187147</destination>
+            <destination character="Caesar" endTime="50.3646">-0.100375 -0.4856454 -4.82832</destination>
+            <destination character="Caesar" endTime="50.8017">-0.1198179 -0.4856454 -4.765665</destination>
+            <destination character="Caesar" endTime="52.35521">-0.1198179 -0.4856454 -4.765665</destination>
+            <destination character="Caesar" endTime="58">2.425483 -0.4856454 -2.906943</destination>
+            <destination character="Caesar" endTime="129.4571">2.425483 -0.4856454 -2.906943</destination>
+            <destination character="Caesar" endTime="131.403">2.902816 -0.4856454 -2.528027</destination>
+            <destination character="Caesar" endTime="142.4093">2.902816 -0.4856454 -2.528027</destination>
+            <destination character="Caesar" endTime="143.4824">3.442698 -0.4856454 -1.989945</destination>
+            <destination character="Caesar" endTime="144.0564">3.442698 -0.4856454 -1.989945</destination>
+            <destination character="Caesar" endTime="145.0672">2.155372 -0.4856454 -3.218727</destination>
+            <destination character="Caesar" endTime="146.2033">1.512502 -0.4856454 -3.250606</destination>
+            <destination character="Caesar" endTime="148.3363">1.512502 -0.4856454 -3.250606</destination>
+            <destination character="Caesar" endTime="149.2602">1.3898 -0.4856454 -2.133162</destination>
+            <destination character="Caesar" endTime="169">1.3898 -0.4856454 -2.133162</destination>
+            <destination character="Cassius" endTime="0">-0.8028855 0.204836 2.009076</destination>
+            <destination character="Cassius" endTime="66.25327">-0.8028855 0.204836 2.009076</destination>
+            <destination character="Cassius" endTime="67.1113">-1.300456 0.2732769 1.909603</destination>
+            <destination character="Cassius" endTime="68.06532">-1.397732 0.2732769 1.486423</destination>
+            <destination character="Cassius" endTime="71.99977">-1.397732 0.2732769 1.486423</destination>
+            <destination character="Cassius" endTime="72.20986">-0.6415925 0.1045594 0.4999717</destination>
+            <destination character="Cassius" endTime="72.96296">0.4757218 -0.1762989 -0.3779957</destination>
+            <destination character="Cassius" endTime="74.27402">1.944104 -0.4856454 -2.971164</destination>
+            <destination character="Cassius" endTime="132.5626">1.944104 -0.4856454 -2.971164</destination>
+            <destination character="Cassius" endTime="133.1678">2.322952 -0.4856454 -2.893774</destination>
+            <destination character="Cassius" endTime="141.7257">2.322952 -0.4856454 -2.893774</destination>
+            <destination character="Cassius" endTime="143.3067">0.9683296 -0.4856454 -3.68274</destination>
+            <destination character="Cassius" endTime="144.4674">0.9683296 -0.4856454 -3.68274</destination>
+            <destination character="Cassius" endTime="145.0736">1.871431 -0.4856454 -3.170154</destination>
+            <destination character="Cassius" endTime="148.5257">1.871431 -0.4856454 -3.170154</destination>
+            <destination character="Cassius" endTime="149.3818">-0.2154902 -0.4856454 -4.566428</destination>
+            <destination character="Cassius" endTime="157.1106">-0.2154902 -0.4856454 -4.566428</destination>
+            <destination character="Cassius" endTime="158.2676">0.07140646 -0.4856454 -4.304039</destination>
+            <destination character="Decius" endTime="0">-0.9877129 0.06021833 0.3413655</destination>
+            <destination character="Decius" endTime="135.3973">-0.9877129 0.06021833 0.3413655</destination>
+            <destination character="Decius" endTime="137.6443">3.034104 -0.4856454 -2.346762</destination>
+            <destination character="Decius" endTime="141.6299">3.034104 -0.4856454 -2.346762</destination>
+            <destination character="Decius" endTime="142.2278">3.337717 -0.4856454 -0.9636712</destination>
+            <destination character="Decius" endTime="142.5966">3.337717 -0.4856454 -0.9636712</destination>
+            <destination character="Decius" endTime="142.9325">3.65435 -0.4856454 -1.767327</destination>
+            <destination character="Decius" endTime="144.5254">3.65435 -0.4856454 -1.767327</destination>
+            <destination character="Decius" endTime="145.5354">3.446331 -0.4856454 -1.200261</destination>
+            <destination character="Decius" endTime="146.2774">3.224129 -0.4856454 -0.240351</destination>
+            <destination character="Casca" endTime="0">-1.087839 -0.02692038 1.33674</destination>
+            <destination character="Casca" endTime="66.40219">-1.087839 -0.02692038 1.33674</destination>
+            <destination character="Casca" endTime="71.5013">-0.7223139 0.3047305 3.432884</destination>
+            <destination character="Casca" endTime="71.77034">-0.6693182 0.2789387 3.238955</destination>
+            <destination character="Casca" endTime="80.08943">-0.6693182 0.2789387 3.238955</destination>
+            <destination character="Casca" endTime="81.43148">-0.5472074 0.34036 2.79541</destination>
+            <destination character="Casca" endTime="136.5367">-0.5472074 0.34036 2.79541</destination>
+            <destination character="Casca" endTime="139.4897">-0.7866397 0.1079589 0.6525135</destination>
+            <destination character="Casca" endTime="141.0657">2.817753 -0.4856454 -2.286919</destination>
+            <destination character="Casca" endTime="142.4093">2.817753 -0.4856454 -2.286919</destination>
+            <destination character="Casca" endTime="143.1271">1.992731 -0.4856454 -0.182439</destination>
+            <destination character="Casca" endTime="148.8368">1.992731 -0.4856454 -0.182439</destination>
+            <destination character="Casca" endTime="149.4748">1.876001 -0.4856454 -0.4569583</destination>
+            <destination character="Cinna" endTime="0">-1.404225 0.047885 0.02914119</destination>
+            <destination character="Cinna" endTime="132.3681">-1.404225 0.047885 0.02914119</destination>
+            <destination character="Cinna" endTime="133">0.8632131 -0.1816981 -0.4031141</destination>
+            <destination character="Cinna" endTime="134.3">3.252834 -0.4856454 -2.446037</destination>
+            <destination character="Cinna" endTime="135.0542">3.157666 -0.4856454 -2.677611</destination>
+            <destination character="Cinna" endTime="145.426">3.157666 -0.4856454 -2.677611</destination>
+            <destination character="Cinna" endTime="146.4671">3.794455 -0.4856454 -1.44389</destination>
+            <destination character="Cinna" endTime="148.2751">3.807765 -0.4856454 -0.3271548</destination>
+            <destination character="Cinna" endTime="148.4781">3.807765 -0.4856454 -0.3271548</destination>
+            <destination character="Cinna" endTime="149.3171">3.151006 -0.3363231 0.8634463</destination>
+            <destination character="Metellus" endTime="0">0.3958389 -0.4856454 -2.018703</destination>
+            <destination character="Metellus" endTime="4.274155">0.8241919 -0.4856454 -2.275182</destination>
+            <destination character="Metellus" endTime="5.380012">0.8241919 -0.4856454 -2.275182</destination>
+            <destination character="Metellus" endTime="7.392064">1.306507 -0.4856454 -2.615043</destination>
+            <destination character="Metellus" endTime="37.38191">1.306507 -0.4856454 -2.615043</destination>
+            <destination character="Metellus" endTime="39.26105">1.81381 -0.4856454 -2.926772</destination>
+            <destination character="Metellus" endTime="46.68399">1.81381 -0.4856454 -2.926772</destination>
+            <destination character="Metellus" endTime="47.18896">1.389446 -0.4856454 -3.294897</destination>
+            <destination character="Metellus" endTime="65.61104">1.389446 -0.4856454 -3.294897</destination>
+            <destination character="Metellus" endTime="68.27523">-0.1247259 -0.4856454 -3.497803</destination>
+            <destination character="Metellus" endTime="141.751">-0.1247259 -0.4856454 -3.497803</destination>
+            <destination character="Metellus" endTime="144.2001">-0.8687832 -0.4856454 -3.670181</destination>
+            <destination character="Metellus" endTime="146.4">-0.8687832 -0.4856454 -3.670181</destination>
+            <destination character="Metellus" endTime="146.9">1.178144 -0.4856454 -3.326408</destination>
+            <destination character="Metellus" endTime="148.3363">1.178144 -0.4856454 -3.326408</destination>
+            <destination character="Metellus" endTime="149.6602">-2.188542 -0.4856454 -4.076692</destination>
+          </destinations>
+          <lines>
+            <line character="Metellus" startTime="0" pace="1">Most high, most mighty, and most puissant Caesar!  Metellus Cimber throws before thy seat an humble heart.</line>
+            <line character="Caesar" startTime="7" pace="1.6">I must prevent thee, Cimber.  These couchings and these lowly courtesies might fire the bloof of ordinary men, and turn preordinance and first decree into the lane of children.  Be not fond to think that Caesar bears such rebel blood that will be thawd from the true quality with that which melteth fools--I mean sweet words, low-crooked curtsies, and base spaniel fawning.</line>
+            <line character="Caesar" startTime="40" pace="1.65">Thy brother by decree is banished.</line>
+            <line character="Caesar" startTime="43" pace="1">If thou doest bend, and pray, and fawn for him, I spurn thee like a cur out of my way!</line>
+            <line character="Caesar" startTime="50" pace="1.5">Know, Caesar doth not wrong, nor without cause will he be satisfied.</line>
+            <line character="Metellus" startTime="55.5" pace="1">Is there no voice more worthy than my own to sound more sweetly in great Caesar's ears for the repealing of my banished brother?</line>
+            <line character="Brutus" startTime="64" pace="1">I kiss thy hand, but not in flattery, Caesar, desiring thee, that Publius Cimber may have an immediate freedom of repeal.</line>
+            <line character="Caesar" startTime="71" pace="1">What, Brutus?</line>
+            <line character="Cassius" startTime="71.8" pace="1.6">Pardon, Caesar!  Caesar, pardon!</line>
+            <line character="Cassius" startTime="74.4" pace="1">As low as to thy foot doth Cassius fall to beg enfranchisement for Publius Cimber.</line>
+            <line character="Caesar" startTime="78.4" pace="0.95">I could be well moved, if I were as you.  If I could pray to move, prayers would move me.  But I am constant as the northern star, of whose true fixed and resting quality, there is no fellow in the firmanment.</line>
+            <line character="Caesar" startTime="91" pace="1.65">The skies are painted with unnumbered sparks; they are all fire, and every one doth shine; but there's but one in all doth hold his place.  So in the world: 'tis furnished well with men, and men are flesh and blood, and apprehensive; yet in the number I do know but one that unassailable holds on his rank unshaked of motion, and that I am he, let me a little show it, even in this:</line>
+            <line character="Caesar" startTime="128.7" pace="0.7">That I was constant Cimber should be banished, and constant do remain to keep him so.</line>
+            <line character="Cinna" startTime="132" pace="1.5">O Caesar--</line>
+            <line character="Caesar" startTime="133.5" pace="0.7">Hence!  Wilt thou lift up Olympus?</line>
+            <line character="Decius" startTime="135" pace="1.75">Great Caesar--</line>
+            <line character="Caesar" startTime="136" pace="1.75">Doth not Brutus bootless kneel?</line>
+            <line character="Casca" startTime="139" pace="1">Speak, hands, for me!</line>
+            <line character="Casca" startTime="141" pace="2">Ah!</line>
+            <line character="Caesar" startTime="141" pace="3">Argh!</line>
+            <line character="Caesar" startTime="141.8" pace="3">Uh!</line>
+            <line character="Cinna" startTime="141.8" pace="2">Ah!</line>
+            <line character="Decius" startTime="143.5" pace="3">Gahhh!</line>
+            <line character="Cassius" startTime="145" pace="3">Aahh!</line>
+            <line character="Caesar" startTime="145" pace="3">Aahh!</line>
+            <line character="Metellus" startTime="147" pace="2">Uh! Guh!</line>
+            <line character="Cassius" startTime="148.5" pace="3">Uh!</line>
+            <line character="Caesar" startTime="149" pace="2">Ugh.</line>
+            <line character="Caesar" startTime="150" pace="3">(Exasperated breath.)</line>
+            <line character="Caesar" startTime="152.5" pace="2">Et tu Brute?---</line>
+            <line character="Brutus" startTime="155" pace="1">Ahhhhh! (Slits Caesar's throat.  He falls.)</line>
+            <line character="Caesar" startTime="157.4" pace="3">(Exasperated breaths.) Then fall, Caesar! (More of Terry's exasperated breaths.  Much  more of Terry's exasperated breaths.)</line>
+          </lines>
+          <beats>0</beats>
+        </scene>
+      </scenes>
+    </act>
+  </acts>
+  <annotations />
+  <views>
+    <view id="Risers L">
+      <location>-4.385894 3.342669 -1.299346</location>
+      <lookAt>-1.910699 -0.3874767 0.9276303</lookAt>
+    </view>
+    <view id="HL">
+      <location>-1.891978 3.203951 -6.497033</location>
+      <lookAt>0.1781867 -0.2721663 -3.559172</lookAt>
+    </view>
+    <view id="Risers">
+      <location>3.351589 2.359602 -0.9326224</location>
+      <lookAt>-0.228111 -0.424998 1.17255</lookAt>
+    </view>
+    <view id="HR Stage">
+      <location>5.116447 1.706296 -5.578904</location>
+      <lookAt>2.196338 -1.078587 -2.626381</lookAt>
+    </view>
+    <view id="HR Zout">
+      <location>7.861344 4.324086 -8.35428</location>
+      <lookAt>5.16193 1.120389 -5.624904</lookAt>
+    </view>
+    <view id="FHR">
+      <location>8.653896 4.658271 -1.02129</location>
+      <lookAt>5.997387 0.4251146 -0.868488</lookAt>
+    </view>
+    <view id="HL ZOut">
+      <location>-2.566607 4.295998 -7.45443</location>
+      <lookAt>-0.8351558 0.3004479 -4.997265</lookAt>
+    </view>
+  </views>
+</play>

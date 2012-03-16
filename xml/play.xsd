@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="act">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" />
+        <xs:element ref="scenes" />
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:NMTOKEN" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="acts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="act" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="annotation">
+    <xs:complexType mixed="true">
+      <xs:attribute name="startTime" type="xs:decimal" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="annotations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="annotation" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="beats">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="cast">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="character" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="character">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="name" />
+        <xs:element ref="color" />
+        <xs:element ref="model" />
+      </xs:all>
+      <xs:attribute name="id" type="xs:NMTOKEN" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="name" type="xs:string" />
+
+  <xs:element name="color" type="xs:string" />
+  
+  <xs:element name="model" type="xs:string" />
+
+  <xs:element name="destination">
+    <xs:complexType mixed="true">
+      <xs:attribute name="endTime" type="xs:decimal" use="required" />
+      <xs:attribute name="character" type="xs:NMTOKEN" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="destinations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="destination" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="line">
+    <xs:complexType mixed="true">
+      <xs:attribute name="startTime" type="xs:decimal" use="required" />
+      <xs:attribute name="character" type="xs:NMTOKEN" use="required" />
+      <xs:attribute name="pace" type="xs:decimal" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="lines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="line" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="play">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="stage" />
+        <xs:element ref="cast" />
+        <xs:element ref="acts" />
+        <xs:element ref="annotations" />
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="scene">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="name" />
+        <xs:element ref="destinations" />
+        <xs:element ref="lines" minOccurs="0" />
+        <xs:element ref="beats" />
+      </xs:all>
+      <xs:attribute name="id" type="xs:NMTOKEN" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="scenes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="scene" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stage" type="xs:string" />
+
+</xs:schema>

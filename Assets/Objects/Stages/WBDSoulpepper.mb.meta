@@ -1,0 +1,59 @@
+fileFormatVersion: 1
+guid: 7306707d479e94b50ac09ad319b7e430
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 1
+    swapUVs: 0
+    generateSecondaryUV: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    White_Biting_Dog___Soulpepper_Shell:Mesh:
+    - 100002
+    - 400002
+    - 3300000
+    - 2300000
+    - 6400000
+    White_Biting_Dog___SoulPepper_Structure_Additions:Mesh:
+    - 100004
+    - 400004
+    - 3300002
+    - 2300002
+    - 6400002
+    group:
+    - 100006
+    - 400006
+    group1:
+    - 100008
+    - 400008
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: White_Biting_Dog___Soulpepper_Reimagined:Mesh
+    4300002: StageBoundry
+    4300004: WBDSoulpepper
+    4300006: White_Biting_Dog___Soulpepper_Shell:Mesh
+    4300008: White_Biting_Dog___SoulPepper_Structure_Additions:Mesh

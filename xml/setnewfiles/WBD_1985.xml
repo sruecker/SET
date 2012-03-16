@@ -1,0 +1,64 @@
+<play>
+	<stage>
+		<model>TofA</model>
+	</stage>
+	<cast>
+		<character id="Character1">
+			<name>Cape</name>
+			<color>0.839093 0.726578 0.6910493</color>
+			<model>PersonBigPrefab</model>
+		</character>
+		<character id="Character2">
+			<name>Glidden</name>
+			<color>0.9099953 0.7482334 0.010117</color>
+			<model>PersonBigPrefab</model>
+		</character>
+		<character id="Peace">
+			<name>Peace</name>
+			<color>-0.9099953 0.7482334 -0.010117</color>
+			<model>PersonBigPrefab</model>
+		</character>
+	</cast>
+	<acts>
+		<act id="act1">
+			<name>White Biting Dog</name>
+			<scenes>
+				<scene id="Scene1">
+					<name>Scene 1</name>
+					<destinations>
+						<destination character="Character1" endTime="0.05691057">-11.18387 2.927315 -3.033763</destination>
+						<destination character="Character2" endTime="0.08536585">-10.75275 2.927315 -2.851365</destination>
+						<destination character="Peace" endTime="0">-5.337574 2.454815 -6.320055</destination>
+						<destination character="Peace" endTime="0.5691057">-5.337574 2.454815 -6.320055</destination>
+						<destination character="Peace" endTime="4.04065">-8.442203 2.454815 -3.237483</destination>
+					</destinations>
+					<actions/>
+					<lines>
+						<line character="Character1" startTime="0.03333334" pace="1.015873">Did it ever happen? Sure it happened. It happened, I'm not crazy, I know! I arrived</line>
+						<line character="Character1" startTime="4.569106" pace="1.015873">at the Bloor Street bridge, and I climbed up the wall, right? And I was gonna do</line>
+						<line character="Character1" startTime="6" pace="1"> it, I was just about to jump when I heard this drum sound, as if the whole city knew,</line>
+						<line character="Character1" startTime="7" pace="1">boom boom boom boom BOOM BOOM BOOM BOOM BOOM BOOM (speaks in</line>
+						<line character="Character1" startTime="8" pace="1"> small strange voice) "I'm not gonna hurt you." (turns quickly) Who's that? A cop?</line>
+						<line character="Character1" startTime="9" pace="1">There's nobody! Just! A white dog! Beside me! How did it...</line>
+						<line character="Character1" startTime="10" pace="1">"YOU'RE JUMPING TO HELL" the dog, the dog spoke</line>
+						<line character="Character1" startTime="11" pace="1">So I...answered-</line>
+						<line character="Character1" startTime="12" pace="1">"BUT I'M LIVING IN HELL...ANYWAY."</line>
+						<line character="Character1" startTime="13" pace="1">"YOU'RE LIVING IN HELL, 'CAUSE YOU AIN'T DONE YOUR MISSION."</line>
+						<line character="Character1" startTime="14" pace="1">"WHAT'S THAT?"</line>
+						<line character="Character1" startTime="15" pace="1">"TO SAVE YOU FATHER FROM DEATH, TO SAVE YOUR FATHER FROM</line>
+						<line character="Character1" startTime="16" pace="1">DEATH."</line>
+						<line character="Character1" startTime="17" pace="1">The dog...spoke! I'm not kidding! This dog actually spoke she saved me from the</line>
+						<line character="Character1" startTime="18" pace="1">plunge; it was the weirdest-</line>
+						<line character="Character2" startTime="19" pace="1"> (GLIDDEN rushes out of bed, and out of his room onto the landing.)</line>
+						<line character="Character2" startTime="20" pace="1"> OUT OF THE TUNNEL</line>
+					</lines>
+					<beats>0 1 5 15 17 20 30 35</beats>
+				</scene>
+			</scenes>
+		</act>
+	</acts>
+	<annotations>
+		<annotation startTime="0" sd="false" endTime="14" character="Peace">Peace all in black</annotation>
+	</annotations>
+	<views/>
+</play>

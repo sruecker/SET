@@ -1,0 +1,47 @@
+fileFormatVersion: 1
+guid: a0735a1ebe77d4eef8c0f2b407a0d168
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    - 11100000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: transform2
+    4300002: transform1
+    4300004: transform4
+    4300006: transform3
+    4300008: transform7
+    4300010: transform6
+    4300012: transform5
+    4300014: transform8
+    4300016: polySurface4
+    4300018: polySurface6
+    4300020: pSphere1
+    4300022: pCone1
+    4300024: polySurface8
+    7400000: Take 001 //// CharacterModel2
