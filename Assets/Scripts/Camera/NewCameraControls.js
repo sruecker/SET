@@ -53,7 +53,7 @@ public function SetZoom() {
 
 function OnGUI() {
 
-	if (!Screen.showCursor) {
+	if (!ApplicationState.instance.moveCamera && !Screen.showCursor) {
 		var e : Event = Event.current;
 		mouseRect.x = e.mousePosition.x - cursorSize/2;
 		mouseRect.y = e.mousePosition.y - cursorSize/2;

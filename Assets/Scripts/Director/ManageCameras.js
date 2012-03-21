@@ -140,9 +140,14 @@ function Awake()
 function LateUpdate()
 {
 	if ( Input.GetButtonDown("GUI Toggle") ) {
+		
+		// set mouse to pointer
+				
+		
 		ApplicationState.instance.moveCamera = ! ApplicationState.instance.moveCamera ;
 		
 		if ( ! ApplicationState.instance.moveCamera ) {
+			Screen.showCursor = true;			
 			//Debug.Log("move camera false");
 			setFlyCamSpeed(0, 0, 0);
 			// for characters
@@ -150,6 +155,8 @@ function LateUpdate()
 			setSmoothMouseSpeed(__selectedHeadObject, 0, 0);
 	
 		} else {
+			GameObject.Find("Director").GetComponent(NewCameraControls).SetPointer();
+			Screen.showCursor = false;			
 			if (__mainCamera.transform.parent == __directorFlyCam.transform) { // parent is flyCam
 				setFlyCamSpeed(__flyCamSpeed, __flyCamSensitivityX, __flyCamSensitivityY);
 			} else { // a normal character has the camera focus
