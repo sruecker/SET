@@ -206,7 +206,7 @@ function SaveFile(filename:String) {
 	//~ Debug.Log(filename);
 	ApplicationState.instance.savePlayFile(filename);
 	// TODO check if the file was actually saved successfully
-	ApplicationState.instance.showMessage("Info", filename+ " was saved successfully.");
+	ApplicationState.instance.showMessage("Info", "Your file was saved successfully.");
 }
 
 function FixedUpdate() {

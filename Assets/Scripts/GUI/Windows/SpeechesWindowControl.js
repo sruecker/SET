@@ -244,7 +244,8 @@ private function windowFunction (windowID : int) {
 									}
 								}
 							} else {
-								if (GUI.Button(Rect(3, 8, lineWidth-6, mug.height), GUIContent(line["character"], mug), mugButtonStyle)) {
+								var characterName : String = ApplicationState.instance.playStructure["characters"][line["character"]]["name"];
+								if (GUI.Button(Rect(3, 8, lineWidth-6, mug.height), GUIContent(characterName, mug), mugButtonStyle)) {
 									line["showText"] = !line["showText"];
 									if (__speechOpenTracker.ContainsKey(line["character"])) {
 										__speechOpenTracker[line["character"]].Remove(line["startPos"]);
@@ -339,7 +340,7 @@ private function windowFunction (windowID : int) {
 						for (var line:Hashtable in scene["lines"]) {
 							mug = ApplicationState.instance.playStructure["characters"][line["character"]]["mug"];
 							
-							testString = line["character"];
+							testString = ApplicationState.instance.playStructure["characters"][line["character"]]["name"];
 							headerHeight = speechStyle.CalcHeight(GUIContent(testString, mug), availableWidth);
 							
 							testString = line["text"];
@@ -355,7 +356,7 @@ private function windowFunction (windowID : int) {
 							
 							GUI.BeginGroup(Rect(0, startPos, availableWidth+10, headerHeight+textHeight+10));
 							
-							GUI.Label(Rect(4, 0, availableWidth, headerHeight), GUIContent(line["character"], mug));
+							GUI.Label(Rect(4, 0, availableWidth, headerHeight), GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"], mug));
 							if (ApplicationState.instance.moveCamera) {
 								GUI.Label(Rect(6, headerHeight+4, availableWidth-12.5, textHeight), line["text"], lineTextStyle);  
 							} else {
@@ -392,7 +393,7 @@ private function windowFunction (windowID : int) {
 						
 						for (var line:Hashtable in scene["lines"]) {
 							mug = ApplicationState.instance.playStructure["characters"][line["character"]]["mug"];
-							GUILayout.Label(GUIContent(line["character"], mug));
+							GUILayout.Label(GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"], mug));
 							
 							if (ApplicationState.instance.moveCamera) {
 								GUILayout.Label(line["text"], lineTextStyle);  
@@ -477,7 +478,7 @@ private function windowPopOutFunction(windowID: int) {
 						for (i = 0; i < __speechCache[actIndex][sceneCount]["lines"].length; i++) {
 							line = __speechCache[actIndex][sceneCount]["lines"][i];
 							mug = ApplicationState.instance.playStructure["characters"][line["character"]]["mug"];
-							GUILayout.Label(GUIContent(line["character"], mug));  
+							GUILayout.Label(GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"], mug));  
 							GUILayout.Label(line["text"], lineTextStyle);  
 						}
 					}
@@ -526,7 +527,7 @@ private function windowPopOutFunction(windowID: int) {
 							line = __speechCache[actIndex][sceneCount]["lines"][i];
 							mug = ApplicationState.instance.playStructure["characters"][line["character"]]["mug"];
 							
-							testString = line["character"];
+							testString = ApplicationState.instance.playStructure["characters"][line["character"]]["name"];
 							headerHeight = speechStyle.CalcHeight(GUIContent(testString, mug), availableWidth);
 							
 							testString = line["text"];
@@ -541,7 +542,7 @@ private function windowPopOutFunction(windowID: int) {
 							}
 							
 							GUI.BeginGroup(Rect(0, startPos, availableWidth+10, headerHeight+textHeight+10));
-							
+
 							GUI.Label(Rect(4, 0, availableWidth, headerHeight), GUIContent(line["character"], mug));
 							if (ApplicationState.instance.moveCamera) {
 								GUI.Label(Rect(6, headerHeight+4, availableWidth-12.5, textHeight), line["text"], lineTextStyle);  

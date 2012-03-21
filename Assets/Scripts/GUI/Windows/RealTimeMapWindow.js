@@ -76,6 +76,8 @@ private function removeView() {
 	
 	if (viewsHash.Contains(ApplicationState.instance.currentSelectedView)) {
 		viewsHash.Remove(ApplicationState.instance.currentSelectedView);
+		ApplicationState.instance.currentSelectedView = __noCamera;
+		
 	}
 }
 
