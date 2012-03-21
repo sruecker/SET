@@ -73,6 +73,10 @@ private function canBlock() {
 			//WindowManager. check if hit was on interface
 }
 
+function addToColliders(collider : Collider) {
+	__colliders.Push(collider);
+}
+
 function Update() {
 	
 	if (Input.GetMouseButton(0) && canBlock()) { 
