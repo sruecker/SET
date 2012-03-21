@@ -188,7 +188,7 @@ function loadPlay(filename:String) {
 	
 	// reset values
 	ApplicationState.instance.playTime = 0;
-	
+	GameObject.Find("Director").GetComponent(NewCameraControls).SetPointer();
 	// load that stage
 	Application.LoadLevel(ApplicationState.instance.playStructure["stage"]);
 		

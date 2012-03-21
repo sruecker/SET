@@ -102,6 +102,15 @@ function OnGUI()
 	GUI.depth = 1;
 	GUI.skin = gSkin;
 	
+	if(WindowManager.instance.windowFloat[WindowManager.instance.ANNOTATIONS_ID]) {
+		if (WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID].width < 200) {
+			WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID].width = 200;
+		}
+		if (WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID].height < 150) {
+			WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID].height = 150;
+		}
+	}
+	
 	WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID] = GUI.Window (WindowManager.instance.ANNOTATIONS_ID, 
 									   WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID], 
 									   windowFunction, 

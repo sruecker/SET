@@ -87,7 +87,19 @@ function Awake() {
 function OnGUI () {
 	
 	GUI.skin = gSkin;
+	
+	
 	if (!ApplicationState.instance.loadingNewFile) {
+		
+		if(WindowManager.instance.windowFloat[WindowManager.instance.SPEECHES_ID]) {
+			if (WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID].width < 200) {
+				WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID].width = 200;
+			}
+			if (WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID].height < 150) {
+				WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID].height = 150;
+			}
+		}
+		
 		WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID] = GUI.Window(WindowManager.instance.SPEECHES_ID, 
 				   WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID], 
 				   windowFunction, 

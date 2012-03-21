@@ -77,7 +77,6 @@ function FinishInitialization() {
 }
 
 function annotationTexturesWindow(winId : int) {
-	// GUI.Button(Rect(0,0,100,100), "test");
 	
 	if (__images.length) {
 		var thisImage:Hashtable = __images[__currentlyShowingIndex];
@@ -122,15 +121,17 @@ function annotationTexturesWindow(winId : int) {
 		content.text = thisImage['annotationSample'];		
 		content.image = downButtonTexture;
 		
-		if (GUI.Button(Rect(10, winRect.height + 5, 123, 15), content )) {
-				__renderMenu = true;
-			}
-		
 		if (GUI.RepeatButton(Rect( winRect.width - 20, winRect.height + 5, 15, 15), resizeButtonTexture, resizeButtonStyle)) {
 			__resizingVector = Input.mousePosition;
 			__resizingRect = WindowManager.instance.windowRects[winId];
 			__resizing = true;
 		}
+		
+		if (GUI.Button(Rect(10, winRect.height + 5, 123, 15), content )) {
+			__renderMenu = true;
+		}
+		
+	
 		
 	}
 	
@@ -139,12 +140,12 @@ function annotationTexturesWindow(winId : int) {
 		WindowManager.instance.windowRects[winId].width = __resizingRect.width + Input.mousePosition.x - __resizingVector.x;
 		WindowManager.instance.windowRects[winId].height = __resizingRect.height - Input.mousePosition.y + __resizingVector.y;
 		
-		if (WindowManager.instance.windowRects[winId].width < 30) {
-			WindowManager.instance.windowRects[winId].width = 30;
+		if (WindowManager.instance.windowRects[winId].width < 200) {
+			WindowManager.instance.windowRects[winId].width = 200;
 		}
 		
-		if (WindowManager.instance.windowRects[winId].height < 30) {
-			WindowManager.instance.windowRects[winId].height = 30;
+		if (WindowManager.instance.windowRects[winId].height < 150) {
+			WindowManager.instance.windowRects[winId].height = 150;
 		}
 		
 		if (Input.GetMouseButtonUp(0)) {
