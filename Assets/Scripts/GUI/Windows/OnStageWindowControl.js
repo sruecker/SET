@@ -239,33 +239,34 @@ function OnGUI()
 	onStageWindowFunction(WindowManager.instance.ONSTAGE_ID);
 	GUI.EndGroup();
 */	
+	if (! ApplicationState.instance.loadingNewFile) {
 	
+		WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID] = GUI.Window(WindowManager.instance.CHARACTER_ID, 
+										   WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID], 
+										   characterWindowFunction, 
+										   "Character");
 	
-	WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID] = GUI.Window(WindowManager.instance.CHARACTER_ID, 
-									   WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID], 
-									   characterWindowFunction, 
-									   "Character");
-	
-	WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID] = GUI.Window (WindowManager.instance.ONSTAGE_ID, 
-									   WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID], 
-									   onStageWindowFunction, 
-									   ""); // On Stage
+		WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID] = GUI.Window (WindowManager.instance.ONSTAGE_ID, 
+										   WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID], 
+										   onStageWindowFunction, 
+										   ""); // On Stage
 									   
 		
-	GUI.BringWindowToBack(WindowManager.instance.CHARACTER_ID);								   
-	GUI.BringWindowToBack(WindowManager.instance.ONSTAGE_ID);	
+		GUI.BringWindowToBack(WindowManager.instance.CHARACTER_ID);								   
+		GUI.BringWindowToBack(WindowManager.instance.ONSTAGE_ID);	
 	
-	if (__showPopUpCharMenu) {
-		WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_2_ID].width = 100;
-		WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_2_ID].height = 70;
-		WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_2_ID].x = __popUpCharMenuPos.x;
-		WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_2_ID].y = __popUpCharMenuPos.y;
+		if (__showPopUpCharMenu) {
+			WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_2_ID].width = 100;
+			WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_2_ID].height = 70;
+			WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_2_ID].x = __popUpCharMenuPos.x;
+			WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_2_ID].y = __popUpCharMenuPos.y;
 
-		WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_2_ID] =
-			GUI.Window(WindowManager.instance.CHARACTER_MENU_2_ID,
-					   WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_2_ID],
-					   createRemoveMenu,
-					   GUIContent("", "Remove Character"), menuStyle);
+			WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_2_ID] =
+				GUI.Window(WindowManager.instance.CHARACTER_MENU_2_ID,
+						   WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_2_ID],
+						   createRemoveMenu,
+						   GUIContent("", "Remove Character"), menuStyle);
+		}
 	}
 		
 }

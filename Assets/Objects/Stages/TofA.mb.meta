@@ -8,6 +8,11 @@ ModelImporter:
     meshCompression: 0
     generateColliders: 1
     swapUVs: 0
+    generateSecondaryUV: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
   tangentSpace:
     normalImportMode: 0
     tangentImportMode: 1

@@ -79,8 +79,10 @@ function Update()
 			
 					var currentDestinationIndex : int = getValueIndexAtTime(charachterKey, destinations, currentTime);
 				
-					// for destinations
-					if (currentDestinationIndex != INDEX_NOT_FOUND) {
+					// make sure the character objects have been loaded
+					if (ApplicationState.instance.playStructure["characters"][charachterKey]["gameObject"]) {
+						// for destinations
+						if (currentDestinationIndex != INDEX_NOT_FOUND) {
 				
 				
 						// var verticalSpeed = 0;//-1.0 * gravity * Time.deltaTime;
@@ -88,8 +90,9 @@ function Update()
 						// 				if (ApplicationState.instance.playStructure["characters"][charachterKey]["gameObject"].tag == "SoundEmitter") {
 						// 					movement.y = 0;
 						// 				}
-					
-						var controller : CharacterController = ApplicationState.instance.playStructure["characters"][charachterKey]["gameObject"].GetComponent(CharacterController);
+						
+						// ApplicationState.instance.playStructure["characters"][charachterKey]["gameObject"]
+						// var controller : CharacterController = ApplicationState.instance.playStructure["characters"][charachterKey]["gameObject"].GetComponent(CharacterController);
 							
 				
 						var prevPosDisappear : boolean = (currentDestinationIndex > 0 && destinations[charachterKey][currentDestinationIndex - 1]["position"] == ApplicationState.instance.DISAPPEAR_POS);
@@ -177,6 +180,7 @@ function Update()
 							destinations[charachterKey][currentDestinationIndex]["position"];
 				
 					}
+					}
 				}
 				// for actions
 				// var currentActionIndex : int = getValueIndexAtTime(charachterKey, actions, currentTime);
@@ -261,16 +265,18 @@ private function appearInDestination(characterObject : GameObject,
 							 characterDestinations : Array,
 							 currentTime : float )
 {
-	if (currentDestinationIndex == 0) {
-		characterObject.transform.position =
-		characterDestinations[currentDestinationIndex]["position"];
-	} else {
+	if (characterObject) {
+		if (currentDestinationIndex == 0) {
+			characterObject.transform.position =
+			characterDestinations[currentDestinationIndex]["position"];
+		} else {
 		
-		characterObject.transform.position = getTargetPosition(currentDestinationIndex,
-															   currentTime,
-															   characterDestinations);
+			characterObject.transform.position = getTargetPosition(currentDestinationIndex,
+																   currentTime,
+																   characterDestinations);
 		
-	}	
+		}	
+	}
 	
 }
 
@@ -293,16 +299,6 @@ private function rotateCharacterInstantly(characterObject : GameObject,
 		angle = Mathf.Atan2(relative.x, relative.z) * Mathf.Rad2Deg;
 		characterModelTransform.Rotate( 0, angle, 0);
 	}
-/*
-	while (angle > 5)
-	{
-		angle = Mathf.Abs(RotateTowardsPosition(characterModelTransform,
-												destination, 
-												rotateSpeed));	
-	//	Debug.Log(angle);
-	//	yield;
-	}
-	*/
 
 }
 

@@ -4,6 +4,7 @@ public var toolbarSkin : GUISkin;
 public var comboArrow : Texture;
 public var addButton : Texture;
 public var comboStyle : GUIStyle;
+public var loadingStyle : GUIStyle;
 
 private var __toolbarArea : Rect;
 private var __backgroundObject : Transform;
@@ -40,6 +41,11 @@ function Awake() {
 
 function OnGUI() {
 	GUI.skin = toolbarSkin;
+	
+	if(ApplicationState.instance.loadingNewFile) {
+	  	GUI.depth = 0;
+		GUI.Label(Rect(0,0,Screen.width, Screen.height), "Loading...", loadingStyle);
+	}
 	
 	WindowManager.instance.windowRects[WindowManager.instance.TOOLBAR_ID] = 
 		GUI.Window (WindowManager.instance.TOOLBAR_ID, 
@@ -189,8 +195,8 @@ function OpenFile(filename:String) {
 	//~ var xsdfile : String = Application.dataPath+"/Resources/XML/play.xsd";
 	var valid : boolean = __validator.ValidateXml(filename);
 	if (valid) {
-		ApplicationState.instance.setPlayToLoad(filename);
-		Application.LoadLevel("SceneReloader");
+		ApplicationState.instance.loadPlay(filename);
+		// Application.LoadLevel("SceneReloader");
 	} else {
 		ApplicationState.instance.showMessage("Error", "The selected play file wasn't valid.");
 	}

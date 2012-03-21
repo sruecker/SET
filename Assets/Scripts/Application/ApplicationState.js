@@ -32,6 +32,7 @@ static var showAnnotationImages : boolean;
 static var showOnScreenTextAnnotations : boolean;
 static var showOnScreenImageAnnotations : boolean;
 static var movingCharacterKey : String;
+static var loadingNewFile : boolean;
 var characterMug : Texture2D;
 var speechBubbleTexture : Texture2D;
 var characterControlsTexture: Texture2D;
@@ -99,13 +100,16 @@ function getPlay() : Hashtable
 	return playStructure;	
 }
 
+function InitValues() {
+	
+}
+
 function Awake()
 {
 	animate = false;
 	playTime = 0;
 	playTimeLength = 0;
 	playSpeed = 1.0;
-	playStructure = new Hashtable();
 	loaded = false;
 	currentToolTip = "";
 	editCharacterPaths = false;
@@ -116,6 +120,9 @@ function Awake()
 	showAnnotationImages = true;
 	showOnScreenTextAnnotations = true;
 	showOnScreenImageAnnotations = true;
+	loadingNewFile = false;
+	playStructure = new Hashtable();
+	
 	__previousTime = 0;
 	__directorObject = GameObject.Find("Director");	
 	__timeLineObject = GameObject.Find("TimeLine");
@@ -127,7 +134,6 @@ function Awake()
 	__realTimeMapWindow = GameObject.Find("RealTimeMapWindow");
 	__messengerObject = GameObject.Find("Messenger");
 	__minimapObject = GameObject.Find("MinimapWindow");
-
 	__fileManagerComponent = GameObject.Find("States").GetComponent(FileManager);
 }
 
@@ -158,22 +164,40 @@ function showConfirm(title: String, msg:String, callback:Function) {
 
 function Start()
 {
-	if (playToLoad != null) {
+	DontDestroyOnLoad(GameObject.Find("Director"));
+	DontDestroyOnLoad(GameObject.Find("States"));
+	DontDestroyOnLoad(GameObject.Find("UI"));
+	if (playToLoad != null) {		
 		loadPlay(playToLoad);
 	} else loadPlay(null);
 	
 }
 
-function setPlayToLoad(filename:String) {
-	playToLoad = filename;
+// function setPlayToLoad(filename:String) {
+// 	loadPlay(filename);
+// 	
+// }
+
+
+function loadPlay(filename:String) {
+	// setPlayToLoad( filename );
+	playToLoad = filename;	
+	// find what stage to load 
+	ApplicationState.instance.loadingNewFile = true;
+	loadPlayFile(ApplicationState.instance.playToLoad);
+	
+	// reset values
+	ApplicationState.instance.playTime = 0;
+	
+	// load that stage
+	Application.LoadLevel(ApplicationState.instance.playStructure["stage"]);
+		
 }
 
-
-function loadPlay(filename:String)
+function completeLoadPlay()
 {
-	loadPlayFile(filename);
-	setupPlay();
 	
+	setupPlay();	
 	__directorObject.GetComponent(PathPainter).FinishInitialization();
 //	__directorObject.GetComponent(Blocker).FinishInitialization();
 //	__timeLineObject.GetComponent(TimeLineView).FinishInitialization();
@@ -221,9 +245,9 @@ function setupPlay()
 {
 	// check which stage to set according 
 
-	var prefabStage : GameObject =  Instantiate(Resources.Load( "Prefabs/Stages/" + playStructure["stage"] + "Prefab" )) as GameObject;
+	// var prefabStage : GameObject =  Instantiate(Resources.Load( "Prefabs/Stages/" + playStructure["stage"] + "Prefab" )) as GameObject;
 	
-	prefabStage.tag = "Stage";
+	// prefabStage.tag = "Stage";
 	
 	var prefabSet : GameObject;
 	if (playStructure["set"] != null) {

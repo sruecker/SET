@@ -6,8 +6,9 @@ public var annotationWidth : int = 200;
 function OnGUI() {
 	
 	
-	if (ApplicationState.instance.showOnScreenTextAnnotations || 
-		ApplicationState.instance.showOnScreenImageAnnotations)  {// if show annotations
+	if (!ApplicationState.instance.loadingNewFile &&
+		(ApplicationState.instance.showOnScreenTextAnnotations || 
+		ApplicationState.instance.showOnScreenImageAnnotations))  {// if show annotations
 		
 		for (var annotation : Hashtable in ApplicationState.instance.playStructure["annotations"]) {
 			

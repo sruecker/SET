@@ -28,7 +28,6 @@ var toggleSDDisabledButtonTexture : Texture2D;
 
 //private var __annotationsWindowRect : Rect;
 private var __scrollViewVector : Vector2 = Vector2.zero;
-private var __playLoaded : boolean = false;
 
 private var __resizingAnnotationsWindow : boolean;
 
@@ -211,7 +210,7 @@ private function windowFunction (windowID : int)
 	);
 
 	
-	if (__playLoaded) {
+	if (!ApplicationState.instance.loadingNewFile) {
 		
 		var count : int = 0;
 		var currentBoxStyle : GUIStyle;
@@ -402,7 +401,6 @@ function createHeaderTextures(characterKeys : Array)
 public function FinishInitialization()
 {
 	__scrollHeight = WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID].height;
-	__playLoaded = true;
 	createHeaderTextures(ApplicationState.instance.playStructure["characters"].Keys);
 	
 	__selectedAnotations.Clear();

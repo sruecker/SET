@@ -31,8 +31,9 @@ private var __distanceSinceLastStop : float = 0;
 
 function Update()
 {
-	if (__lastSceneID != ApplicationState.instance.currentScene["id"] ||
-		ApplicationState.instance.redrawSurfacePaths) {
+
+	if (ApplicationState.instance.currentScene != null &&
+		(__lastSceneID != ApplicationState.instance.currentScene["id"] || ApplicationState.instance.redrawSurfacePaths)) {
 		ApplicationState.instance.redrawSurfacePaths = false;
 		paintScenePaths();
 		
@@ -178,9 +179,9 @@ function applyChanges() {
 
 
 function clearTexture()
-{
-	    
+{    
     __tex.SetPixels(__blankPixels, 0);
+	applyChanges();
     
 }
 
@@ -211,7 +212,6 @@ function FinishInitialization() {
 	
 	
 	clearTexture();
-	    
    
 
 	Drawing.NumSamples=AntiAlias;

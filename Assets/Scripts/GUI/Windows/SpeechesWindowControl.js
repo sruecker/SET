@@ -87,23 +87,24 @@ function Awake() {
 function OnGUI () {
 	
 	GUI.skin = gSkin;
+	if (!ApplicationState.instance.loadingNewFile) {
+		WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID] = GUI.Window(WindowManager.instance.SPEECHES_ID, 
+				   WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID], 
+				   windowFunction, 
+				   "Speech");
+		if (! WindowManager.instance.windowFloat[WindowManager.instance.SPEECHES_ID]) {
+			GUI.BringWindowToBack(WindowManager.instance.SPEECHES_ID);								   
+		}
 	
-	WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID] = GUI.Window(WindowManager.instance.SPEECHES_ID, 
-			   WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID], 
-			   windowFunction, 
-			   "Speech");
-	if (! WindowManager.instance.windowFloat[WindowManager.instance.SPEECHES_ID]) {
-		GUI.BringWindowToBack(WindowManager.instance.SPEECHES_ID);								   
-	}
+		if (__showPopOut) {
+			WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_POPOUT_ID] = GUI.Window(WindowManager.instance.SPEECHES_POPOUT_ID, 
+				   WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_POPOUT_ID], 
+				   windowPopOutFunction, 
+				   "Speech");
+		}
+		//UpdateToolTip();
+	}	
 	
-	if (__showPopOut) {
-		WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_POPOUT_ID] = GUI.Window(WindowManager.instance.SPEECHES_POPOUT_ID, 
-			   WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_POPOUT_ID], 
-			   windowPopOutFunction, 
-			   "Speech");
-	}
-
-	//UpdateToolTip();
 }
 
 private function windowFunction (windowID : int) {

@@ -52,7 +52,7 @@ function OnGUI () {
 	
 
     // Register the window. Notice the 3rd parameter 
-    if ( ! ApplicationState.instance.moveCamera && ApplicationState.instance.selectedCharacter) {
+    if ( ! ApplicationState.instance.loadingNewFile && ! ApplicationState.instance.moveCamera && ApplicationState.instance.selectedCharacter) {
 		
 		var rectHeight : float = WindowManager.instance.windowRects[WindowManager.instance.CHARACTERCONTROLS_ID].height;				  		
 		

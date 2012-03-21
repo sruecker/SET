@@ -134,11 +134,12 @@ public class CTreeView : MonoBehaviour {
 		   case SAVE:
 			   if (GUILayout.Button("Save File")) {
 				   if (path != "") {
-					   if (path.IndexOfAny(Path.GetInvalidFileNameChars()) == -1) {
-						   DoSave();
-					   } else {
-						   errorMsg = "The file name is invalid.";
-					   }
+				DoSave();
+					 //  if (path.IndexOfAny(Path.GetInvalidFileNameChars()) == -1) {
+					//	   DoSave();
+					 //  } else {
+					//	   errorMsg = "The file name is invalid.";
+					   //}
 				   } else {
 					   errorMsg = "Enter a file name to save.";
 				   }

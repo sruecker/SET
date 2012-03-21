@@ -201,7 +201,7 @@ function OnGUI() {
 		
 	// if show
 		
-	if (ApplicationState.instance.showAnnotationImages) {
+	if (! ApplicationState.instance.loadingNewFile &&  ApplicationState.instance.showAnnotationImages) {
 	
 		for (var thisImage: Hashtable in __images) {
 			

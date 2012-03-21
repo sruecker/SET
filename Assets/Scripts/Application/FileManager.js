@@ -268,9 +268,9 @@ function loadSceneFile(fileName_ : String) : Hashtable
 				var shortPath = annotations.Current.GetAttribute("image");
 				match = Regex.Match(fileName_, "(.+/)");
 				var xmlPath = match.Groups[0].Value;
-				
+				newAnnotation["origImage"] = shortPath;
 				newAnnotation["image"] = shortPath.Replace("file://", "file://"+ xmlPath);
-				Debug.Log(newAnnotation["image"]);
+				// Debug.Log(newAnnotation["image"]);
 			}
 		
 			newAnnotation["text"] = annotations.Current.InnerText.Trim();
@@ -425,8 +425,8 @@ function addAnnotationsToXML(xmlDocument : System.Xml.XmlDocument)
 			singleAnnotationElement.SetAttribute("header" ,annotation["header"].ToString());
 		}
 		
-		if (annotation.ContainsKey("image")) {
-			singleAnnotationElement.SetAttribute("image" ,annotation["image"].ToString());
+		if (annotation.ContainsKey("origImage")) {
+			singleAnnotationElement.SetAttribute("image" ,annotation["origImage"].ToString());
 		}
 
 		singleAnnotationElement.InnerText = annotation["text"];
