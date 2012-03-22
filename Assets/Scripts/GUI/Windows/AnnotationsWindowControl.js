@@ -230,7 +230,7 @@ private function windowFunction (windowID : int)
 		var textHeight:float;
 		var testString:String;
 		var scrollTo:float;
-		var krow:float = startPos;
+
 		for (var annotation:Hashtable in ApplicationState.instance.playStructure["annotations"]) {
 
 			if ((__annotationsEnabled && !annotation["sd"]) ||
@@ -250,7 +250,7 @@ private function windowFunction (windowID : int)
 				
 				startPos = prevPos + 10;
 				endPos = startPos + headerHeight + textHeight;
-				krow +=  10 + headerHeight + textHeight;
+
 				if (ApplicationState.instance.animate || ApplicationState.instance.scrubberDraged) {
 					if (annotation["startTime"] <= ApplicationState.instance.playTime) scrollTo = startPos;
 				}
