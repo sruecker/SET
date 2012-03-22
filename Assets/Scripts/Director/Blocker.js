@@ -21,6 +21,7 @@ private var __colliders : Array;
 private var __closestHit : RaycastHit;
 private var __addingDestinations : boolean;
 private var __startTime : float;
+private var __blocking : boolean;
 // live drawing
 // private var __textureSize : int = 2048;
 // private var __blankPixels : Color[] = new Color[__textureSize*__textureSize];
@@ -38,7 +39,7 @@ private var __previousMouseCoords : Vector2;
 
 function FinishInitialization() {
 	// var sceneColliders : Array = GameObject.FindObjectsOfType(Collider);
-
+	__blocking = false;
 	__colliders = new Array();
 	__addingDestinations = false;
 	__setStartTime = true;
@@ -78,14 +79,24 @@ function addToColliders(collider : Collider) {
 }
 
 function Update() {
-	
-	if (Input.GetMouseButton(0) && canBlock()) { 
+	var mouseCoords : Vector2; 
+	if (Input.GetMouseButtonDown(0) && canBlock()) { 
 		
+		mouseCoords	= Input.mousePosition;
+		if (!isHitOnInterface(mouseCoords)) {
 
-		var mouseCoords : Vector2 = Input.mousePosition;				
+			__blocking = true;
+		}
+	}
+
+	if (__blocking && Input.GetMouseButtonUp(0)) {
+		__blocking = false;
+	}
+
+	if (__blocking) {
+		mouseCoords	= Input.mousePosition;				
 		
-		if (Vector2.Distance(__previousMouseCoords, mouseCoords) > 5 &&
-			!isHitOnInterface(mouseCoords)) {
+		if (Vector2.Distance(__previousMouseCoords, mouseCoords) > 5) {
 			__previousMouseCoords = mouseCoords;
 			
 			__ray = Camera.main.ScreenPointToRay(mouseCoords);
@@ -138,6 +149,12 @@ function Update() {
 		} 
 	}
 
+	
+	
+	
+	
+	
+	
 	if (__addingDestinations && ApplicationState.instance.scrubberDraged) {
 		__addOnNextMouseUp = true;
 	}
