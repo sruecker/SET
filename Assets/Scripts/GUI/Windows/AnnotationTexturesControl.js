@@ -62,7 +62,7 @@ function FinishInitialization() {
 			var thisImage : Hashtable = new Hashtable();
 			// img
 			thisImage['image'] = t;
-			thisImage['annotationSample'] = annotation["text"].Replace("\n", " ").Substring(0,20);
+			thisImage['annotationSample'] = annotation["text"].Replace("\n", " ").Substring(0, annotation["text"].length > 20 ? 20 : annotation["text"].length);
 			AddIfKeyExists(thisImage, annotation, 'startTime');
 			AddIfKeyExists(thisImage, annotation, 'endTime');			
 			AddIfKeyExists(thisImage, annotation, 'character');
