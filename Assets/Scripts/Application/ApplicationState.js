@@ -264,7 +264,7 @@ function setupPlay()
 									 						  DISAPPEAR_POS,
 									 						  Quaternion.identity) as GameObject;
 									 						  
-
+		
 		// playStructure["characters"][characterKey]["gameObject"].tag = "Character";
 		
 		//temp

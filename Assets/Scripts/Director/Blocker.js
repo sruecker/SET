@@ -18,6 +18,7 @@ enum CharacterActions {
 private var __destinations : Array;
 private var __ray : Ray;
 private var __colliders : Array;
+private var __characterColliders : Array;
 private var __closestHit : RaycastHit;
 private var __addingDestinations : boolean;
 private var __startTime : float;
@@ -41,6 +42,7 @@ function FinishInitialization() {
 	// var sceneColliders : Array = GameObject.FindObjectsOfType(Collider);
 	__blocking = false;
 	__colliders = new Array();
+	__characterColliders = new Array();
 	__addingDestinations = false;
 	__setStartTime = true;
 	
@@ -56,7 +58,12 @@ function FinishInitialization() {
 		if (thisCollider.gameObject.tag == "Stage") {
 			__colliders.Push(thisCollider);
 		}
-	}		
+	}
+	
+	for (var key : String in ApplicationState.instance.playStructure["characters"].Keys()) {
+		addToCharacterColliders(ApplicationState.instance.playStructure["characters"][key]["gameObject"].GetComponent("CharacterController"));		
+	}
+			
 	// }	
 }
  
@@ -65,7 +72,41 @@ function Awake() {
 	__previousMouseCoords = Vector2(Mathf.Infinity, Mathf.Infinity);
 }
 
-private function canBlock() {
+private function canBlock(mouseCoords : Vector2) {
+	
+	// check if hit is on character, if so 
+	var shortestDistance :float = Mathf.Infinity;
+	var currentDistance : float = shortestDistance;
+	var hit : RaycastHit;
+	__ray = Camera.main.ScreenPointToRay(mouseCoords);	
+	var closestCollider : Collider;
+	// check against character colliders
+	for (var collider : Collider in __characterColliders) {
+		if (collider.Raycast(__ray, hit, shortestDistance)) {
+			currentDistance = Vector3.Distance (hit.point , transform.position);
+			if ( currentDistance < shortestDistance ) {
+				shortestDistance = currentDistance;
+				closestCollider = collider;
+			}
+		}
+	}
+	// check against stage colliders
+	for (var collider : Collider in __colliders) {
+		if (collider.Raycast(__ray, hit, shortestDistance)) {
+			currentDistance = Vector3.Distance (hit.point , transform.position);
+			if ( currentDistance < shortestDistance ) {
+				shortestDistance = currentDistance;
+				closestCollider = collider;
+			}
+		}
+	}	
+	
+	// if collider belongs to a character set selected and return false
+	
+	if (closestCollider.gameObject.tag == "Character") {
+		ApplicationState.instance.selectedCharacter = closestCollider.gameObject;
+		return false;
+	}
 	
 	return 	ApplicationState.instance.selectedCharacter && 
 			ApplicationState.instance.currentMouseCameraState == MouseCameraControlState.NONE &&
@@ -74,17 +115,20 @@ private function canBlock() {
 			//WindowManager. check if hit was on interface
 }
 
-function addToColliders(collider : Collider) {
-	__colliders.Push(collider);
+function addToCharacterColliders(collider : Collider) {
+	__characterColliders.Push(collider);
 }
+
+// function addToColliders(collider : Collider) {
+// 	__colliders.Push(collider);
+// }
 
 function Update() {
 	var mouseCoords : Vector2; 
-	if (Input.GetMouseButtonDown(0) && canBlock()) { 
+	if (Input.GetMouseButtonDown(0)) { 
 		
 		mouseCoords	= Input.mousePosition;
-		if (!isHitOnInterface(mouseCoords)) {
-
+		if (canBlock(mouseCoords) && !isHitOnInterface(mouseCoords)) {
 			__blocking = true;
 		}
 	}

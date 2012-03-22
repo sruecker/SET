@@ -1244,8 +1244,8 @@ private function addRandomCharacter()
 	ApplicationState.instance.playStructure["characters"][key]["gameObject"].GetComponent(CharacterModelColor).setBodyColor( newColor );
 	
 	// add to blocker list of colliders to be able to move them
-	__blockerComponent.addToColliders(ApplicationState.instance.playStructure["characters"][key]["gameObject"].GetComponent("CharacterController"));
-	
+	// __blockerComponent.addToColliders(ApplicationState.instance.playStructure["characters"][key]["gameObject"].GetComponent("CharacterController"));
+	__blockerComponent.addToCharacterColliders(ApplicationState.instance.playStructure["characters"][key]["gameObject"].GetComponent("CharacterController"));
 	// set destinations
 	
 	var newDestination : Hashtable;
