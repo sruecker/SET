@@ -230,7 +230,7 @@ private function windowFunction (windowID : int)
 		var textHeight:float;
 		var testString:String;
 		var scrollTo:float;
-		
+		var krow:float = startPos;
 		for (var annotation:Hashtable in ApplicationState.instance.playStructure["annotations"]) {
 
 			if ((__annotationsEnabled && !annotation["sd"]) ||
@@ -247,10 +247,10 @@ private function windowFunction (windowID : int)
 				}
 				testString = annotation["text"];
 				textHeight = annotationStyle.CalcHeight(GUIContent(testString), availableWidth);
-			
+				
 				startPos = prevPos + 10;
 				endPos = startPos + headerHeight + textHeight;
-			
+				krow +=  10 + headerHeight + textHeight;
 				if (ApplicationState.instance.animate || ApplicationState.instance.scrubberDraged) {
 					if (annotation["startTime"] <= ApplicationState.instance.playTime) scrollTo = startPos;
 				}
@@ -260,7 +260,7 @@ private function windowFunction (windowID : int)
 				} else {
 					currentBoxStyle = anotationBoxStyle;
 				}
-			
+
 				GUI.BeginGroup(Rect(0, startPos, availableWidth+10, headerHeight+textHeight), currentBoxStyle);
 				if (annotation.Contains("character")) {
 					if (!annotation["sd"]) {
@@ -289,12 +289,15 @@ private function windowFunction (windowID : int)
 				}
 			
 				GUI.EndGroup();
-			
+
 				prevPos = endPos;
+				
 			}
 
 		}
-		__scrollHeight = endPos + (winRect.height - (headerHeight + textHeight)*2);
+
+		__scrollHeight = endPos < winRect.height -45 ? winRect.height - 45 : endPos;
+		// __scrollHeight = endPos + (winRect.height - (headerHeight + textHeight)*2);
 		
 		if (__jumpingEnabled && (ApplicationState.instance.animate || ApplicationState.instance.scrubberDraged)) {
 			__scrollViewVector.y = scrollTo;
