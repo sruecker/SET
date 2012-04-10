@@ -115,10 +115,10 @@ function OnGUI ()
 			
 			if (WindowManager.instance.getBottomWindowHeight() > 100) {
 				__initialResizeHeight = Input.mousePosition.y - WindowManager.instance.getBottomWindowHeight();
-			} else {
+			} 
+			else {
 				__initialResizeHeight = Input.mousePosition.y;
 			}
-			
 		}
 	}
 	

@@ -430,6 +430,8 @@ private function windowFunction (windowID : int) {
 	
 	if ( WindowManager.instance.windowFloat[WindowManager.instance.SPEECHES_ID] ) {
 		GUI.DragWindow(Rect(0, 0, 1000000, 30)); // 30 is the height of the window header
+		var windowRect : Rect = WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID];
+	    WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID] = WindowManager.instance.restrictToWindow(windowRect);
 	}
 	//UpdateToolTip();
 }

@@ -424,14 +424,27 @@ static public function setBottomWindowHeight(newHeight : float)
 	if (newHeight<0) {
 		newHeight = 0;
 	}
+	
+	// Debug.Log(newHeight + " "  + Screen.height - windowRects[TOOLBAR_ID].height);
+	
+	if (newHeight > Screen.height - windowRects[TOOLBAR_ID].height - 85) {
+		newHeight = Screen.height - windowRects[TOOLBAR_ID].height - 85;
+	}
+	
 	__bottomWindowHeight = newHeight;
 	
 	var yPos : float = Screen.height - newHeight;
 	
-	if ( newHeight < 100) {
+	if ( __bottomWindowHeight < 100) {
 		__bottomWindowHeight = 100;
 	}
+
+	// if (__bottomWindowHeight > Screen.height - windowRects[TOOLBAR_ID].height) {
+	// 	__bottomWindowHeight = Screen.height - windowRects[TOOLBAR_ID].height;
+	// }
 	
+	
+		
 	windowRects[TIMELINE_ID].y         = yPos - 85;    
 	
 	for (var windowId : int in __panelGroupMainPanelsIds) {
@@ -470,3 +483,11 @@ static public function restrictToViewPort(windowRect:Rect) : Rect{
 	return windowRect;
 }
 
+static public function restrictToWindow(windowRect:Rect) : Rect {
+	if (windowRect.x <=0) windowRect.x = 0;				
+	if (windowRect.y <=windowRects[TOOLBAR_ID].height) windowRect.y = windowRects[TOOLBAR_ID].height;
+	if (windowRect.x >=Screen.width - windowRect.width) windowRect.x = Screen.width - windowRect.width;				
+	if (windowRect.y >= Screen.height - windowRect.height) windowRect.y = Screen.height - windowRect.height;
+	
+	return windowRect;
+}

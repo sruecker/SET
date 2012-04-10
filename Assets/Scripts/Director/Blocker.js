@@ -45,7 +45,7 @@ function FinishInitialization() {
 	__characterColliders = new Array();
 	__addingDestinations = false;
 	__setStartTime = true;
-	
+	finishCharacterMovement();
 	var stages : Array = GameObject.FindGameObjectsWithTag("Stage");		
 	// live drawing
 	__pathPainter = GameObject.Find("Director").GetComponent(PathPainter);
@@ -205,30 +205,33 @@ function Update() {
 	
 	
 	if (__addOnNextMouseUp && Input.GetMouseButtonUp(0)) {
-
-		__previousMouseCoords = Vector2(Mathf.Infinity, Mathf.Infinity);
-		if (__startTime > ApplicationState.instance.playTime) {
-			__startTime = ApplicationState.instance.playTime;
-		}
-		
-		var thisDelta = (ApplicationState.instance.playTime - __startTime)/ __destinations.length;
-		var thisTime = __startTime;
-		// Debug.Log();
-		for (var destination : Vector3 in __destinations) {
-			// add the destinations to selected character
-			addDestinationCurrentCharacter(destination, 
-				 							   thisTime, 
-				  							   true, 
-				  							   true);
-			thisTime += thisDelta;			
-		}
-		
-		__addingDestinations = false;
-		__destinations.Clear();
-		ApplicationState.instance.movingCharacterKey = "";
-		__prevPos = __noPos;
-		__addOnNextMouseUp = false;
+		finishCharacterMovement();
 	}
+}
+
+function finishCharacterMovement() {
+	__previousMouseCoords = Vector2(Mathf.Infinity, Mathf.Infinity);
+	if (__startTime > ApplicationState.instance.playTime) {
+		__startTime = ApplicationState.instance.playTime;
+	}
+	
+	var thisDelta = (ApplicationState.instance.playTime - __startTime)/ __destinations.length;
+	var thisTime = __startTime;
+	// Debug.Log();
+	for (var destination : Vector3 in __destinations) {
+		// add the destinations to selected character
+		addDestinationCurrentCharacter(destination, 
+			 							   thisTime, 
+			  							   true, 
+			  							   true);
+		thisTime += thisDelta;			
+	}
+	
+	__addingDestinations = false;
+	__destinations.Clear();
+	ApplicationState.instance.movingCharacterKey = "";
+	__prevPos = __noPos;
+	__addOnNextMouseUp = false;
 }
 
 public function addDestinationCurrentCharacter(destination : Vector3, 
@@ -308,13 +311,6 @@ function isHitOnInterface(mouseCoords : Vector2) {
 	
 	return false;
 }
-
-// private function posToTextureCoordinates(x_ : float, y_ : float) : Vector2
-// {
-// 	return Vector2( Mathf.Floor(((x_ - __xMin) / (__xMax - __xMin)) * __textureSize),
-// 					Mathf.Floor(((y_ - __zMin) / (__zMax - __zMin)) * __textureSize));					
-// }
-// -----------------------
 
 
 public function addActionCurrentCharacterNow(type : CharacterActions)

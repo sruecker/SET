@@ -153,6 +153,8 @@ function annotationTexturesWindow(winId : int) {
 		}
 	} else {
 		GUI.DragWindow();
+		var windowRect : Rect = WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_TEXTURES_ID];
+	    WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_TEXTURES_ID] = WindowManager.instance.restrictToWindow(windowRect);
 	}
 }
 

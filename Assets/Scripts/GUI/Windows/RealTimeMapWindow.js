@@ -92,7 +92,7 @@ function get2DPositionFrom3D(pos3D : Vector3, width : float, height : float) {
 function DoWindow(windowID : int) {
 	GUI.skin = emptyGuiSkin;
 	
-
+	
 	
 	GUI.DrawTexture(Rect(0, 0, __mapWidth, newHeight), realTimeMapTexture);
 	
@@ -198,5 +198,7 @@ function DoWindow(windowID : int) {
 	GUI.EndGroup();
 	
 	GUI.DragWindow();
-    
+	
+	var windowRect : Rect = WindowManager.instance.windowRects[WindowManager.instance.REAL_TIME_MAP_ID];
+    WindowManager.instance.windowRects[WindowManager.instance.REAL_TIME_MAP_ID] = WindowManager.instance.restrictToWindow(windowRect);
 }
