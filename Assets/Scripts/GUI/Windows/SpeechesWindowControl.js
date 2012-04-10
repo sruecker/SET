@@ -169,6 +169,8 @@ private function windowFunction (windowID : int) {
 	
 	var scene:Object;
 	var mug:Texture2D;
+	var act : Hashtable;
+	var line: Hashtable;
 	
 	switch (__displayMode) {
 		case BUBBLE_MODE:
@@ -189,7 +191,7 @@ private function windowFunction (windowID : int) {
 			
 				for (var actIndex:int = 0; actIndex < ApplicationState.instance.playStructure["acts"].length; actIndex++) {
 					
-					var act:Hashtable = ApplicationState.instance.playStructure["acts"][actIndex];
+					act = ApplicationState.instance.playStructure["acts"][actIndex];
 					
 					var sceneCount:int = 0;
 					for (var sceneIndex : int in act["scenes"]) {
@@ -201,7 +203,7 @@ private function windowFunction (windowID : int) {
 						
 						for (var i:int = 0; i < __speechPositions[actIndex][sceneCount]["lines"].length; i++) {
 							
-							var line:Object = __speechPositions[actIndex][sceneCount]["lines"][i];
+							line = __speechPositions[actIndex][sceneCount]["lines"][i];
 							
 							GUI.skin = speechBoxSkin;
 							
@@ -323,7 +325,7 @@ private function windowFunction (windowID : int) {
 				var testString:String;
 				var scrollTo:float;
 				
-				for (var act : Hashtable in ApplicationState.instance.playStructure["acts"]) {
+				for (act in ApplicationState.instance.playStructure["acts"]) {
 					
 					for (var sceneIndex : int in act["scenes"]) {
 						scene = ApplicationState.instance.playStructure["scenes"][sceneIndex];
@@ -337,7 +339,7 @@ private function windowFunction (windowID : int) {
 						
 						GUI.Label(Rect(0, startPos, availableWidth+10, headerHeight+5), testString, actSceneLabelStyle);
 						
-						for (var line:Hashtable in scene["lines"]) {
+						for (line in scene["lines"]) {
 							mug = ApplicationState.instance.playStructure["characters"][line["character"]]["mug"];
 							
 							testString = ApplicationState.instance.playStructure["characters"][line["character"]]["name"];
@@ -384,14 +386,14 @@ private function windowFunction (windowID : int) {
 
 			if (__linesLoaded) {
 			
-				for (var act : Hashtable in ApplicationState.instance.playStructure["acts"]) {
+				for (act in ApplicationState.instance.playStructure["acts"]) {
 					
 					for (var sceneIndex : int in act["scenes"]) {
 						scene = ApplicationState.instance.playStructure["scenes"][sceneIndex];
 						
 						GUILayout.Label(act["name"] + ", " + scene["name"], actSceneLabelStyle, GUILayout.Height(21));
 						
-						for (var line:Hashtable in scene["lines"]) {
+						for (line in scene["lines"]) {
 							mug = ApplicationState.instance.playStructure["characters"][line["character"]]["mug"];
 							GUILayout.Label(GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"], mug));
 							
@@ -819,7 +821,7 @@ function Update() {
 			if (__scrollViewVector.y / __speechHeightModifyer > ApplicationState.instance.playTimeLength) {
 				__scrollViewVector.y = ApplicationState.instance.playTimeLength * __speechHeightModifyer - 0.1;
 			}
-			
+			// XXX AQUI
 			ApplicationState.instance.playTime = __scrollViewVector.y / __speechHeightModifyer;
 			__oldScrollViewVector = __scrollViewVector;
 			
@@ -857,6 +859,7 @@ public function FinishInitialization() {
 	
 	createSpeechPositions(true);
 	__linesLoaded = true;
+	__scrollViewVector.y = 0;
 }
 
 }

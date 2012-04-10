@@ -19,12 +19,21 @@ private var __dragging : boolean = false;
 private var __initialXPosDragging : float = 0;
 private var __previousTime : float = 0;
 private var __timeText : String = "00:00:00";
+private var __workingArea : int;
 
+
+function SetToPlayTime() {
+	var currentPosition : float = (ApplicationState.instance.playTime * 
+								   __workingArea / 
+								   ApplicationState.instance.playTimeLength) + 
+								   minXDrag;
+	scrubberRect.x = currentPosition;
+}
 
 function Update()
 {
 
-	var workingArea : int = Screen.width - scrubberRect.width / 2;
+	__workingArea= Screen.width - scrubberRect.width / 2;
 	
 	if (__dragging) {
 		var newXPos : int = Input.mousePosition.x - __initialXPosDragging;
@@ -36,7 +45,7 @@ function Update()
 		}
 		
 		scrubberRect.x = newXPos;
-		ApplicationState.instance.playTime =  scrubberRect.x * ApplicationState.instance.playTimeLength / workingArea;
+		ApplicationState.instance.playTime =  scrubberRect.x * ApplicationState.instance.playTimeLength / __workingArea;
 		ApplicationState.instance.playingForward = ApplicationState.instance.playTime > __previousTime;
 		__previousTime = ApplicationState.instance.playTime;
 	
@@ -45,11 +54,7 @@ function Update()
 		}
 	} else {
 		
-		var currentPosition : float = (ApplicationState.instance.playTime * 
-									   workingArea / 
-									   ApplicationState.instance.playTimeLength) + 
-									   minXDrag;
-		scrubberRect.x = currentPosition;
+		SetToPlayTime();
 
 	}
 	
@@ -102,7 +107,7 @@ function DrawGUI()
 private function setScruberTime()
 {
 	var currentTime : float = ApplicationState.instance.playTime;
-	
+
 	var hours : int = currentTime / 3600;
 	currentTime -= hours * 3600;
 	var minutes : int = currentTime / 60;

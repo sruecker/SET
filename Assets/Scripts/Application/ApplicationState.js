@@ -101,16 +101,9 @@ function getPlay() : Hashtable
 }
 
 function InitValues() {
-	
-}
-
-function Awake()
-{
 	animate = false;
 	playTime = 0;
-	playTimeLength = 0;
 	playSpeed = 1.0;
-	loaded = false;
 	currentToolTip = "";
 	editCharacterPaths = false;
 	holdingSelectedCharacter = false;
@@ -120,10 +113,18 @@ function Awake()
 	showAnnotationImages = true;
 	showOnScreenTextAnnotations = true;
 	showOnScreenImageAnnotations = true;
+	__previousTime = 0;
+	
+}
+
+function Awake()
+{
+	
+	loaded = false;
+	playTimeLength = 0;	
 	loadingNewFile = false;
 	playStructure = new Hashtable();
-	
-	__previousTime = 0;
+	InitValues();
 	__directorObject = GameObject.Find("Director");	
 	__timeLineObject = GameObject.Find("TimeLine");
 	__speechesObject = GameObject.Find("SpeechesWindow");
@@ -181,13 +182,19 @@ function Start()
 
 function loadPlay(filename:String) {
 	// setPlayToLoad( filename );
+	ApplicationState.instance.animate = false;
 	playToLoad = filename;	
 	// find what stage to load 
 	ApplicationState.instance.loadingNewFile = true;
+	InitValues();
+	
 	loadPlayFile(ApplicationState.instance.playToLoad);
+	playTime = 0;
+	
 	
 	// reset values
-	ApplicationState.instance.playTime = 0;
+	
+	// ApplicationState.instance.playTime = 0;
 	GameObject.Find("Director").GetComponent(NewCameraControls).SetPointer();
 	// load that stage
 	Application.LoadLevel(ApplicationState.instance.playStructure["stage"]);
@@ -197,7 +204,8 @@ function loadPlay(filename:String) {
 function completeLoadPlay()
 {
 	
-	setupPlay();	
+	setupPlay();		
+	InitValues();
 	__directorObject.GetComponent(PathPainter).FinishInitialization();
 //	__directorObject.GetComponent(Blocker).FinishInitialization();
 //	__timeLineObject.GetComponent(TimeLineView).FinishInitialization();

@@ -212,16 +212,13 @@ function FinishInitialization() {
 	
 	
 	clearTexture();
-   
-
 	Drawing.NumSamples=AntiAlias;
-	
+   	ApplicationState.instance.redrawSurfacePaths = true;
 
 }
 
 private function posToTextureCoordinates(x_ : float, y_ : float) : Vector2
 {
-	
 	
 	return Vector2( Mathf.Floor(((x_ - __xMin) / (__xMax - __xMin)) * __textureSize),
 					Mathf.Floor(((y_ - __zMin) / (__zMax - __zMin)) * __textureSize));

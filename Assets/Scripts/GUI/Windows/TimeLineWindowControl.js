@@ -74,7 +74,7 @@ function FinishInitialization()
 {
 	__timeLine.timeLineWidth = WindowManager.instance.windowRects[WindowManager.instance.TIMELINE_ID].width - __timeLineLeftPadding;
 	__timeLine.FinishInitialization();
-
+	__scrubber.SetToPlayTime();
 
 }
 
