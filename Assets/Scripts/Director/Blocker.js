@@ -102,7 +102,7 @@ private function canBlock(mouseCoords : Vector2) {
 	}	
 	
 	// if collider belongs to a character set selected and return false	
-	if (closestCollider.gameObject.tag == "Character"  && !isHitOnInterface(mouseCoords)) {
+	if (!closestCollider || (closestCollider.gameObject.tag == "Character"  && !isHitOnInterface(Input.mousePosition))) {
 		ApplicationState.instance.selectedCharacter = closestCollider.gameObject;
 		return false;
 	}

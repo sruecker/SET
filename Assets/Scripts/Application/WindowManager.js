@@ -491,3 +491,14 @@ static public function restrictToWindow(windowRect:Rect) : Rect {
 	
 	return windowRect;
 }
+
+static public function isMouseOnScreen(mousePos : Vector3) : boolean {
+	if (mousePos.x < 0) return false;
+	if (mousePos.y < 0) return false;
+	if (mousePos.x > Screen.width) return false;
+	if (mousePos.y > Screen.height) return false;
+	return true;
+}
+
+
+

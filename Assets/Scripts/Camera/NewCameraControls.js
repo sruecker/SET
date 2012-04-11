@@ -84,7 +84,7 @@ function Update() {
 			__cameraManager.StartTracking(startingPoint);
 		}		
 		
-		if (startingPoint != noPoint3) {
+		if (startingPoint != noPoint3 && WindowManager.instance.isMouseOnScreen(Input.mousePosition)) {
 			switch(ApplicationState.instance.currentMouseCameraState) {
 				case MouseCameraControlState.ZOOM:
 					__cameraManager.ZoomCamera(Input.mousePosition);

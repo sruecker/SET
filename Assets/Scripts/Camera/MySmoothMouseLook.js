@@ -31,42 +31,44 @@ function LateUpdate () {
 
 function DoLook(useBuffer:boolean)
 {
-	if (sensitivityX > 0 || sensitivityY > 0) {
-		__xInput = Input.GetAxisRaw("Mouse X") * sensitivityX;
-		__yInput = Input.GetAxisRaw("Mouse Y") * sensitivityY;
+	// if (WindowManager.instance.isMouseOnScreen(Input.mousePosition)){
+		if (sensitivityX > 0 || sensitivityY > 0) {
+			__xInput = Input.GetAxisRaw("Mouse X") * sensitivityX;
+			__yInput = Input.GetAxisRaw("Mouse Y") * sensitivityY;
 		
-		if (useBuffer) {
-			__xInputBuffer[__currentBuffer] = __xInput;
-			__yInputBuffer[__currentBuffer] = __yInput;
-			__xInput = 0.0;
-			__yInput = 0.0;
+			if (useBuffer) {
+				__xInputBuffer[__currentBuffer] = __xInput;
+				__yInputBuffer[__currentBuffer] = __yInput;
+				__xInput = 0.0;
+				__yInput = 0.0;
 		
-			var currentIndex:int = 0;
-			for (var i:int = 0; i<__bufferSize; i++) {
-				currentIndex = (__currentBuffer + i) % __bufferSize;
-				__xInput += __xInputBuffer[currentIndex] * __bufferWeights[i];
-				__yInput += __yInputBuffer[currentIndex] * __bufferWeights[i];
+				var currentIndex:int = 0;
+				for (var i:int = 0; i<__bufferSize; i++) {
+					currentIndex = (__currentBuffer + i) % __bufferSize;
+					__xInput += __xInputBuffer[currentIndex] * __bufferWeights[i];
+					__yInput += __yInputBuffer[currentIndex] * __bufferWeights[i];
 				
+				}
+				__xInput /= __bufferSize;
+				__yInput /= __bufferSize;
 			}
-			__xInput /= __bufferSize;
-			__yInput /= __bufferSize;
+
+			__rotationX += __xInput;
+			__rotationY += __yInput;
+
+			__rotationX = ClampAngle (__rotationX, minimumX, maximumX);
+			__rotationY = ClampAngle (__rotationY, minimumY, maximumY);
+		
+		
+			var xQuaternion : Quaternion = Quaternion.AngleAxis(__rotationX, Vector3.up); 
+			var yQuaternion : Quaternion = Quaternion.AngleAxis(__rotationY, Vector3.left); 
+		
+			transform.localRotation = xQuaternion * yQuaternion;
+			//transform.localRotation =  __originalRotation *   xQuaternion * yQuaternion;
+		
+			__currentBuffer = (__currentBuffer+1) % 10;
 		}
-
-		__rotationX += __xInput;
-		__rotationY += __yInput;
-
-		__rotationX = ClampAngle (__rotationX, minimumX, maximumX);
-		__rotationY = ClampAngle (__rotationY, minimumY, maximumY);
-		
-		
-		var xQuaternion : Quaternion = Quaternion.AngleAxis(__rotationX, Vector3.up); 
-		var yQuaternion : Quaternion = Quaternion.AngleAxis(__rotationY, Vector3.left); 
-		
-		transform.localRotation = xQuaternion * yQuaternion;
-		//transform.localRotation =  __originalRotation *   xQuaternion * yQuaternion;
-		
-		__currentBuffer = (__currentBuffer+1) % 10;
-	}
+	// }
 }
 
 function LookAt( rotX : float , rotY: float)
