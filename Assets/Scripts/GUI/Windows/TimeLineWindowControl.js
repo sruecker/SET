@@ -119,6 +119,7 @@ function OnGUI ()
 			else {
 				__initialResizeHeight = Input.mousePosition.y;
 			}
+
 		}
 	}
 	
