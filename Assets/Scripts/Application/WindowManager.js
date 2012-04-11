@@ -184,7 +184,6 @@ function Awake()
 	windowRects[SPEECHES_ID]                  = Rect(__initialCharacterWidth + onStageInitialWidth + __initialAnnotationWidth, initialYPos, __initialSpeechesWidth, __bottomWindowHeight);
 	windowRects[SPEECHES_POPOUT_ID]           = Rect(__initialCharacterWidth + onStageInitialWidth + __initialAnnotationWidth, initialYPos - __bottomWindowHeight, __initialSpeechesWidth, __bottomWindowHeight);
 	
-	windowRects[FILEBROWSER_ID]               = Rect(20,20,120,50);
 	windowRects[MESSENGER_ID]                 = Rect(20,20,50,50);
 	windowRects[TOOLBAR_ID]                   = Rect(0,0,Screen.width,22);
 	windowRects[TOOLBAR_MENU_ID]              = Rect(0,22,80,100);
@@ -192,7 +191,8 @@ function Awake()
 	windowRects[CHARACTER_MENU_1_ID]          = Rect(0,0,0,0);
 	windowRects[CHARACTER_MENU_2_ID]          = Rect(0,0,0,0);
 	windowRects[REAL_TIME_MAP_ID]             = Rect(150, 20, 200, 200+25);
-
+	windowRects[FILEBROWSER_ID]				  = Rect(Screen.width / 2 - 185,35,370,50);
+	
 	__windowIdPool = Array();
 	
 	for (i = 0; i < __maxIdCount; i++) {

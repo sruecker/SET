@@ -101,9 +101,8 @@ private function canBlock(mouseCoords : Vector2) {
 		}
 	}	
 	
-	// if collider belongs to a character set selected and return false
-	
-	if (closestCollider.gameObject.tag == "Character") {
+	// if collider belongs to a character set selected and return false	
+	if (closestCollider.gameObject.tag == "Character"  && !isHitOnInterface(mouseCoords)) {
 		ApplicationState.instance.selectedCharacter = closestCollider.gameObject;
 		return false;
 	}
@@ -308,7 +307,7 @@ function isHitOnInterface(mouseCoords : Vector2) {
 			return true;
 		}
 	}
-	
+		
 	return false;
 }
 

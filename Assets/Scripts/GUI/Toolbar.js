@@ -30,8 +30,8 @@ function Awake() {
 	__fileBrowser = gameObject.GetComponentInChildren(CTreeView);
 	__fileBrowser.visible = false;
 	__fileBrowser.location = "./";
-	__fileBrowser.winRect = new Rect(Screen.width / 2 - 185,35,370,50);
 	__fileBrowser.winId = WindowManager.instance.FILEBROWSER_ID;
+	__fileBrowser.winRect = Rect(Screen.width / 2 - 185,35,370,50);
 	__validator = gameObject.GetComponentInChildren(XMLValidator);
 	__cameraManager = GameObject.Find("Director").GetComponent(ManageCameras);	
 	
@@ -212,6 +212,8 @@ function SaveFile(filename:String) {
 function FixedUpdate() {
 	if (__fileBrowser.visible) {
 		WindowManager.instance.windowRects[WindowManager.instance.FILEBROWSER_ID] = getTreeBrowserWindowRect();
+	} else {
+		WindowManager.instance.windowRects[WindowManager.instance.FILEBROWSER_ID] = Rect(0,0,0,0);		
 	}
 }
 
