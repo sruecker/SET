@@ -483,7 +483,8 @@ private function onStageWindowFunction (windowID : int)
 														  __lowerButtonSize - 3),
 													  __breakMainTimeLineInCount, 1.0, 30.0);
 	
-	__scalingFactor = __breakMainTimeLineInCount/7.0;
+
+	__scalingFactor = (__breakMainTimeLineInCount+6)/7.0;
 													
 	__timeLine.breakMainTimeLineInCount = __breakMainTimeLineInCount;
 	__timeLine.setScalingFactor(__scalingFactor);

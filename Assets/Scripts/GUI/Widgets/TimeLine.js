@@ -116,7 +116,7 @@ public function FinishInitialization()
 }
 
 function setScalingFactor( scalingFactor : float)
-{
+{	
 	__scalingFactor = scalingFactor;
 }
 
