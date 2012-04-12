@@ -114,6 +114,7 @@ function InitValues() {
 	showOnScreenTextAnnotations = true;
 	showOnScreenImageAnnotations = true;
 	__previousTime = 0;
+	selectedCharacter = null;
 	
 }
 
