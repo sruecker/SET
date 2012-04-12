@@ -19,6 +19,7 @@ var characterSitTexture : Texture2D;
 var characterKneelTexture : Texture2D;
 var characterLayTexture : Texture2D;
 
+var pointButtonTexture : Texture2D;
 var zoomButtonTexture : Texture2D;
 var trackButtonTexture : Texture2D;
 var tumbleButtonTexture : Texture2D;
@@ -123,7 +124,7 @@ function DoSubControlsWindow (windowID : int) {
   	toolPos.y = newPos.y + originRect.y;
 
 	
-	if (GUI.Button (newPos, GUIContent(" Point", toolPos+"_POSITION-STYLE_" + "Point"), buttonNormalStyle) ) {
+	if (GUI.Button (newPos, GUIContent(pointButtonTexture, toolPos+"_POSITION-STYLE_" + "Point"), buttonNormalStyle) ) {
 		__newCameraControls.SetPointer();
 	}
 	

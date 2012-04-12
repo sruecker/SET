@@ -260,7 +260,7 @@ class SpeechesWindowControl extends ToolTipSender {
 									}
 								} else {
 									var characterName : String = ApplicationState.instance.playStructure["characters"][line["character"]]["name"];
-									if (GUI.Button(Rect(3, 8, lineWidth-6, mug.height), GUIContent(characterName, mug), mugButtonStyle)) {
+									if (GUI.Button(Rect(3, 8, lineWidth-6, mug.height+5), GUIContent(characterName, mug), mugButtonStyle)) {
 										line["showText"] = !line["showText"];
 										if (__speechOpenTracker.ContainsKey(line["character"])) {
 											__speechOpenTracker[line["character"]].Remove(line["startPos"]);

@@ -387,7 +387,7 @@ class OnStageWindowControl extends ToolTipSender {
 	
 		var buttonY : float = 27 / 2.0 - 17 / 2.0;
 	
-		if (GUI.Button(Rect(WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].width  - 53, buttonY, 42, 19),
+		if (GUI.Button(Rect(WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].width  - 65, buttonY, 55, 19),
 				   			"Options" ) ) {
 		
 			__showFirstMenu = !__showFirstMenu;
