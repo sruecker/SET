@@ -169,9 +169,9 @@ private function windowFunction (windowID : int)
 	if (GUI.Button( Rect(winRect.width - 80 - 5, 5, 16, 16), annotationButtonContent, dragButtonStyle )) {
 		__annotationsEnabled = ! __annotationsEnabled;
 		
-		if (!__annotationsEnabled && !__stageDirectionsEnabled) {
-			__stageDirectionsEnabled = true;
-		}
+		// if (!__annotationsEnabled && !__stageDirectionsEnabled) {
+		// 	__stageDirectionsEnabled = true;
+		// }
 	}
 	
 	// activate / deactivate stage directions
@@ -181,9 +181,9 @@ private function windowFunction (windowID : int)
 	if (GUI.Button( Rect(winRect.width - 60 - 5, 5, 16, 16), stageDirectionsButtonContent, dragButtonStyle )) {
 		__stageDirectionsEnabled = ! __stageDirectionsEnabled;
 		
-		if (!__annotationsEnabled && !__stageDirectionsEnabled) {
-			__annotationsEnabled = true;
-		}
+		// if (!__annotationsEnabled && !__stageDirectionsEnabled) {
+		// 	__annotationsEnabled = true;
+		// }
 	}
 
 	// activate / deactivate jump mode
