@@ -446,7 +446,8 @@ class SpeechesWindowControl extends ToolTipSender {
 			var windowRect : Rect = WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID];
 		    WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID] = WindowManager.instance.restrictToWindow(windowRect);
 		}
-		UpdateToolTip();
+		//UpdateToolTip();
+		
 	}
 
 	private function windowPopOutFunction(windowID: int) {

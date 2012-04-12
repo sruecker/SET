@@ -364,7 +364,8 @@ class AnnotationsWindowControl extends ToolTipSender {
 		    WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID] = WindowManager.instance.restrictToWindow(windowRect);
 		}
 		
-		UpdateToolTip();
+		// UpdateToolTip();
+	
 	
 	}
 
