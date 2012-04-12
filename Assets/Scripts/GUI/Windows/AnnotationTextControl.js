@@ -40,23 +40,26 @@ function OnGUI() {
 						// content = GUIContent(annotation['text'] as String);
 						stringPart = annotation['text'];
 					}
-					
+					var showAnnotation = false;
 					if (annotation.ContainsKey("imageTexture") && ApplicationState.instance.showOnScreenImageAnnotations) {
 						if (ApplicationState.instance.showOnScreenTextAnnotations){
 							content = GUIContent(stringPart, annotation["imageTexture"] as Texture2D);
+							showAnnotation = true;
 						} else {
 							content = GUIContent(annotation["imageTexture"] as Texture2D);
+							showAnnotation = true;
 						}
 					} else if (ApplicationState.instance.showOnScreenTextAnnotations) {
 						content = GUIContent(stringPart);
+						showAnnotation = true;
 					}
 																	
 					// render
 					annotationPosition.height = annotationStyle.CalcHeight(content, annotationWidth);					
 					annotationPosition = WindowManager.instance.restrictToViewPort(annotationPosition);					
-					
-					GUI.Label(annotationPosition, content, annotationStyle);
-					
+					if (showAnnotation) {
+						GUI.Label(annotationPosition, content, annotationStyle);
+					}
 				}
 			
 		}
