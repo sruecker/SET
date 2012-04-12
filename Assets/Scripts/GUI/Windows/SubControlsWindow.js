@@ -114,13 +114,12 @@ function DoSubControlsWindow (windowID : int) {
 
   	newPos.y += buttonYStep;
   	toolPos.y = newPos.y + originRect.y;
-
 	// temp
 	if (GUI.Button (newPos, GUIContent(" Map", toolPos+"_POSITION-STYLE_" + "Minimap"), buttonNormalStyle) ) {
 		WindowManager.instance.showMiniMap = ! WindowManager.instance.showMiniMap;
 	}
 	
-  	newPos.y += buttonYStep;
+  	newPos.y += buttonYStep+5;
   	toolPos.y = newPos.y + originRect.y;
 
 	

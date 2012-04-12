@@ -103,8 +103,14 @@ function OnGUI()
 			WindowManager.instance.windowRects[WindowManager.instance.TOOLTIP_ID].width = __toolTipArea.x;
 			WindowManager.instance.windowRects[WindowManager.instance.TOOLTIP_ID].height = __toolTipArea.y;
 		
-	
+			var windRect : Rect = WindowManager.instance.windowRects[WindowManager.instance.TOOLTIP_ID];
+			if (windRect.x + windRect.width >= Screen.width) {
+				windRect.x -= ( windRect.x +  windRect.width) - Screen.width;
+				windRect.y += windRect.height;
+				WindowManager.instance.windowRects[WindowManager.instance.TOOLTIP_ID] = windRect;
+			}
 		
+			// WindowManager.instance.windowRects[WindowManager.instance.TOOLTIP_ID].y = Screen.height/2;
 			WindowManager.instance.windowRects[WindowManager.instance.TOOLTIP_ID] = 
 				GUI.Window(WindowManager.instance.TOOLTIP_ID,
 						   WindowManager.instance.windowRects[WindowManager.instance.TOOLTIP_ID],
@@ -119,6 +125,6 @@ function OnGUI()
 }
 
 function DoToolTipWindow(windowId : int) {
-
+	
 	GUI.Label(Rect(5, 0,__toolTipArea.x, __toolTipArea.y), __text, __currentTextStyle);
 }
