@@ -81,14 +81,20 @@ private function canBlock(mouseCoords : Vector2) {
 	__ray = Camera.main.ScreenPointToRay(mouseCoords);	
 	var closestCollider : Collider;
 	// check against character colliders
+	var i : int = 0;
 	for (var collider : Collider in __characterColliders) {
-		if (collider.Raycast(__ray, hit, shortestDistance)) {
-			currentDistance = Vector3.Distance (hit.point , transform.position);
-			if ( currentDistance < shortestDistance ) {
-				shortestDistance = currentDistance;
-				closestCollider = collider;
+		if (collider == null) {
+			__characterColliders.RemoveAt(i);
+		} else {
+			if (collider.Raycast(__ray, hit, shortestDistance)) {
+				currentDistance = Vector3.Distance (hit.point , transform.position);
+				if ( currentDistance < shortestDistance ) {
+					shortestDistance = currentDistance;
+					closestCollider = collider;
+				}
 			}
 		}
+		i++;
 	}
 	// check against stage colliders
 	for (var collider : Collider in __colliders) {

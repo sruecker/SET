@@ -1572,6 +1572,10 @@ class OnStageWindowControl extends ToolTipSender {
 			ApplicationState.instance.playStructure["characters"][newBody.name]["gameObject"] = newBody;
 			ApplicationState.instance.selectedCharacter = ApplicationState.instance.playStructure["characters"][newBody.name]["gameObject"];
 		
+			// add to character colliders
+			__blockerComponent.addToCharacterColliders(newBody.GetComponent("CharacterController"));
+			
+			
 			newBody.transform.position = oldPos.position;
 			newBody.transform.rotation = oldPos.rotation;
 		
