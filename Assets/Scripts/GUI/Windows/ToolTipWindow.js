@@ -31,6 +31,7 @@ function Update() {
 		Debug.Log(ApplicationState.instance.sideLabels);
 	}
 }
+
 function OnGUI()
 {
 	
@@ -73,7 +74,6 @@ function OnGUI()
 			renderToolTip = true;
 		} else if (ApplicationState.instance.currentToolTip.Contains("POSITION-STYLE")) {
 			// __text = ApplicationState.instance.currentToolTip;
-			
 			var input = ApplicationState.instance.currentToolTip.Split("_"[0]);
 
 
@@ -125,6 +125,5 @@ function OnGUI()
 }
 
 function DoToolTipWindow(windowId : int) {
-	
 	GUI.Label(Rect(5, 0,__toolTipArea.x, __toolTipArea.y), __text, __currentTextStyle);
 }
