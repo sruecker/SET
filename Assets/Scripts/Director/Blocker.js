@@ -81,6 +81,15 @@ private function canBlock(mouseCoords : Vector2) {
 	__ray = Camera.main.ScreenPointToRay(mouseCoords);	
 	var closestCollider : Collider;
 	// check against character colliders
+	
+	// ApplicationState.instance.selectedCharacter.name = mouseCoords.x.ToString();
+	
+	ApplicationState.instance.playStructure["characters"][ApplicationState.instance.selectedCharacter.name]["name"] = mouseCoords.y.ToString();
+	
+	if (mouseCoords.y >= Screen.height) { 
+		return false;
+	}
+	
 	var i : int = 0;
 	for (var collider : Collider in __characterColliders) {
 		if (collider == null) {

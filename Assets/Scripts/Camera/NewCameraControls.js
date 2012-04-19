@@ -1,7 +1,7 @@
 
 
 
-public var movementSpeed : float  = 0.1;
+// public var movementSpeed : float  = 0.1;
 public var tumbleCursorTexture : Texture2D;
 public var trackCursorTexture : Texture2D;
 public var zoomCursorTexture : Texture2D;
