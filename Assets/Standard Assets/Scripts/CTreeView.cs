@@ -85,7 +85,7 @@ public class CTreeView : MonoBehaviour {
 	   GUILayout.BeginHorizontal();
 	   
 	   // list available drives
-	   GUILayout.BeginVertical();
+	   GUILayout.BeginVertical(GUILayout.Height(200));
 	   foreach (string drive in Directory.GetLogicalDrives()) {
 		   if (GUILayout.Button(new GUIContent(" "+drive, driveTexture), driveStyle)) {
 			   this.location = drive;

@@ -53,6 +53,7 @@ static var	UNDOCKING_JUMP : int;
 
 static var windowGroups:Hashtable;
 
+private static var timeLineWindowControl : TimeLineWindowControl;
 
 instance = FindObjectOfType(WindowManager);
 
@@ -199,7 +200,7 @@ function Awake()
 		__windowIdPool.Push(LAST_ID + i);
 	}
 	
-
+	timeLineWindowControl = GameObject.Find("TimeLineWindow").GetComponent(TimeLineWindowControl);
 }
 
 static function reserveId() : int {
@@ -232,8 +233,11 @@ static function restoreWindow(winId:int) {
 	}
 	if (winId == TIMELINE_ID || winId < 0) {
 		// XXX check why the timeline windowRectCache is apparently being modified 
-		windowRects[TIMELINE_ID].y = Screen.height - __bottomWindowHeight - 85;
-		GameObject.Find("TimeLineWindow").GetComponent(TimeLineWindowControl).setScrubberPositions();
+		// windowRects[TIMELINE_ID].y = Screen.height - __bottomWindowHeight - 85;
+		// setBottomWindowHeight(Screen.height - __bottomWindowHeight);		
+		// GameObject.Find("TimeLineWindow").GetComponent(TimeLineWindowControl).setScrubberPositions();
+		timeLineWindowControl.resetBottomWindow(Screen.height - __bottomWindowHeight);
+		
 	}
 	if (winId == ANNOTATIONS_ID || winId < 0) {
 		if (windowFloat[ANNOTATIONS_ID]) {

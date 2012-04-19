@@ -42,6 +42,9 @@ private var __skipScrubber : boolean;
 private var __resizeGUI : boolean;
 private var __initialResizeHeight : float;
 
+private var __resetBottom: boolean = false;
+private var __resetHeight : int = 200;
+
 function Awake()
 {
 	__timeLineTopPadding = 10;
@@ -78,6 +81,10 @@ function FinishInitialization()
 
 }
 
+function resetBottomWindow(height : int){
+	__resetHeight = height;
+	__resetBottom = true;
+}
 
 function OnGUI () 
 {
@@ -127,10 +134,18 @@ function OnGUI ()
 		if (!Input.GetMouseButton(0)) {
 			__resizeGUI = false;	
 		} else {
-			
-			WindowManager.instance.setBottomWindowHeight(Input.mousePosition.y - __initialResizeHeight);
-			setScrubberPositions();
+			resetBottomWindow(Input.mousePosition.y - __initialResizeHeight);			
+			// __resetHeight = Input.mousePosition.y - __initialResizeHeight;
+			// __resetBottom = true;
 		}
+	}
+	
+	
+	if (__resetBottom) {
+		__resetBottom = false;
+		WindowManager.instance.setBottomWindowHeight(__resetHeight);
+		setScrubberPositions();	
+		
 	}
 	
 	
@@ -145,8 +160,11 @@ function OnGUI ()
 		__skipScrubber = false;
 		var ratio : float = (Input.mousePosition.x - __timeLineLeftPadding) / 
 							(Screen.width - __timeLineLeftPadding);
-		
-		ApplicationState.instance.playTime = ratio * ApplicationState.instance.playTimeLength;
+		var newPlaytime : float = ratio * ApplicationState.instance.playTimeLength;
+		if (newPlaytime < 0) {
+			newPlaytime = 0;
+		}
+		ApplicationState.instance.playTime = newPlaytime;
 	}
 	
 

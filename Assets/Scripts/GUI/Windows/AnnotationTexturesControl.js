@@ -1,6 +1,6 @@
 import ApplicationState;
 
-var buttonTexture : Texture2D;
+// var buttonTexture : Texture2D;
 var buttonStyle : GUIStyle;
 var guiSkin : GUISkin;
 var bottomMenuHeight : int = 25;
@@ -121,6 +121,9 @@ function annotationTexturesWindow(winId : int) {
 		content.text = thisImage['annotationSample'];		
 		content.image = downButtonTexture;
 		
+		// aqui abajo va el texto de descripcion
+		
+		
 		if (GUI.RepeatButton(Rect( winRect.width - 20, winRect.height + 5, 15, 15), resizeButtonTexture, resizeButtonStyle)) {
 			__resizingVector = Input.mousePosition;
 			__resizingRect = WindowManager.instance.windowRects[winId];
@@ -129,10 +132,7 @@ function annotationTexturesWindow(winId : int) {
 		
 		if (GUI.Button(Rect(10, winRect.height + 5, 123, 15), content )) {
 			__renderMenu = true;
-		}
-		
-	
-		
+		}			
 	}
 	
 	if (__resizing) {
@@ -206,7 +206,7 @@ function OnGUI() {
 	}
 		
 	// if show
-		
+/*		
 	if (! ApplicationState.instance.loadingNewFile &&  ApplicationState.instance.showAnnotationImages) {
 	
 		for (var thisImage: Hashtable in __images) {
@@ -226,13 +226,22 @@ function OnGUI() {
 					thisImage['btnRect'].y = Screen.height - buttonPosn.y ;
 				}
 				
-				if (GUI.Button(thisImage['btnRect'], buttonTexture, buttonStyle)) {
-					// show image on images window
-					__currentlyShowingIndex = __winIdToImage[thisImage['winId']];
-				}			
+				
+				// XXX instead of buttonTexture use real texture;
+				
+				// if (GUI.Button(thisImage['btnRect'], buttonTexture, buttonStyle)) {
+				// if (GUI.Button(Rect(thisImage['btnRect'].x, 
+				// 					thisImage['btnRect'].y, 
+				// 					thisImage['imgRect'].width, 
+				// 					thisImage['imgRect'].width), 
+				// 			   thisImage['image'], buttonStyle)) {					
+				// 	// show image on images window
+				// 	__currentlyShowingIndex = __winIdToImage[thisImage['winId']];
+				// }			
 			}
 		}
 	}
+*/
 }
 
 function imageWindowFunction(winId: int) {
