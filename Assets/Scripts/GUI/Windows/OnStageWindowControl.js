@@ -55,7 +55,7 @@ class OnStageWindowControl extends ToolTipSender {
 	private var __characterPresenceOpenRightStyles : Hashtable;
 
 	private var __newCharacterPosition : GameObject;
-
+	private var __optionsButtonRect : Rect;
 	//var characterAnootationBarStyle : GUIStyle;
 	//var characterAnootationDotStyle : GUIStyle;
 
@@ -386,16 +386,25 @@ class OnStageWindowControl extends ToolTipSender {
 		// ugly hardcoded menu begins here
 	
 		var buttonY : float = 27 / 2.0 - 17 / 2.0;
+		__optionsButtonRect = Rect(WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].width  - 65, buttonY, 55, 19);
 	
-		if (GUI.Button(Rect(WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].width  - 65, buttonY, 55, 19),
-				   			"Options" ) ) {
-		
+		if (GUI.Button(__optionsButtonRect, "Options" ) ) {		
 			__showFirstMenu = !__showFirstMenu;
 			if (__showPopUpCharMenu) __showPopUpCharMenu = false;
 		} 
 	
 		if (__showFirstMenu) {
 
+			var movedOptionsButtonRect : Rect = Rect(__optionsButtonRect.x + WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].x, 
+													 __optionsButtonRect.y + WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].y, 
+													 __optionsButtonRect.width, 
+													 __optionsButtonRect.height);
+			if (movedOptionsButtonRect.x >= Input.mousePosition.x &&
+				(movedOptionsButtonRect.x + movedOptionsButtonRect.width <= Input.mousePosition.x )) {
+				__showFirstMenu = false;
+			}
+		
+		
 		
 			WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_1_ID].x = WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].width  - 53;
 			WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_1_ID].y = WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].y + buttonY + 19;
@@ -1396,7 +1405,7 @@ class OnStageWindowControl extends ToolTipSender {
 		removeYpos = yPos;
 
 		yPos = 0;
-		var currentMenu2WindowFunction;
+		// var currentMenu2WindowFunction;
 		var currentMenuTooltip : String = __lastToolTip;
 	
 
@@ -1407,28 +1416,28 @@ class OnStageWindowControl extends ToolTipSender {
 	
 	
 			if (ApplicationState.instance.currentToolTip == __TYPE_ONMOUSE) {
-				currentMenu2WindowFunction = createTypeMenu;
+				// currentMenu2WindowFunction = createTypeMenu;
 				__menu_2_onmouse = true;
 				currentMenuTooltip = __TYPE_ONMOUSE;
 				__lastToolTip = currentMenuTooltip;
 				yPos = typeYpos;
 			}
 			if (ApplicationState.instance.currentToolTip == __COLOUR_ONMOUSE) {
-				currentMenu2WindowFunction = createColourMenu;
+				// currentMenu2WindowFunction = createColourMenu;
 				__menu_2_onmouse = true;
 				currentMenuTooltip = __COLOUR_ONMOUSE;
 				__lastToolTip = currentMenuTooltip;
 				yPos = colourYpos;
 			}
 			if (ApplicationState.instance.currentToolTip == __NAME_ONMOUSE) {
-				currentMenu2WindowFunction = createNameMenu;
+				// currentMenu2WindowFunction = createNameMenu;
 				__menu_2_onmouse = true;
 				currentMenuTooltip = __NAME_ONMOUSE;
 				__lastToolTip = currentMenuTooltip;
 				yPos = nameYpos;
 			}
 			if (ApplicationState.instance.currentToolTip == __REMOVE_ONMOUSE) {
-				currentMenu2WindowFunction = createRemoveMenu;
+				// currentMenu2WindowFunction = createRemoveMenu;
 				__menu_2_onmouse = true;
 				currentMenuTooltip = __REMOVE_ONMOUSE;
 				__lastToolTip = currentMenuTooltip;

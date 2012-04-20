@@ -89,7 +89,7 @@ function Awake()
 	__initialCharacterWidth  = 200;
 	__initialAnnotationWidth = 207;
 	__initialSpeechesWidth   = 200;
-	__minWindowWidth         = 130;
+	__minWindowWidth         = 170;
 	__maxIdCount			 = 100;
 
 	windowGroups = new Hashtable();

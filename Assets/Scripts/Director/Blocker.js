@@ -84,8 +84,6 @@ private function canBlock(mouseCoords : Vector2) {
 	
 	// ApplicationState.instance.selectedCharacter.name = mouseCoords.x.ToString();
 	
-	ApplicationState.instance.playStructure["characters"][ApplicationState.instance.selectedCharacter.name]["name"] = mouseCoords.y.ToString();
-	
 	if (mouseCoords.y >= Screen.height) { 
 		return false;
 	}
@@ -118,7 +116,9 @@ private function canBlock(mouseCoords : Vector2) {
 	
 	// if collider belongs to a character set selected and return false	
 	if (!closestCollider || (closestCollider.gameObject.tag == "Character"  && !isHitOnInterface(Input.mousePosition))) {
-		ApplicationState.instance.selectedCharacter = closestCollider.gameObject;
+		if (closestCollider) {
+			ApplicationState.instance.selectedCharacter = closestCollider.gameObject;
+		}
 		return false;
 	}
 	

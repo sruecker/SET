@@ -313,9 +313,11 @@ private function createSpeedSlider()
 	
 	
 
-	var speedString = ApplicationState.instance.playSpeed.ToString();
+	var speedString = ApplicationState.instance.playSpeed.ToString("0.00") + "x";
 	//speedString.Format("{0:N3}"); 
-	speedString = String.Format("{0:#.##}x", speedString);
+	// speedString = String.Format("{0:#.##}x", speedString);
+	
+	
 	
 	var speedStringPosition : int = (ApplicationState.instance.playSpeed / 2.0) * 100 + 50 - 5;
 	
