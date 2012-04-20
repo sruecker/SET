@@ -45,6 +45,7 @@ function FinishInitialization() {
 	__characterColliders = new Array();
 	__addingDestinations = false;
 	__setStartTime = true;
+	__destinations.Clear();
 	finishCharacterMovement();
 	var stages : Array = GameObject.FindGameObjectsWithTag("Stage");		
 	// live drawing
