@@ -508,7 +508,16 @@ class SpeechesWindowControl extends ToolTipSender {
 								line = __speechCache[actIndex][sceneCount]["lines"][i];
 								mug = ApplicationState.instance.playStructure["characters"][line["character"]]["mug"];
 								GUILayout.Label(GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"], mug));  
-								GUILayout.Label(line["text"], lineTextStyle);  
+								// GUILayout.Label(line["text"], lineTextStyle);  
+								
+								if (ApplicationState.instance.moveCamera) {
+									GUILayout.Label(line["text"], lineTextStyle);  									
+								} else {
+									line["text"] = GUILayout.TextArea(line["text"], lineTextStyle);  
+									
+									// line["text"] = GUI.TextArea(Rect(6, headerHeight+4, availableWidth-12.5, textHeight), line["text"], lineTextStyle);
+								}
+								
 							}
 						}
 					}
