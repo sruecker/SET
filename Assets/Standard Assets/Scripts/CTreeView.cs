@@ -104,8 +104,22 @@ public class CTreeView : MonoBehaviour {
 	   
 	   switch (fileMode) {
 		   case OPEN:
-			   if (path != "") GUILayout.Label("Selected: " + path);
-			   else GUILayout.Label("No file selected.");
+			   if (path != "") {
+					string fileSeparator = "/";
+					if (Application.platform == RuntimePlatform.WindowsPlayer) {
+						fileSeparator = "\\";
+					}
+					string[] names = path.Split(fileSeparator[0]);
+					string fileName = names[names.Length-1];
+					
+					GUIStyle labelStyle = gSkin.label;
+					labelStyle.wordWrap = false;
+					GUILayout.Label("Selected: " + fileName, labelStyle, GUILayout.Width(350));
+					labelStyle.wordWrap = true;
+			   }
+			   else {
+					GUILayout.Label("No file selected.");
+				}
 			   break;
 		   case SAVE:
 			   GUILayout.BeginHorizontal();
