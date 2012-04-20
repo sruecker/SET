@@ -155,6 +155,9 @@ function DoSubControlsWindow (windowID : int) {
 	UpdateToolTip();
 
 	GUI.DragWindow();
+	
+	var windowRect : Rect = WindowManager.instance.windowRects[windowID];
+    WindowManager.instance.windowRects[windowID] = WindowManager.instance.restrictToWindow(windowRect);
 
 }
 
