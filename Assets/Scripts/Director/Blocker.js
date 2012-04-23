@@ -14,7 +14,6 @@ enum CharacterActions {
 	Inaction
 }
 
-
 private var __destinations : Array;
 private var __ray : Ray;
 private var __colliders : Array;
@@ -313,6 +312,9 @@ public function addDestinationCurrentCharacter(destination : Vector3,
 function isHitOnInterface(mouseCoords : Vector2) {
 	
 	for (var i:int =0; i < WindowManager.instance.LAST_ID; i++) {
+		
+		// if (i==test) continue;
+		
 		if (WindowManager.isWindowClicked(mouseCoords, WindowManager.instance.windowRects[i])) {
 			return true;
 		}

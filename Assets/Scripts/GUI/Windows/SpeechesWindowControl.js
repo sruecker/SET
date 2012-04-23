@@ -67,7 +67,7 @@ class SpeechesWindowControl extends ToolTipSender {
 	private static var JUMP_READER_MODE : int = 2;
 	private var __displayMode : int;
 	private var __popOutDisplayMode : int;
-
+	private var __originalRect : Rect;
 
 	function Awake() {
 		__linesLoaded = false;
@@ -82,6 +82,10 @@ class SpeechesWindowControl extends ToolTipSender {
 		__scrollViewVector = Vector2.zero;
 		__popOutScrollViewVector = Vector2.zero;
 		__oldScrollViewVector = Vector2.zero;
+		
+		__originalRect = WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_POPOUT_ID];
+		WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_POPOUT_ID] = Rect(0,0,0,0);
+		
 	}
 
 	function OnGUI () {
@@ -109,10 +113,17 @@ class SpeechesWindowControl extends ToolTipSender {
 			}
 	
 			if (__showPopOut) {
+				
+				if (WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_POPOUT_ID] == Rect(0,0,0,0)) {
+					WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_POPOUT_ID] = __originalRect;
+				}
+				
 				WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_POPOUT_ID] = GUI.Window(WindowManager.instance.SPEECHES_POPOUT_ID, 
 					   WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_POPOUT_ID], 
 					   windowPopOutFunction, 
 					   "Speech");
+			} else {
+				WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_POPOUT_ID] = Rect(0,0,0,0);
 			}
 			//UpdateToolTip();
 		}	
@@ -896,6 +907,7 @@ class SpeechesWindowControl extends ToolTipSender {
 		createSpeechPositions(true);
 		__linesLoaded = true;
 		__scrollViewVector.y = 0;
+		
 	}
 
 }

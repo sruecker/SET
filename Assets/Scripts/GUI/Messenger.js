@@ -9,6 +9,8 @@ public var msgType : int;
 public static var SHOW : int = 0;
 public static var CONFIRM : int = 1;
 
+private var originalRect : Rect;
+
 function Awake() {
 	title = "";
 	message = "";
@@ -18,7 +20,8 @@ function Awake() {
 }
 
 function Start() {
-	WindowManager.instance.windowRects[WindowManager.instance.MESSENGER_ID] = new Rect(Screen.width / 2 - 75, Screen.height /2 - 50, 150, 100);
+	originalRect = Rect(Screen.width / 2 - 75, Screen.height /2 - 50, 150, 100);
+	WindowManager.instance.windowRects[WindowManager.instance.MESSENGER_ID] = Rect(0,0,0,0);
 }
 
 function Update () {
@@ -27,6 +30,9 @@ function Update () {
 function OnGUI() {
 	if (visible) {
 		GUI.skin = gSkin;
+		
+		WindowManager.instance.windowRects[WindowManager.instance.MESSENGER_ID] = originalRect;
+		
 		if (msgType == SHOW) {
 			WindowManager.instance.windowRects[WindowManager.instance.MESSENGER_ID] = 
 				GUI.Window (WindowManager.instance.MESSENGER_ID, 
@@ -40,6 +46,8 @@ function OnGUI() {
 						DoConfirmWindow, 
 			title);
 		}
+	} else {
+		WindowManager.instance.windowRects[WindowManager.instance.MESSENGER_ID] = Rect(0,0,0,0);		
 	}
 }
 
