@@ -274,7 +274,7 @@ function loadSceneFile(fileName_ : String) : Hashtable
 			}
 		
 			newAnnotation["text"] = annotations.Current.InnerText.Trim();
-		
+			newAnnotation['isSelected'] = false;
 			result["annotations"].Push(newAnnotation);
 		}
 	}

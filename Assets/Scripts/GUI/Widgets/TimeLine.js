@@ -47,7 +47,7 @@ private var __startedCountingAt : float;
 
 function Awake()
 {
-	breakMainTimeLineInCount = 1;
+	breakMainTimeLineInCount = 1.0;
 	__scalingFactor = 1.0;
 	
 	__showAnnotationTooltip = false;

@@ -43,6 +43,38 @@ private function AddIfKeyExists(to : Hashtable, from : Hashtable, key : String) 
 	}
 }
 
+function ProcessAnnotationImage(annotation) {
+		// load them
+		var www = new WWW(annotation['image']); 
+		yield www;
+		var t = new Texture2D(4, 4);
+		www.LoadImageIntoTexture(t);
+		t.Compress(true);
+		annotation["imageTexture"] = t;
+		// hash 
+		var thisImage : Hashtable = new Hashtable();
+		// img
+		thisImage['image'] = t;
+		thisImage['annotationSample'] = annotation["text"].Replace("\n", " ").Substring(0, annotation["text"].length > 20 ? 20 : annotation["text"].length);
+		AddIfKeyExists(thisImage, annotation, 'startTime');
+		AddIfKeyExists(thisImage, annotation, 'endTime');			
+		AddIfKeyExists(thisImage, annotation, 'character');
+		thisImage['winId'] = WindowManager.instance.reserveId();
+		thisImage['imgRect'] = Rect(0,0,t.width,t.height);
+		thisImage['btnRect'] = Rect(0,0,32,32);
+		__winIdToImage[thisImage['winId']] = __images.length;
+
+		__images.Push(thisImage);
+}
+
+function AddAnnotation(annotation) {
+	if (annotation.Contains('image')) {
+		ProcessAnnotationImage(annotation);
+	}
+	
+	ApplicationState.instance.playStructure["annotations"].Push(annotation);
+}
+
 function FinishInitialization() {
 	var imagePaths : Array = new Array();
 	__images = new Array();
@@ -51,27 +83,7 @@ function FinishInitialization() {
 		// Debug.Log(annotation);
 		// get paths
 		if (annotation.Contains('image')) {
-			// load them
-			var www = new WWW(annotation['image']); 
-			yield www;
-			var t = new Texture2D(4, 4);
-			www.LoadImageIntoTexture(t);
-			t.Compress(true);
-			annotation["imageTexture"] = t;
-			// hash 
-			var thisImage : Hashtable = new Hashtable();
-			// img
-			thisImage['image'] = t;
-			thisImage['annotationSample'] = annotation["text"].Replace("\n", " ").Substring(0, annotation["text"].length > 20 ? 20 : annotation["text"].length);
-			AddIfKeyExists(thisImage, annotation, 'startTime');
-			AddIfKeyExists(thisImage, annotation, 'endTime');			
-			AddIfKeyExists(thisImage, annotation, 'character');
-			thisImage['winId'] = WindowManager.instance.reserveId();
-			thisImage['imgRect'] = Rect(0,0,t.width,t.height);
-			thisImage['btnRect'] = Rect(0,0,32,32);
-			__winIdToImage[thisImage['winId']] = __images.length;
-
-			__images.Push(thisImage);
+			ProcessAnnotationImage(annotation);
 		}
 	}
 }

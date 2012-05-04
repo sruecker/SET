@@ -50,7 +50,7 @@ class AnnotationsWindowControl extends ToolTipSender {
 	private var __headerPointerTextures : Hashtable;
 	private var __headerSquareTextures : Hashtable;
 
-	private var __selectedAnotations : Array;
+	// private var __selectedAnotations : Array;
 	private var __toolTipControl : ToolTipWindow;
 
 	private var __annotationPositions : Array;
@@ -68,7 +68,7 @@ class AnnotationsWindowControl extends ToolTipSender {
 	{
 		__headerPointerTextures = Hashtable();
 		__headerSquareTextures = Hashtable();
-		__selectedAnotations = Array();
+		// __selectedAnotations = Array();
 		doAutoLayout = true;
 		//__showStageDirectionsDrawer = true;
 		//__stageDirectionsDrawerRect = Rect(0,0,0,0);
@@ -279,7 +279,8 @@ class AnnotationsWindowControl extends ToolTipSender {
 						if (annotation["startTime"] <= ApplicationState.instance.playTime) scrollTo = startPos;
 					}
 			
-					if (__selectedAnotations[count++]) {
+					// if (__selectedAnotations[count++]) {
+					if(annotation['isSelected']) {
 						currentBoxStyle = anotationBoxSelectedStyle;
 					} else {
 						currentBoxStyle = anotationBoxStyle;
@@ -371,20 +372,20 @@ class AnnotationsWindowControl extends ToolTipSender {
 
 
 	function selectAnotationState(index : int) {
-		if (index < __selectedAnotations.length && index >= 0) {
-			__selectedAnotations[index] = true;
+		if (index < ApplicationState.instance.playStructure["annotations"].length && index >= 0) {
+			ApplicationState.instance.playStructure["annotations"][index]['isSelected'] = true;
 		}
 	}
 
 	function deselectAnotationState(index : int) {
-		if (index < __selectedAnotations.length && index >= 0) {
-			__selectedAnotations[index] = false;
+		if (index < ApplicationState.instance.playStructure["annotations"].length && index >= 0) {
+			ApplicationState.instance.playStructure["annotations"][index]['isSelected'] = false;
 		}
 	}
 
 	function changeAnotationState(index : int) {
-		if (index < __selectedAnotations.length && index >= 0) {
-			__selectedAnotations[index] = ! __selectedAnotations[index];
+		if (index < ApplicationState.instance.playStructure["annotations"].length && index >= 0) {
+			ApplicationState.instance.playStructure["annotations"][index]['isSelected'] = ! ApplicationState.instance.playStructure["annotations"][index]['isSelected'];
 		}
 	}
 
@@ -444,12 +445,12 @@ class AnnotationsWindowControl extends ToolTipSender {
 		__scrollHeight = WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID].height;
 		createHeaderTextures(ApplicationState.instance.playStructure["characters"].Keys);
 	
-		__selectedAnotations.Clear();
+		// __selectedAnotations.Clear();
 	
-		var count : int = 0;
-		for (var annotation in ApplicationState.instance.playStructure["annotations"]) {
-			__selectedAnotations[count++] = false;
-		}
+		// var count : int = 0;
+		// for (var annotation in ApplicationState.instance.playStructure["annotations"]) {
+		// 	__selectedAnotations[count++] = false;
+		// }
 	
 	}
 

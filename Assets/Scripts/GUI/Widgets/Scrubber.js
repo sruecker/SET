@@ -75,7 +75,7 @@ function DrawGUI()
 	GUI.EndGroup();
 	
 	
-	setScruberTime();
+	__timeText = Helper.instance.FloatToTime(ApplicationState.instance.playTime);
 	
 	
 	
@@ -104,21 +104,5 @@ function DrawGUI()
 
 }
 
-private function setScruberTime()
-{
-	var currentTime : float = ApplicationState.instance.playTime;
 
-	var hours : int = currentTime / 3600;
-	currentTime -= hours * 3600;
-	var minutes : int = currentTime / 60;
-	currentTime -= minutes * 60;
-	var seconds : int = currentTime;
-	
-	var hString : String = hours < 10 ? "0" + hours.ToString() : hours.ToString();
-	var mString : String = minutes < 10 ? "0" + minutes.ToString() : minutes.ToString();
-	var sString : String = seconds < 10 ? "0" + seconds.ToString() : seconds.ToString();
-	
-	
-	__timeText = hString + ":" + mString + ":" + sString;
-}
 

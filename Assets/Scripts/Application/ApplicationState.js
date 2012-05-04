@@ -33,6 +33,8 @@ static var showOnScreenTextAnnotations : boolean;
 static var showOnScreenImageAnnotations : boolean;
 static var movingCharacterKey : String;
 static var loadingNewFile : boolean;
+static var addAnnotation : boolean;
+
 var characterMug : Texture2D;
 var speechBubbleTexture : Texture2D;
 var characterControlsTexture: Texture2D;
@@ -115,7 +117,7 @@ function InitValues() {
 	showOnScreenImageAnnotations = true;
 	__previousTime = 0;
 	selectedCharacter = null;
-	
+	addAnnotation = true;// for testing purposes
 }
 
 function Awake()
@@ -221,6 +223,7 @@ function completeLoadPlay()
 	// __minimapObject.GetComponent(MinimapWindow).FinishInitialization();
 	__realTimeMapWindow.GetComponent(RealTimeMapWindow).FinishInitialization();
 	GameObject.Find("CameraControlsWindow").GetComponent(CameraControlsWindow).FinishInitialization();
+	GameObject.Find("AddAnnotationWindow").GetComponent(AddAnnotationWindow).FinishInitialization();
 	WindowManager.instance.cacheWindows();
 }
 

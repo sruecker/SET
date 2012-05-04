@@ -47,6 +47,7 @@ static var  REAL_TIME_MAP_ID : int;
 static var  CHARACTERCONTROLS_ID : int;
 static var  ANNOTATIONS_TEXTURES_ID : int;
 static var  ANNOTATIONS_TEXTURES_MENU_ID : int;
+static var  ADD_ANNOTATION_ID : int;
 static var	LAST_ID : int;
 
 static var	UNDOCKING_JUMP : int;
@@ -132,7 +133,8 @@ function Awake()
 	windowGroups["anchored"][ANNOTATIONS_TEXTURES_ID] = "Annotation textures";
 	windowGroups["floating"][REAL_TIME_MAP_ID] = "Realtime map";
 	ANNOTATIONS_TEXTURES_MENU_ID = 18;
-	LAST_ID             = 23;
+	ADD_ANNOTATION_ID = 23;
+	LAST_ID             = 24;
 	
 	UNDOCKING_JUMP  = 10;
 	
@@ -193,6 +195,7 @@ function Awake()
 	windowRects[CHARACTER_MENU_2_ID]          = Rect(0,0,0,0);
 	windowRects[REAL_TIME_MAP_ID]             = Rect(150, 20, 200, 200+25);
 	windowRects[FILEBROWSER_ID]				  = Rect(Screen.width / 2 - 185,35,370,50);
+	windowRects[ADD_ANNOTATION_ID]			  = Rect(Screen.width / 2 - 185,35,370,250);
 	
 	__windowIdPool = Array();
 	

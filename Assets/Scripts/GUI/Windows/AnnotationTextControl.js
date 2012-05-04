@@ -12,7 +12,7 @@ function OnGUI() {
 		
 		for (var annotation : Hashtable in ApplicationState.instance.playStructure["annotations"]) {
 			
-			if (annotation['endTime'] != false && 
+			if (annotation.Contains('endTime') && 
 				ApplicationState.instance.playTime >= annotation['startTime'] && 
 				ApplicationState.instance.playTime <= annotation['endTime']) {
 					

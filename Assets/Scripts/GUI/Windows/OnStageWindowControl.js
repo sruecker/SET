@@ -74,7 +74,7 @@ class OnStageWindowControl extends ToolTipSender {
 	//private var __characterGUIContents : Hashtable = Hashtable();
 	private var __resizeButtonSize : int = 7;
 
-	private var __breakMainTimeLineInCount : float = 7.0;
+	private var __breakMainTimeLineInCount : float = 10.0;
 	private var __scalingFactor : float = 1.0;
 	private var __topPadding : int = 28;
 
@@ -126,7 +126,8 @@ class OnStageWindowControl extends ToolTipSender {
 	private var __selectedAnnotation : int =0;
 	private var __startedCountingAt : float;
 	//private var __NO_SELECTION : String  = "__NO_SELECTION";
-
+	private var workingArea : float;
+	private var showPart : int;
 
 	function Awake()
 	{
@@ -451,6 +452,9 @@ class OnStageWindowControl extends ToolTipSender {
 		// draw markers
 	
 		//drawActionBars();
+		workingArea = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width);
+		showPart = -1 * Mathf.Floor(ApplicationState.instance.playTime / ( ApplicationState.instance.playTimeLength / __breakMainTimeLineInCount));
+
 		drawSpeechActionBars();
 		drawPresenceActionBars();
 		drawCharacterAnnotations();
@@ -460,10 +464,14 @@ class OnStageWindowControl extends ToolTipSender {
 		__timeLine.DrawGUI();
 
 		// red marker
-		
+									  // Mathf.Floor(ApplicationState.instance.playTime / ( ApplicationState.instance.playTimeLength / __breakMainTimeLineInCount));
 		var markerPosition : float = ApplicationState.instance.playTime * __breakMainTimeLineInCount / ApplicationState.instance.playTimeLength;
+		// Debug.Log("VV");
+		// Debug.Log(markerPosition);
 		markerPosition = markerPosition % 1;
-		var markerX:float = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize) * markerPosition - 4;
+
+		// Debug.Log(markerPosition);
+		var markerX:float = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width) * markerPosition;
 
 		if (GUI.RepeatButton(Rect(markerX, 1, 8, WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].height - 20), 
 			secondTimeLineMarker, secondTimeLineStyle)) {
@@ -493,8 +501,8 @@ class OnStageWindowControl extends ToolTipSender {
 														  __breakMainTimeLineInCount, 1.0, 30.0);
 	
 
-		__scalingFactor = (__breakMainTimeLineInCount+6)/7.0;
-													
+		__scalingFactor = (__breakMainTimeLineInCount);
+
 		__timeLine.breakMainTimeLineInCount = __breakMainTimeLineInCount;
 		__timeLine.setScalingFactor(__scalingFactor);
 	
@@ -686,14 +694,14 @@ class OnStageWindowControl extends ToolTipSender {
 	{
 	
 	
-		var workingArea : float = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize) * __breakMainTimeLineInCount;
+		var workingArea : float = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width) * __breakMainTimeLineInCount;
 	
 		var showPart : int  = -1 * Mathf.Floor(ApplicationState.instance.playTime / ( ApplicationState.instance.playTimeLength / __breakMainTimeLineInCount));
 	
 	
 		for (var characterKey in __characterKeysShowing) {		
 
-			GUI.BeginGroup(Rect(showPart * (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize), 
+			GUI.BeginGroup(Rect(showPart * (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width ), 
 								(__characterKeysShowingIndexes[characterKey] -1)  * characterRowStyle.fixedHeight + __topPadding + 2, 
 								workingArea, 
 								__topPadding));
@@ -709,16 +717,16 @@ class OnStageWindowControl extends ToolTipSender {
 
 	private function drawSpeechActionBars()
 	{
-		var workingArea : float = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize) * __breakMainTimeLineInCount;
-		var showPart : int  = -1 * Mathf.Floor(ApplicationState.instance.playTime / ( ApplicationState.instance.playTimeLength / __breakMainTimeLineInCount));
+		// var workingArea : float = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize) * __breakMainTimeLineInCount;
+		// var showPart : int  = -1 * Mathf.Floor(ApplicationState.instance.playTime / ( ApplicationState.instance.playTimeLength / __breakMainTimeLineInCount));
 		var currentPosition : float;
 		var currentWidth : float;
 		var endTime : float;
 	
 		for (var characterKey in __characterKeysShowing) {
-			GUI.BeginGroup(Rect(showPart * (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize), 
+			GUI.BeginGroup(Rect(showPart * (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width ), 
 								(__characterKeysShowingIndexes[characterKey] -1)  * characterRowStyle.fixedHeight + __topPadding + 2, 
-								workingArea, 
+								workingArea * __breakMainTimeLineInCount, 
 								__topPadding));
 		
 			for (scene in ApplicationState.instance.playStructure["scenes"]) {	
@@ -769,7 +777,7 @@ class OnStageWindowControl extends ToolTipSender {
 	function createSpeechActionBars(characterKeys : Array) // XXX TODO
 	{
 	
-		var workingArea : float = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize) * __breakMainTimeLineInCount;
+		var workingArea : float = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width) * __breakMainTimeLineInCount;
 	
 		var currentPosition : float;
 		var currentWidth : float;
@@ -799,8 +807,8 @@ class OnStageWindowControl extends ToolTipSender {
 	private function drawCharacterAnnotations()
 	{
 	
-		var workingArea : float = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize) * __breakMainTimeLineInCount;
-		var showPart : int  = -1 * Mathf.Floor(ApplicationState.instance.playTime / ( ApplicationState.instance.playTimeLength / __breakMainTimeLineInCount));
+		// var workingArea : float = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize) * __breakMainTimeLineInCount;
+		// var showPart : int  = -1 * Mathf.Floor(ApplicationState.instance.playTime / ( ApplicationState.instance.playTimeLength / __breakMainTimeLineInCount));
 		var currentPosition : float;
 		var currentWidth : float;
 		var currentGUIStyle : GUIStyle;
@@ -822,9 +830,9 @@ class OnStageWindowControl extends ToolTipSender {
 		}
 
 		for (var characterKey in __characterAnnotationBars.Keys) {
-			GUI.BeginGroup(Rect(showPart * (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize), 
+			GUI.BeginGroup(Rect(showPart * (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width), 
 								(__characterKeysShowingIndexes[characterKey] -1)  * characterRowStyle.fixedHeight + __topPadding + 14, 
-								workingArea, 
+								workingArea * __breakMainTimeLineInCount, 
 								__topPadding));
 		
 			count = 0;
@@ -919,8 +927,8 @@ class OnStageWindowControl extends ToolTipSender {
 */
 	private function drawPresenceActionBars()
 	{
-		var workingArea : float = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize) * __breakMainTimeLineInCount;
-		var showPart : int  = -1 * Mathf.Floor(ApplicationState.instance.playTime / ( ApplicationState.instance.playTimeLength / __breakMainTimeLineInCount));
+		// var workingArea : float = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize) * __breakMainTimeLineInCount;
+		// var showPart : int  = -1 * Mathf.Floor(ApplicationState.instance.playTime / ( ApplicationState.instance.playTimeLength / __breakMainTimeLineInCount));
 	
 		if (__prevPresenceWorkingArea == Mathf.Infinity) {
 			__prevPresenceWorkingArea = workingArea;
@@ -928,9 +936,9 @@ class OnStageWindowControl extends ToolTipSender {
 	
 		for (var characterKey in __presenceActionBars.Keys) {
 			//Debug.Log(characterKey);
-			GUI.BeginGroup(Rect(showPart * (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize), 
+			GUI.BeginGroup(Rect(showPart * (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width), 
 								(__characterKeysShowingIndexes[characterKey] -1)  * characterRowStyle.fixedHeight + __topPadding + 2, 
-								workingArea, 
+								workingArea * __breakMainTimeLineInCount, 
 								__topPadding));
 		
 			//for (var currentRect : Rect in 	__presenceActionBars[characterKey]) {
@@ -989,7 +997,7 @@ class OnStageWindowControl extends ToolTipSender {
 	function createPresenceActionBars(characterKeys : Array)
 	{
 		//Debug.Log("creating");
-		var workingArea : float = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize) * __breakMainTimeLineInCount;
+		var workingArea : float = (WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width) * __breakMainTimeLineInCount;
 	
 		var currentPosition : float;
 		var currentWidth : float;
