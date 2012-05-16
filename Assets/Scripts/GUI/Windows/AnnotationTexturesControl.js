@@ -190,7 +190,7 @@ function OnGUI() {
 	var winId : int = WindowManager.instance.ANNOTATIONS_TEXTURES_ID;
 	GUI.depth = 1;//0
 	
-	if (__images.Count) {
+	if (__images && __images.Count) {
 		WindowManager.instance.windowRects[winId]= GUI.Window(winId,
 									   WindowManager.instance.windowRects[winId],
 									   annotationTexturesWindow,

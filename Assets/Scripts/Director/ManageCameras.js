@@ -175,8 +175,10 @@ function LateUpdate()
 
 private function setSmoothMouseSpeed(object_ : GameObject , sensitivityX_ : float, sensitivityY_ : float)
 {
-	object_.GetComponent(MySmoothMouseLook).sensitivityX = sensitivityX_;
-	object_.GetComponent(MySmoothMouseLook).sensitivityY = sensitivityY_;
+	if (object_ && object_.GetComponent(MySmoothMouseLook)) {
+		object_.GetComponent(MySmoothMouseLook).sensitivityX = sensitivityX_;
+		object_.GetComponent(MySmoothMouseLook).sensitivityY = sensitivityY_;
+	}
 }
 
 private function setFlyCamSpeed(speed_ : float, sensitivityX_ : float, sensitivityY_ : float)
