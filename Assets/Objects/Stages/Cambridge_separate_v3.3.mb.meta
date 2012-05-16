@@ -1,0 +1,1070 @@
+fileFormatVersion: 2
+guid: 84050a9e8190f4b8d9fa40cbf4802190
+ModelImporter:
+  fileIDToRecycleName:
+    4300000: cielingSubBeams
+    4300002: cielingBeams
+    4300004: windowRight
+    4300006: leftStrictureCeiling
+    4300008: rightStructurePoles
+    4300010: rightStructure
+    4300012: Obj64
+    4300014: Obj61
+    4300016: Obj59
+    4300018: Obj60
+    4300020: Obj56
+    4300022: Obj55
+    4300024: Obj52
+    4300026: Obj51
+    4300028: Obj50
+    4300030: Obj49
+    4300032: Obj48
+    4300034: Obj47
+    4300036: Obj46
+    4300038: Obj45
+    4300040: cieling
+    4300042: Obj30
+    4300044: Obj29
+    4300046: Obj28
+    4300048: Obj27
+    4300050: Obj26
+    4300052: Obj25
+    4300054: Obj24
+    4300056: Obj23
+    4300058: Obj22
+    4300060: Obj21
+    4300062: Obj20
+    4300064: Obj19
+    4300066: Obj18
+    4300068: Obj17
+    4300070: Obj16
+    4300072: Obj15
+    4300074: Obj14
+    4300076: Obj13
+    4300078: Obj12
+    4300080: Obj11
+    4300082: Obj10
+    4300084: Obj9
+    4300086: Obj8
+    4300088: Obj7
+    4300090: Obj6
+    4300092: Obj
+    4300094: Obj1
+    4300096: Obj2
+    4300098: Obj3
+    4300100: Obj4
+    4300102: Obj5
+    4300104: mainFloor
+    4300106: ramps
+    4300108: leftStructure
+    4300110: Obj63
+    4300112: Obj58
+    4300114: Obj57
+    4300116: Obj54
+    4300118: Obj43
+    4300120: Obj42
+    4300122: Obj41
+    4300124: Obj40
+    4300126: Obj39
+    4300128: Obj38
+    4300130: Obj37
+    4300132: Obj36
+    4300134: Obj35
+    4300136: Obj34
+    4300138: Obj33
+    4300140: Obj32
+    4300142: secondFloor
+  serializedVersion: 10
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    generateAnimations: 3
+    bakeSimulation: 0
+    splitAnimations: 1
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMesh: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  textMetaNamesToFileIDs:
+    //RootNode:
+      data:
+        first: 1
+        second: 34870100
+      data:
+        first: 4
+        second: 141b0600
+      data:
+        first: 111
+        second: 605fa900
+    Obj:
+      data:
+        first: 1
+        second: d4860100
+      data:
+        first: 4
+        second: b41a0600
+      data:
+        first: 23
+        second: 92182300
+      data:
+        first: 33
+        second: d25a3200
+    Obj1:
+      data:
+        first: 1
+        second: d2860100
+      data:
+        first: 4
+        second: b21a0600
+      data:
+        first: 23
+        second: 90182300
+      data:
+        first: 33
+        second: d05a3200
+    Obj10:
+      data:
+        first: 1
+        second: de860100
+      data:
+        first: 4
+        second: be1a0600
+      data:
+        first: 23
+        second: 9c182300
+      data:
+        first: 33
+        second: dc5a3200
+    Obj11:
+      data:
+        first: 1
+        second: e0860100
+      data:
+        first: 4
+        second: c01a0600
+      data:
+        first: 23
+        second: 9e182300
+      data:
+        first: 33
+        second: de5a3200
+    Obj12:
+      data:
+        first: 1
+        second: e2860100
+      data:
+        first: 4
+        second: c21a0600
+      data:
+        first: 23
+        second: a0182300
+      data:
+        first: 33
+        second: e05a3200
+    Obj13:
+      data:
+        first: 1
+        second: e4860100
+      data:
+        first: 4
+        second: c41a0600
+      data:
+        first: 23
+        second: a2182300
+      data:
+        first: 33
+        second: e25a3200
+    Obj14:
+      data:
+        first: 1
+        second: e6860100
+      data:
+        first: 4
+        second: c61a0600
+      data:
+        first: 23
+        second: a4182300
+      data:
+        first: 33
+        second: e45a3200
+    Obj15:
+      data:
+        first: 1
+        second: e8860100
+      data:
+        first: 4
+        second: c81a0600
+      data:
+        first: 23
+        second: a6182300
+      data:
+        first: 33
+        second: e65a3200
+    Obj16:
+      data:
+        first: 1
+        second: ea860100
+      data:
+        first: 4
+        second: ca1a0600
+      data:
+        first: 23
+        second: a8182300
+      data:
+        first: 33
+        second: e85a3200
+    Obj17:
+      data:
+        first: 1
+        second: ec860100
+      data:
+        first: 4
+        second: cc1a0600
+      data:
+        first: 23
+        second: aa182300
+      data:
+        first: 33
+        second: ea5a3200
+    Obj18:
+      data:
+        first: 1
+        second: ee860100
+      data:
+        first: 4
+        second: ce1a0600
+      data:
+        first: 23
+        second: ac182300
+      data:
+        first: 33
+        second: ec5a3200
+    Obj19:
+      data:
+        first: 1
+        second: f0860100
+      data:
+        first: 4
+        second: d01a0600
+      data:
+        first: 23
+        second: ae182300
+      data:
+        first: 33
+        second: ee5a3200
+    Obj2:
+      data:
+        first: 1
+        second: d0860100
+      data:
+        first: 4
+        second: b01a0600
+      data:
+        first: 23
+        second: 8e182300
+      data:
+        first: 33
+        second: ce5a3200
+    Obj20:
+      data:
+        first: 1
+        second: f2860100
+      data:
+        first: 4
+        second: d21a0600
+      data:
+        first: 23
+        second: b0182300
+      data:
+        first: 33
+        second: f05a3200
+    Obj21:
+      data:
+        first: 1
+        second: f4860100
+      data:
+        first: 4
+        second: d41a0600
+      data:
+        first: 23
+        second: b2182300
+      data:
+        first: 33
+        second: f25a3200
+    Obj22:
+      data:
+        first: 1
+        second: f6860100
+      data:
+        first: 4
+        second: d61a0600
+      data:
+        first: 23
+        second: b4182300
+      data:
+        first: 33
+        second: f45a3200
+    Obj23:
+      data:
+        first: 1
+        second: f8860100
+      data:
+        first: 4
+        second: d81a0600
+      data:
+        first: 23
+        second: b6182300
+      data:
+        first: 33
+        second: f65a3200
+    Obj24:
+      data:
+        first: 1
+        second: fa860100
+      data:
+        first: 4
+        second: da1a0600
+      data:
+        first: 23
+        second: b8182300
+      data:
+        first: 33
+        second: f85a3200
+    Obj25:
+      data:
+        first: 1
+        second: fc860100
+      data:
+        first: 4
+        second: dc1a0600
+      data:
+        first: 23
+        second: ba182300
+      data:
+        first: 33
+        second: fa5a3200
+    Obj26:
+      data:
+        first: 1
+        second: fe860100
+      data:
+        first: 4
+        second: de1a0600
+      data:
+        first: 23
+        second: bc182300
+      data:
+        first: 33
+        second: fc5a3200
+    Obj27:
+      data:
+        first: 1
+        second: 00870100
+      data:
+        first: 4
+        second: e01a0600
+      data:
+        first: 23
+        second: be182300
+      data:
+        first: 33
+        second: fe5a3200
+    Obj28:
+      data:
+        first: 1
+        second: 02870100
+      data:
+        first: 4
+        second: e21a0600
+      data:
+        first: 23
+        second: c0182300
+      data:
+        first: 33
+        second: 005b3200
+    Obj29:
+      data:
+        first: 1
+        second: 04870100
+      data:
+        first: 4
+        second: e41a0600
+      data:
+        first: 23
+        second: c2182300
+      data:
+        first: 33
+        second: 025b3200
+    Obj3:
+      data:
+        first: 1
+        second: ce860100
+      data:
+        first: 4
+        second: ae1a0600
+      data:
+        first: 23
+        second: 8c182300
+      data:
+        first: 33
+        second: cc5a3200
+    Obj30:
+      data:
+        first: 1
+        second: 06870100
+      data:
+        first: 4
+        second: e61a0600
+      data:
+        first: 23
+        second: c4182300
+      data:
+        first: 33
+        second: 045b3200
+    Obj32:
+      data:
+        first: 1
+        second: a2860100
+      data:
+        first: 4
+        second: 821a0600
+      data:
+        first: 23
+        second: 62182300
+      data:
+        first: 33
+        second: a25a3200
+    Obj33:
+      data:
+        first: 1
+        second: a4860100
+      data:
+        first: 4
+        second: 841a0600
+      data:
+        first: 23
+        second: 64182300
+      data:
+        first: 33
+        second: a45a3200
+    Obj34:
+      data:
+        first: 1
+        second: a6860100
+      data:
+        first: 4
+        second: 861a0600
+      data:
+        first: 23
+        second: 66182300
+      data:
+        first: 33
+        second: a65a3200
+    Obj35:
+      data:
+        first: 1
+        second: a8860100
+      data:
+        first: 4
+        second: 881a0600
+      data:
+        first: 23
+        second: 68182300
+      data:
+        first: 33
+        second: a85a3200
+    Obj36:
+      data:
+        first: 1
+        second: aa860100
+      data:
+        first: 4
+        second: 8a1a0600
+      data:
+        first: 23
+        second: 6a182300
+      data:
+        first: 33
+        second: aa5a3200
+    Obj37:
+      data:
+        first: 1
+        second: ac860100
+      data:
+        first: 4
+        second: 8c1a0600
+      data:
+        first: 23
+        second: 6c182300
+      data:
+        first: 33
+        second: ac5a3200
+    Obj38:
+      data:
+        first: 1
+        second: ae860100
+      data:
+        first: 4
+        second: 8e1a0600
+      data:
+        first: 23
+        second: 6e182300
+      data:
+        first: 33
+        second: ae5a3200
+    Obj39:
+      data:
+        first: 1
+        second: b0860100
+      data:
+        first: 4
+        second: 901a0600
+      data:
+        first: 23
+        second: 70182300
+      data:
+        first: 33
+        second: b05a3200
+    Obj4:
+      data:
+        first: 1
+        second: cc860100
+      data:
+        first: 4
+        second: ac1a0600
+      data:
+        first: 23
+        second: 8a182300
+      data:
+        first: 33
+        second: ca5a3200
+    Obj40:
+      data:
+        first: 1
+        second: b2860100
+      data:
+        first: 4
+        second: 921a0600
+      data:
+        first: 23
+        second: 72182300
+      data:
+        first: 33
+        second: b25a3200
+    Obj41:
+      data:
+        first: 1
+        second: b4860100
+      data:
+        first: 4
+        second: 941a0600
+      data:
+        first: 23
+        second: 74182300
+      data:
+        first: 33
+        second: b45a3200
+    Obj42:
+      data:
+        first: 1
+        second: b6860100
+      data:
+        first: 4
+        second: 961a0600
+      data:
+        first: 23
+        second: 76182300
+      data:
+        first: 33
+        second: b65a3200
+    Obj43:
+      data:
+        first: 1
+        second: b8860100
+      data:
+        first: 4
+        second: 981a0600
+      data:
+        first: 23
+        second: 78182300
+      data:
+        first: 33
+        second: b85a3200
+    Obj45:
+      data:
+        first: 1
+        second: 0a870100
+      data:
+        first: 4
+        second: ea1a0600
+      data:
+        first: 23
+        second: c8182300
+      data:
+        first: 33
+        second: 085b3200
+    Obj46:
+      data:
+        first: 1
+        second: 0c870100
+      data:
+        first: 4
+        second: ec1a0600
+      data:
+        first: 23
+        second: ca182300
+      data:
+        first: 33
+        second: 0a5b3200
+    Obj47:
+      data:
+        first: 1
+        second: 0e870100
+      data:
+        first: 4
+        second: ee1a0600
+      data:
+        first: 23
+        second: cc182300
+      data:
+        first: 33
+        second: 0c5b3200
+    Obj48:
+      data:
+        first: 1
+        second: 10870100
+      data:
+        first: 4
+        second: f01a0600
+      data:
+        first: 23
+        second: ce182300
+      data:
+        first: 33
+        second: 0e5b3200
+    Obj49:
+      data:
+        first: 1
+        second: 12870100
+      data:
+        first: 4
+        second: f21a0600
+      data:
+        first: 23
+        second: d0182300
+      data:
+        first: 33
+        second: 105b3200
+    Obj5:
+      data:
+        first: 1
+        second: ca860100
+      data:
+        first: 4
+        second: aa1a0600
+      data:
+        first: 23
+        second: 88182300
+      data:
+        first: 33
+        second: c85a3200
+    Obj50:
+      data:
+        first: 1
+        second: 14870100
+      data:
+        first: 4
+        second: f41a0600
+      data:
+        first: 23
+        second: d2182300
+      data:
+        first: 33
+        second: 125b3200
+    Obj51:
+      data:
+        first: 1
+        second: 16870100
+      data:
+        first: 4
+        second: f61a0600
+      data:
+        first: 23
+        second: d4182300
+      data:
+        first: 33
+        second: 145b3200
+    Obj52:
+      data:
+        first: 1
+        second: 18870100
+      data:
+        first: 4
+        second: f81a0600
+      data:
+        first: 23
+        second: d6182300
+      data:
+        first: 33
+        second: 165b3200
+    Obj54:
+      data:
+        first: 1
+        second: ba860100
+      data:
+        first: 4
+        second: 9a1a0600
+      data:
+        first: 23
+        second: 7a182300
+      data:
+        first: 33
+        second: ba5a3200
+    Obj55:
+      data:
+        first: 1
+        second: 1a870100
+      data:
+        first: 4
+        second: fa1a0600
+      data:
+        first: 23
+        second: d8182300
+      data:
+        first: 33
+        second: 185b3200
+    Obj56:
+      data:
+        first: 1
+        second: 1c870100
+      data:
+        first: 4
+        second: fc1a0600
+      data:
+        first: 23
+        second: da182300
+      data:
+        first: 33
+        second: 1a5b3200
+    Obj57:
+      data:
+        first: 1
+        second: bc860100
+      data:
+        first: 4
+        second: 9c1a0600
+      data:
+        first: 23
+        second: 7c182300
+      data:
+        first: 33
+        second: bc5a3200
+    Obj58:
+      data:
+        first: 1
+        second: be860100
+      data:
+        first: 4
+        second: 9e1a0600
+      data:
+        first: 23
+        second: 7e182300
+      data:
+        first: 33
+        second: be5a3200
+    Obj59:
+      data:
+        first: 1
+        second: 20870100
+      data:
+        first: 4
+        second: 001b0600
+      data:
+        first: 23
+        second: de182300
+      data:
+        first: 33
+        second: 1e5b3200
+    Obj6:
+      data:
+        first: 1
+        second: d6860100
+      data:
+        first: 4
+        second: b61a0600
+      data:
+        first: 23
+        second: 94182300
+      data:
+        first: 33
+        second: d45a3200
+    Obj60:
+      data:
+        first: 1
+        second: 1e870100
+      data:
+        first: 4
+        second: fe1a0600
+      data:
+        first: 23
+        second: dc182300
+      data:
+        first: 33
+        second: 1c5b3200
+    Obj61:
+      data:
+        first: 1
+        second: 22870100
+      data:
+        first: 4
+        second: 021b0600
+      data:
+        first: 23
+        second: e0182300
+      data:
+        first: 33
+        second: 205b3200
+    Obj63:
+      data:
+        first: 1
+        second: c0860100
+      data:
+        first: 4
+        second: a01a0600
+      data:
+        first: 23
+        second: 80182300
+      data:
+        first: 33
+        second: c05a3200
+    Obj64:
+      data:
+        first: 1
+        second: 24870100
+      data:
+        first: 4
+        second: 041b0600
+      data:
+        first: 23
+        second: e2182300
+      data:
+        first: 33
+        second: 225b3200
+    Obj7:
+      data:
+        first: 1
+        second: d8860100
+      data:
+        first: 4
+        second: b81a0600
+      data:
+        first: 23
+        second: 96182300
+      data:
+        first: 33
+        second: d65a3200
+    Obj8:
+      data:
+        first: 1
+        second: da860100
+      data:
+        first: 4
+        second: ba1a0600
+      data:
+        first: 23
+        second: 98182300
+      data:
+        first: 33
+        second: d85a3200
+    Obj9:
+      data:
+        first: 1
+        second: dc860100
+      data:
+        first: 4
+        second: bc1a0600
+      data:
+        first: 23
+        second: 9a182300
+      data:
+        first: 33
+        second: da5a3200
+    cieling:
+      data:
+        first: 1
+        second: 08870100
+      data:
+        first: 4
+        second: e81a0600
+      data:
+        first: 23
+        second: c6182300
+      data:
+        first: 33
+        second: 065b3200
+    cielingBeams:
+      data:
+        first: 1
+        second: 2e870100
+      data:
+        first: 4
+        second: 0e1b0600
+      data:
+        first: 23
+        second: ec182300
+      data:
+        first: 33
+        second: 2c5b3200
+    cielingSubBeams:
+      data:
+        first: 1
+        second: 30870100
+      data:
+        first: 4
+        second: 101b0600
+      data:
+        first: 23
+        second: ee182300
+      data:
+        first: 33
+        second: 2e5b3200
+    leftStrictureCeiling:
+      data:
+        first: 1
+        second: 2a870100
+      data:
+        first: 4
+        second: 0a1b0600
+      data:
+        first: 23
+        second: e8182300
+      data:
+        first: 33
+        second: 285b3200
+    leftStructure:
+      data:
+        first: 1
+        second: c2860100
+      data:
+        first: 4
+        second: a21a0600
+      data:
+        first: 23
+        second: 82182300
+      data:
+        first: 33
+        second: c25a3200
+    mainFloor:
+      data:
+        first: 1
+        second: c6860100
+      data:
+        first: 4
+        second: a61a0600
+      data:
+        first: 23
+        second: 86182300
+      data:
+        first: 33
+        second: c65a3200
+    noProyection:
+      data:
+        first: 1
+        second: 32870100
+      data:
+        first: 4
+        second: 121b0600
+    proyection:
+      data:
+        first: 1
+        second: c8860100
+      data:
+        first: 4
+        second: a81a0600
+    ramps:
+      data:
+        first: 1
+        second: c4860100
+      data:
+        first: 4
+        second: a41a0600
+      data:
+        first: 23
+        second: 84182300
+      data:
+        first: 33
+        second: c45a3200
+    rightStructure:
+      data:
+        first: 1
+        second: 26870100
+      data:
+        first: 4
+        second: 061b0600
+      data:
+        first: 23
+        second: e4182300
+      data:
+        first: 33
+        second: 245b3200
+    rightStructurePoles:
+      data:
+        first: 1
+        second: 28870100
+      data:
+        first: 4
+        second: 081b0600
+      data:
+        first: 23
+        second: e6182300
+      data:
+        first: 33
+        second: 265b3200
+    secondFloor:
+      data:
+        first: 1
+        second: a0860100
+      data:
+        first: 4
+        second: 801a0600
+      data:
+        first: 23
+        second: 60182300
+      data:
+        first: 33
+        second: a05a3200
+    windowRight:
+      data:
+        first: 1
+        second: 2c870100
+      data:
+        first: 4
+        second: 0c1b0600
+      data:
+        first: 23
+        second: ea182300
+      data:
+        first: 33
+        second: 2a5b3200

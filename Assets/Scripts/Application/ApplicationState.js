@@ -117,7 +117,7 @@ function InitValues() {
 	showOnScreenImageAnnotations = true;
 	__previousTime = 0;
 	selectedCharacter = null;
-	addAnnotation = true;// for testing purposes
+	addAnnotation = false;// for testing purposes
 }
 
 function Awake()

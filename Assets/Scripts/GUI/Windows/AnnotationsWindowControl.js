@@ -24,8 +24,9 @@ class AnnotationsWindowControl extends ToolTipSender {
 	var toggleAnnotationsDisabledButtonTexture : Texture2D;
 	var toggleSDButtonTexture : Texture2D;
 	var toggleSDDisabledButtonTexture : Texture2D;
-
-
+	var addButtonTexture : Texture2D;
+	var emptyGUIStyle : GUIStyle;
+		
 
 	//private var __annotationsWindowRect : Rect;
 	private var __scrollViewVector : Vector2 = Vector2.zero;
@@ -59,6 +60,7 @@ class AnnotationsWindowControl extends ToolTipSender {
 	private var __jumpingEnabled : boolean = true;
 	private var __annotationsEnabled : boolean = true;
 	private var __stageDirectionsEnabled : boolean = true;
+	private var __lowerButtonSize : int = 13;
 
 	// private var __showStageDirectionsDrawer : boolean;
 	// private var __stageDirectionsDrawerRect : Rect;
@@ -346,6 +348,7 @@ class AnnotationsWindowControl extends ToolTipSender {
 				}
 			}
 		}
+		
 		if ( WindowManager.instance.windowFloat[WindowManager.instance.ANNOTATIONS_ID] ) {
 			if( GUI.RepeatButton(Rect(winRect.width - resizeWindowButtonSize,
 								  	  winRect.height - resizeWindowButtonSize,
@@ -363,6 +366,17 @@ class AnnotationsWindowControl extends ToolTipSender {
 			GUI.DragWindow(Rect(0, 0, 1000000, 30)); // 30 is the height of the window header
 			var windowRect : Rect = WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID];
 		    WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID] = WindowManager.instance.restrictToWindow(windowRect);
+		}
+		
+		if (GUI.Button(Rect(WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID].width - 30, 
+							WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID].height - __lowerButtonSize - 3, 
+							__lowerButtonSize, 
+							__lowerButtonSize),
+					   addButtonTexture,
+					   emptyGUIStyle)) {
+						if (!ApplicationState.instance.addAnnotation) {
+							ApplicationState.instance.addAnnotation = true;
+						}
 		}
 		
 		// UpdateToolTip();

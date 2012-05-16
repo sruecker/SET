@@ -20,6 +20,10 @@ var characterKneelTexture : Texture2D;
 var characterLayTexture : Texture2D;
 var floatingWindowSkin : GUISkin;
 var characterControlsStyle : GUIStyle;
+var characterControlsWingStyle : GUIStyle;
+
+var characterSubWindowX : int = 0;
+var characterSubWindowY : int = 0;
 
 var buttonXPadding : int = 5;
 var buttonYStart : int = 22;
@@ -30,7 +34,8 @@ private var __floatingCamera : boolean;
 private var __blocker : Blocker;
 private var __cameraManager : ManageCameras;
 private var __tempCharacterCamera : boolean;
-
+private var __showSubControls : boolean;
+private var buttonDefs : Array;
 
 
 function Awake()
@@ -42,7 +47,28 @@ function Awake()
 	__cameraManager = GameObject.Find("Director").GetComponent(ManageCameras);
 	ratio = Camera.main.pixelWidth / Camera.main.pixelHeight;
 	//__lastToolTip = "";
+	__showSubControls = false;
+	InitializeButtons();
+}
 
+private function InitializeButtons() {
+	buttonDefs = Array();
+	buttonDefs.push(Hashtable());
+	buttonDefs[0]['name'] = 'Stand';
+	buttonDefs[0]['action'] = CharacterActions.Stand;	
+	buttonDefs[0]['texture'] = characterStandTexture;
+	buttonDefs.push(Hashtable());	
+	buttonDefs[1]['name'] = 'Sit';
+	buttonDefs[1]['action'] = CharacterActions.Sit;	
+	buttonDefs[1]['texture'] = characterSitTexture;
+	buttonDefs.push(Hashtable());
+	buttonDefs[2]['name'] = 'Kneel';
+	buttonDefs[2]['action'] = CharacterActions.Kneel;	
+	buttonDefs[2]['texture'] = characterKneelTexture;
+	buttonDefs.push(Hashtable());	
+	buttonDefs[3]['name'] = 'Lay';
+	buttonDefs[3]['action'] = CharacterActions.Lay;	
+	buttonDefs[3]['texture'] = characterLayTexture;
 }
 
 function OnGUI () {
@@ -78,7 +104,38 @@ function OnGUI () {
 						DoSubControlsWindow, 
 						"",
 						newStyle);
+						
+						
+		if (__showSubControls) {
+			
+			
+			WindowManager.instance.windowRects[WindowManager.instance.CHARACTERCONTROLS_SUB_ID] = Rect(WindowManager.instance.windowRects[WindowManager.instance.CHARACTERCONTROLS_ID].x-buttonSize*3 + characterSubWindowX,
+																									   WindowManager.instance.windowRects[WindowManager.instance.CHARACTERCONTROLS_ID].y + characterSubWindowY,
+																									   buttonSize*3,buttonSize);
+
+			WindowManager.instance.windowRects[WindowManager.instance.CHARACTERCONTROLS_SUB_ID] = 
+				GUI.Window (WindowManager.instance.CHARACTERCONTROLS_SUB_ID, 
+							WindowManager.instance.windowRects[WindowManager.instance.CHARACTERCONTROLS_SUB_ID], 
+							DoSubCharacterWindow, 
+							"",
+							characterControlsWingStyle);
+		  	GUI.BringWindowToFront(WindowManager.instance.CHARACTERCONTROLS_SUB_ID); 		
+		
+		
+			// if outside of any two rects __showSubControls = false
+			var rect1 : Rect = WindowManager.instance.windowRects[WindowManager.instance.CHARACTERCONTROLS_SUB_ID];
+			var rect2 : Rect = WindowManager.instance.windowRects[WindowManager.instance.CHARACTERCONTROLS_ID];
+			var mouseCoords :Vector2 = Input.mousePosition;
+			
+			if (!WindowManager.isWindowClicked(mouseCoords, rect2) &&
+				!WindowManager.isWindowClicked(mouseCoords, rect1) ) {
+					__showSubControls = false;
+			}
+		}
     }
+
+
+
 }
 
 // Make the contents of the window
@@ -140,55 +197,60 @@ function DoSubControlsWindow (windowID : int) {
   	//     }
 
 	//yCurrent += yStep;
-    newPos.y += buttonYStep;
-	toolPos.y = newPos.y + originRect.y;
-	var currentEditTexture : Texture2D = ApplicationState.instance.editCharacterPaths ? editPathsTextureActive : editPathsTexture;
-	if (GUI.Button (newPos, GUIContent(currentEditTexture, toolPos+"_POSITION-STYLE_" +"Edit paths"))) {
-		if (ApplicationState.instance.editCharacterPaths == false ) {
-			ApplicationState.instance.editCharacterPaths = true;
-			ApplicationState.instance.holdingSelectedCharacter = false;
-			ApplicationState.instance.newDestinationSelectedCharacter = false;
-		} else {
-			ApplicationState.instance.editCharacterPaths = false;
-		}
-		
-    } 
-	
+	//     newPos.y += buttonYStep;
+	// toolPos.y = newPos.y + originRect.y;
+	// var currentEditTexture : Texture2D = ApplicationState.instance.editCharacterPaths ? editPathsTextureActive : editPathsTexture;
+	// if (GUI.Button (newPos, GUIContent(currentEditTexture, toolPos+"_POSITION-STYLE_" +"Edit paths"))) {
+	// 	if (ApplicationState.instance.editCharacterPaths == false ) {
+	// 		ApplicationState.instance.editCharacterPaths = true;
+	// 		ApplicationState.instance.holdingSelectedCharacter = false;
+	// 		ApplicationState.instance.newDestinationSelectedCharacter = false;
+	// 	} else {
+	// 		ApplicationState.instance.editCharacterPaths = false;
+	// 	}
+	// 	
+	//     } 
+	// 
 	// separate buttons
 	// yCurrent += yStep + 5;
-	newPos.y += buttonYStep + 5;
+	newPos.y += buttonYStep + 3;
 	toolPos.y = newPos.y + originRect.y;
 	
-	if (GUI.Button (newPos, GUIContent(characterStandTexture, toolPos+"_POSITION-STYLE_" +"Stand"))) {
+	var currentActionTexture : Texture2D;
+	
+	
+	
+	var currentAction : CharacterActions;
+	
+	if(ApplicationState.instance.playStructure['characters'][ApplicationState.instance.selectedCharacter.name]['currentAction']) {
+		currentAction = ApplicationState.instance.playStructure['characters'][ApplicationState.instance.selectedCharacter.name]['currentAction'];
+	} else {
+		currentAction = CharacterActions.Stand;
+	}
+	
+	switch (currentAction) {
+		case CharacterActions.Stand:
+			currentActionTexture = characterStandTexture;
+		break;
+		case CharacterActions.Sit:
+			currentActionTexture = characterSitTexture;
+		break;
+		case CharacterActions.Kneel:
+			currentActionTexture = characterKneelTexture;
+		break;
+		case CharacterActions.Lay:
+			currentActionTexture = characterLayTexture;
+		break;		
+	}
+	
+	
+	if (GUI.Button (newPos, GUIContent(currentActionTexture, toolPos+"_POSITION-STYLE_" +"Stand"))) {
 		//__blocker.addActionCurrentCharacterNow(CharacterActions.Stand);
-		Debug.Log("create new window");
 		
-		WindowManager.instance.windowRects[WindowManager.instance.CHARACTERCONTROLS_SUB_ID] = 
-			GUI.Window (WindowManager.instance.CHARACTERCONTROLS_SUB_ID, 
-						WindowManager.instance.windowRects[WindowManager.instance.CHARACTERCONTROLS_SUB_ID], 
-						DoSubCharacterWindow, 
-						"");
-		
+		__showSubControls = true;	
 		
 	}
-	// yCurrent += yStep;
-	newPos.y += buttonYStep;
-	toolPos.y = newPos.y + originRect.y;
-	if (GUI.Button (newPos, GUIContent(characterSitTexture, toolPos+"_POSITION-STYLE_" +"Sit"))) {
-		__blocker.addActionCurrentCharacterNow(CharacterActions.Sit);
-	}
-	// yCurrent += yStep;
-	newPos.y += buttonYStep;
-	toolPos.y = newPos.y + originRect.y;
-	if (GUI.Button (newPos, GUIContent(characterKneelTexture, toolPos+"_POSITION-STYLE_" +"Kneel"))) {
-		__blocker.addActionCurrentCharacterNow(CharacterActions.Kneel);		
-	}
-	// yCurrent += yStep;
-	newPos.y += buttonYStep;
-	toolPos.y = newPos.y + originRect.y;
-	if (GUI.Button (newPos, GUIContent(characterLayTexture, toolPos+"_POSITION-STYLE_" +"Lay"))) {
-		__blocker.addActionCurrentCharacterNow(CharacterActions.Lay);		
-	}
+	
 	// yCurrent += yStep;
 	newPos.y += buttonYStep;
 	toolPos.y = newPos.y + originRect.y;
@@ -199,6 +261,36 @@ function DoSubControlsWindow (windowID : int) {
 }
 
 function DoSubCharacterWindow(winId : int) {
+	var newPos : Rect;
+	var toolPos : Rect;
+	var originRect : Rect = Rect(WindowManager.instance.windowRects[winId].x, WindowManager.instance.windowRects[winId].y, 0, 0);
+	
+	newPos = Rect(0, 0,buttonSize,buttonSize);
+	toolPos = newPos;
+
+	var currentCharacter = ApplicationState.instance.selectedCharacter.name;
+	var currentAction : CharacterActions;
+	
+	if (ApplicationState.instance.playStructure['characters'][currentCharacter]['currentAction']) {
+		currentAction = ApplicationState.instance.playStructure['characters'][currentCharacter]['currentAction'];
+	} else {
+		currentAction = CharacterActions.Stand;
+	}
+	
+	for (var i : int = 0 ; i < 4; ++i) {
+		var thisAction : CharacterActions = buttonDefs[i]['action'];
+		if (currentAction != thisAction) {
+			if (GUI.Button (newPos, GUIContent(buttonDefs[i]['texture'] as Texture2D, toolPos+"_POSITION-STYLE_" +buttonDefs[i]['name']))) {
+				__blocker.addActionCurrentCharacterNow(buttonDefs[i]['action']);
+				__showSubControls = false;
+			}
+			// yCurrent += yStep;
+			newPos.x += buttonYStep;
+			toolPos.x = newPos.x + originRect.x;
+		}
+	}
+
+	
 	
 }
 

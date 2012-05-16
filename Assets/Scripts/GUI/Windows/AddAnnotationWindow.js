@@ -14,6 +14,9 @@ private var winRect : Rect;
 private var winId : int;
 private var scrollPosition : Vector2;
 private var annotationsControl : AnnotationTexturesControl;
+private var renderLinkedToMenu : boolean;
+private var selectedId : String;
+private var selectedName : String;
 
 function Awake() {
 	annotationsControl = GameObject.Find("AnnotationTexturesWindow").GetComponent(AnnotationTexturesControl);
@@ -35,6 +38,9 @@ function InintWindowValues(){
 	annotationStartTime = 0.0;
 	annotationEndTime = 0.0;
 	scrollPosition = Vector2(0,0);
+	renderLinkedToMenu = false;
+	selectedId = '';
+	selectedName = '';
 }
 
 function FinishInitialization() {
@@ -58,6 +64,11 @@ function OnGUI() {
 						DoWindow, 
 						"Add annotation");
 					
+	}
+	
+	if (renderLinkedToMenu) {
+		var menuId : int = WindowManager.instance.ANNOTATIONS_TEXTURES_MENU_ID;
+		
 	}
 }
 
@@ -131,10 +142,14 @@ function DoWindow(winId : int) {
 	GUILayout.EndHorizontal();
 	
 	// add linked to
-	GUILayout.BeginHorizontal();
-	GUILayout.Label("Linked to:", GUILayout.Width(labelWidth));
-	annotationLinkedTo = GUILayout.TextField(annotationLinkedTo, 25);
-	GUILayout.EndHorizontal();
+	// GUILayout.BeginHorizontal();
+	// 	GUILayout.Label("Linked to:", GUILayout.Width(labelWidth));
+	// 	// add dropdown image
+	// 	if(GUILayout.Button(selectedName)) {
+	// 		renderLinkedToMenu = true;
+	// 	}
+	// 	// annotationLinkedTo = GUILayout.TextField(annotationLinkedTo, 25);
+	// 	GUILayout.EndHorizontal();
 	
 	// add start time
 	GUILayout.BeginHorizontal();

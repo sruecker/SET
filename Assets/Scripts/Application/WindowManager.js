@@ -48,6 +48,7 @@ static var  CHARACTERCONTROLS_ID : int;
 static var  ANNOTATIONS_TEXTURES_ID : int;
 static var  ANNOTATIONS_TEXTURES_MENU_ID : int;
 static var  ADD_ANNOTATION_ID : int;
+static var  CHARACTERCONTROLS_SUB_ID : int;
 static var	LAST_ID : int;
 
 static var	UNDOCKING_JUMP : int;
@@ -105,7 +106,7 @@ function Awake()
 	windowGroups["floating"][SUBCONTROLS_ID] = "Sub controls";
 	CAMCONTROLS_ID      = 2;
 	windowGroups["floating"][CAMCONTROLS_ID] = "Camera controls";
-	MINIMAP_ID          = 19;
+	MINIMAP_ID          = 3;
 	windowGroups["floating"][MINIMAP_ID] = "Minimap";
 	TIMELINE_ID         = 4;
 	windowGroups["anchored"][TIMELINE_ID] = "Timeline";
@@ -127,14 +128,14 @@ function Awake()
 	CHARACTER_MENU_1_ID = 15;
 	CHARACTER_MENU_2_ID = 16;
 	REAL_TIME_MAP_ID	= 17;
-	CHARACTERCONTROLS_ID = 22;
-	CHARACTERCONTROLS_SUB_ID = 20;
-	ANNOTATIONS_TEXTURES_ID = 21;
+	CHARACTERCONTROLS_ID = 18;
+	CHARACTERCONTROLS_SUB_ID = 19;
+	ANNOTATIONS_TEXTURES_ID = 20;
 	windowGroups["anchored"][ANNOTATIONS_TEXTURES_ID] = "Annotation textures";
 	windowGroups["floating"][REAL_TIME_MAP_ID] = "Realtime map";
-	ANNOTATIONS_TEXTURES_MENU_ID = 18;
-	ADD_ANNOTATION_ID = 23;
-	LAST_ID             = 24;
+	ANNOTATIONS_TEXTURES_MENU_ID = 21;
+	ADD_ANNOTATION_ID = 22;
+	LAST_ID             = 23;
 	
 	UNDOCKING_JUMP  = 10;
 	
@@ -173,10 +174,10 @@ function Awake()
 	}
 	
 	windowRects[SUBCONTROLS_ID]               = Rect(20, 40, 34, 180); // 127
-	windowRects[CHARACTERCONTROLS_ID]         = Rect(20, 40, 34, 204); // 127
+	windowRects[CHARACTERCONTROLS_ID]         = Rect(20, 40, 34, 61); // 127
 	windowRects[CHARACTERCONTROLS_SUB_ID]     = Rect(20, 40, 100, 34);
-	windowRects[CAMCONTROLS_ID]               = Rect(20, 190, 128, 163);
-	windowRects[MINIMAP_ID]                   = Rect(Screen.width - 210, __bottomWindowHeight - 169, 0, 0);
+	windowRects[CAMCONTROLS_ID]               = Rect(0,0,0,0);//Rect(20, 190, 128, 163);
+	windowRects[MINIMAP_ID]                   = Rect(0,0,0,0);//Rect(Screen.width - 210, __bottomWindowHeight - 169, 0, 0);
 	windowRects[ANNOTATIONS_TEXTURES_ID]      = Rect(Screen.width - 210, __bottomWindowHeight - 169, 200, 150);
 	windowRects[ANNOTATIONS_TEXTURES_MENU_ID] = Rect(Screen.width - 210, __bottomWindowHeight - 169, 200, 150);
 	
@@ -195,7 +196,7 @@ function Awake()
 	windowRects[CHARACTER_MENU_2_ID]          = Rect(0,0,0,0);
 	windowRects[REAL_TIME_MAP_ID]             = Rect(150, 20, 200, 200+25);
 	windowRects[FILEBROWSER_ID]				  = Rect(Screen.width / 2 - 185,35,370,50);
-	windowRects[ADD_ANNOTATION_ID]			  = Rect(Screen.width / 2 - 185,35,370,250);
+	windowRects[ADD_ANNOTATION_ID]			  = Rect(Screen.width / 2 - 185,35,370,270);
 	
 	__windowIdPool = Array();
 	

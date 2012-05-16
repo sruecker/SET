@@ -90,7 +90,7 @@ function JumpToPreviousAction() {
 			__animation.Play("fastLay");
 		break;
 	}	
-	
+	ApplicationState.instance.playStructure['characters'][__characterKey]['currentAction'] = __nextAction;
 	//}
 	/*
 	var currentTime : float = ApplicationState.instance.playTime;
@@ -167,6 +167,7 @@ function Update()
 					AnimateLay();
 				break;
 			}
+			ApplicationState.instance.playStructure['characters'][__characterKey]['currentAction'] = __nextAction;
 		} 
 		// else if (dragging) {
 		// 	switch(__nextAction) {
