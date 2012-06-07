@@ -70,7 +70,7 @@ function setScrubberPositions()
 	
 	//__leftLightingRect = Rect(__timeLineLeftPadding, yPos + 5, 0, 28);
 	__leftLightingRect = Rect(0, yPos + 5, 0, 28);
-	__rightLightingRect = Rect(__timeLineLeftPadding + __scrubber.scrubberRect.width / 2.0, yPos + 5, Screen.width, 28);
+	__rightLightingRect = Rect(__timeLineLeftPadding + __scrubber.scrubberRect.x + __scrubber.scrubberRect.width / 2.0, yPos + 5, Screen.width, 28);
 }
 
 function FinishInitialization()
