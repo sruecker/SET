@@ -11,6 +11,7 @@ private var __backgroundObject : Transform;
 private var __fileBrowser : CTreeView;
 private var __validator : XMLValidator;
 private var __cameraManager : ManageCameras;
+private var __timeLineWindowControl: TimeLineWindowControl;
 
 // views combo
 private var __selectedView : String;
@@ -34,6 +35,7 @@ function Awake() {
 	__fileBrowser.winRect = Rect(Screen.width / 2 - 185,35,370,50);
 	__validator = gameObject.GetComponentInChildren(XMLValidator);
 	__cameraManager = GameObject.Find("Director").GetComponent(ManageCameras);	
+	__timeLineWindowControl = GameObject.Find("TimeLineWindow").GetComponent(TimeLineWindowControl);
 	
 	__menuClick = -1;
 	__selectedView = "";
@@ -140,12 +142,17 @@ function DoToolbarMenu() {
 			WindowManager.instance.windowRects[WindowManager.instance.TOOLBAR_MENU_ID] = Rect(48, 23, 165, 255);
 			GUILayout.BeginArea(Rect(0, 0, 165, 255));
 			GUILayout.BeginVertical(style, GUILayout.Width(165));
+			/*
 			for (var winId:int in WindowManager.instance.windowGroups["floating"].Keys) {
 				if (GUILayout.Button("Restore "+WindowManager.instance.windowGroups["floating"][winId])) {
 					WindowManager.instance.restoreWindow(winId);
 					__menuClick = -1;
 				}
 			}
+			*/
+			
+			
+			/*
 			if (GUILayout.Button("Restore GUI")) {
 				WindowManager.instance.restoreWindow(-1);
 				__menuClick = -1;
@@ -154,10 +161,28 @@ function DoToolbarMenu() {
 				WindowManager.instance.restoreWindow(-2);
 				__menuClick = -1;
 			}
+			*/
+			
+			if(GUILayout.Button("Toggle minimap")) {
+				ApplicationState.instance.showMinimap = ! ApplicationState.instance.showMinimap;
+				__menuClick = -1;	
+			}
+			
+			if(GUILayout.Button("Toggle annotations window")) {
+				ApplicationState.instance.showAnnotations = ! ApplicationState.instance.showAnnotations;
+				__menuClick = -1;					
+			}
+			
+			if(GUILayout.Button("Toggle subcontrols")) {
+				ApplicationState.instance.showSubcontrols = ! ApplicationState.instance.showSubcontrols;	
+				__menuClick = -1;				
+			}
+			
 			if(GUILayout.Button("Toggle anchors")) {
 				ApplicationState.instance.showAxis = !ApplicationState.instance.showAxis;
 				__menuClick = -1;				
 			}
+			
 			if(GUILayout.Button("Toggle text annotations")) {
 				ApplicationState.instance.showOnScreenTextAnnotations = !ApplicationState.instance.showOnScreenTextAnnotations;
 				__menuClick = -1;				
@@ -166,6 +191,11 @@ function DoToolbarMenu() {
 			if(GUILayout.Button("Toggle image annotations")) {
 				ApplicationState.instance.showOnScreenImageAnnotations = !ApplicationState.instance.showOnScreenImageAnnotations;
 				__menuClick = -1;				
+			}
+			
+			if (GUILayout.Button("Restore time line")) {
+				__timeLineWindowControl.resetBottomWindow(200);			
+				__menuClick = -1;
 			}
 			
 			GUILayout.EndVertical();

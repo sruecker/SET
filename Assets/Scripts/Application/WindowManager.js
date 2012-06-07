@@ -102,7 +102,7 @@ function Awake()
 	showYawRing = true;
 	
 	
-	SUBCONTROLS_ID      = 1;
+	SUBCONTROLS_ID      = 22;
 	windowGroups["floating"][SUBCONTROLS_ID] = "Sub controls";
 	CAMCONTROLS_ID      = 2;
 	windowGroups["floating"][CAMCONTROLS_ID] = "Camera controls";
@@ -134,7 +134,7 @@ function Awake()
 	windowGroups["anchored"][ANNOTATIONS_TEXTURES_ID] = "Annotation textures";
 	windowGroups["floating"][REAL_TIME_MAP_ID] = "Realtime map";
 	ANNOTATIONS_TEXTURES_MENU_ID = 21;
-	ADD_ANNOTATION_ID = 22;
+	ADD_ANNOTATION_ID = 1;
 	LAST_ID             = 23;
 	
 	UNDOCKING_JUMP  = 10;

@@ -114,10 +114,13 @@ class AnnotationsWindowControl extends ToolTipSender {
 			}
 		}
 	
+	
+
 		WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID] = GUI.Window (WindowManager.instance.ANNOTATIONS_ID, 
 										   WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID], 
 										   windowFunction, 
 										   "Notes & SDs");
+
 		if (!WindowManager.instance.windowFloat[WindowManager.instance.ANNOTATIONS_ID]) {
 			GUI.BringWindowToBack(WindowManager.instance.ANNOTATIONS_ID);  
 		}

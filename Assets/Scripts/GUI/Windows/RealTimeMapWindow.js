@@ -44,12 +44,13 @@ class RealTimeMapWindow extends ToolTipSender {
 	
 	    // Register the window. Notice the 3rd parameter	
 		GUI.skin = emptyGuiSkin;
-	
-		WindowManager.instance.windowRects[WindowManager.instance.REAL_TIME_MAP_ID] = 
-			GUI.Window (WindowManager.instance.REAL_TIME_MAP_ID, 
-						WindowManager.instance.windowRects[WindowManager.instance.REAL_TIME_MAP_ID], 
-						DoWindow, 
-						"");
+		if (ApplicationState.instance.showMinimap){
+			WindowManager.instance.windowRects[WindowManager.instance.REAL_TIME_MAP_ID] = 
+				GUI.Window (WindowManager.instance.REAL_TIME_MAP_ID, 
+							WindowManager.instance.windowRects[WindowManager.instance.REAL_TIME_MAP_ID], 
+							DoWindow, 
+							"");
+		}
 	}
 
 	private function CacheMapPositions() {

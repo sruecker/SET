@@ -27,6 +27,9 @@ static var floatingCamera : boolean;
 static var holdingSelectedCharacter : boolean;
 static var newDestinationSelectedCharacter : boolean;
 static var sideLabels : boolean;
+static var showMinimap : boolean;
+static var showAnnotations : boolean;
+static var showSubcontrols : boolean;
 static var showAxis : boolean;
 static var showAnnotationImages : boolean;
 static var showOnScreenTextAnnotations : boolean;
@@ -118,6 +121,9 @@ function InitValues() {
 	__previousTime = 0;
 	selectedCharacter = null;
 	addAnnotation = false;// for testing purposes
+	showMinimap = true;
+	showAnnotations = true;
+	showSubcontrols = true;
 }
 
 function Awake()

@@ -72,11 +72,13 @@ function OnGUI () {
 		// WindowManager.instance.windowRects[WindowManager.instance.SUBCONTROLS_ID].x = buttonPosn.x + (xOffset * ratio);
 		// 		WindowManager.instance.windowRects[WindowManager.instance.SUBCONTROLS_ID].y = Camera.main.pixelHeight - rectHeight - buttonPosn.y - (yOffset * ratio);
 		// 	
-	    WindowManager.instance.windowRects[WindowManager.instance.SUBCONTROLS_ID] = 
-			GUI.Window (WindowManager.instance.SUBCONTROLS_ID, 
-						WindowManager.instance.windowRects[WindowManager.instance.SUBCONTROLS_ID], 
-						DoSubControlsWindow, 
-						"");
+		if (ApplicationState.instance.showSubcontrols){			
+		    WindowManager.instance.windowRects[WindowManager.instance.SUBCONTROLS_ID] = 
+				GUI.Window (WindowManager.instance.SUBCONTROLS_ID, 
+							WindowManager.instance.windowRects[WindowManager.instance.SUBCONTROLS_ID], 
+							DoSubControlsWindow, 
+							"");
+		}
     }
 }
 
