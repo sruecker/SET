@@ -1,6 +1,7 @@
 
 
 public var annotationStyle : GUIStyle;
+public var annotationContentStyle : GUIStyle;
 public var annotationWidth : int = 200;
 
 function OnGUI() {
@@ -18,6 +19,9 @@ function OnGUI() {
 					
 					// render annotation
 					
+					var showImage : boolean = false;
+					var showText : boolean = false;
+					
 					var annotationPosition : Rect = Rect(0,0,annotationWidth,0);
 					var content : GUIContent = GUIContent();
 					var stringPart : String = "";
@@ -30,35 +34,56 @@ function OnGUI() {
 										
 						annotationPosition.x = newPos.x;
 						annotationPosition.y = Screen.height - newPos.y;
-						// content = GUIContent((nameRef["name"] + ":\n" + annotation['text']) as String);												
+
 						stringPart = nameRef["name"] + ":\n" + annotation['text'];
 						
 					} else if (annotation.ContainsKey("header")){
-						// content = GUIContent((nameRef["header"] + ":\n" + annotation['text']) as String);	
+
 						stringPart = nameRef["header"] + ":\n" + annotation['text'];
 					} else {
-						// content = GUIContent(annotation['text'] as String);
+
 						stringPart = annotation['text'];
 					}
 					var showAnnotation = false;
 					if (annotation.ContainsKey("imageTexture") && ApplicationState.instance.showOnScreenImageAnnotations) {
 						if (ApplicationState.instance.showOnScreenTextAnnotations){
+							// text and image
 							content = GUIContent(stringPart, annotation["imageTexture"] as Texture2D);
 							showAnnotation = true;
+							showImage = true;
+							showText = true;
 						} else {
+							// image
 							content = GUIContent(annotation["imageTexture"] as Texture2D);
 							showAnnotation = true;
+							showImage = true;
 						}
 					} else if (ApplicationState.instance.showOnScreenTextAnnotations) {
+						// text
 						content = GUIContent(stringPart);
 						showAnnotation = true;
+						showText = true;
 					}
 																	
 					// render
 					annotationPosition.height = annotationStyle.CalcHeight(content, annotationWidth);					
 					annotationPosition = WindowManager.instance.restrictToViewPort(annotationPosition);					
 					if (showAnnotation) {
-						GUI.Label(annotationPosition, content, annotationStyle);
+						// GUI.Label(annotationPosition, content, annotationStyle);
+						// GUI.Box(annotationPosition, content, annotationStyle);
+						// GUI.BeginGroup(annotationPosition, annotationStyle);
+						GUI.BeginGroup(annotationPosition);
+						GUILayout.BeginVertical(annotationStyle, GUILayout.Width(200));
+						if (showImage) {
+							GUILayout.Label(GUIContent(annotation["imageTexture"] as Texture2D), annotationContentStyle, GUILayout.Width(195));
+						}
+						if (showText) {
+							GUILayout.Label(GUIContent(stringPart), annotationContentStyle, GUILayout.Width(195));
+						}
+						// GUILayout
+						GUILayout.EndVertical();
+						GUI.EndGroup();
+						// GUI.EndGroup();
 					}
 				}
 			
