@@ -211,11 +211,11 @@ class OnStageWindowControl extends ToolTipSender {
 				__resizingOnStageWindow = false;	
 			}
 		} 
-	
+		
 		if (WindowManager.instance.windowUpdate[WindowManager.instance.ONSTAGE_ID]) {
 			WindowManager.instance.windowUpdate[WindowManager.instance.ONSTAGE_ID] = false;
 		
-			__timeLine.timeLineWidth = trueWinWidth;
+			// __timeLine.timeLineWidth = trueWinWidth;
 
 			__timeLine.modifyFromWidth(__prevWorkingArea);
 	 		//modifyCharacterActionBarsFromWidth(__prevWorkingArea);
@@ -460,11 +460,11 @@ class OnStageWindowControl extends ToolTipSender {
 		drawCharacterAnnotations();
 	
 		GUILayout.EndScrollView ();
-
+		__timeLine.timeLineWidth =  WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].width - __resizeButtonSize;
 		__timeLine.DrawGUI();
 
 		// red marker
-									  // Mathf.Floor(ApplicationState.instance.playTime / ( ApplicationState.instance.playTimeLength / __breakMainTimeLineInCount));
+
 		var markerPosition : float = ApplicationState.instance.playTime * __breakMainTimeLineInCount / ApplicationState.instance.playTimeLength;
 		// Debug.Log("VV");
 		// Debug.Log(markerPosition);
