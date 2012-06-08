@@ -282,5 +282,6 @@ public function getTreeBrowserWindowRect(): Rect {
 // }
 
 public function FinishInitialization() {
+	__menuClick = -1;
 	//SetViews();
 }
