@@ -480,7 +480,7 @@ function renderLine( charachterKey : String)
 	
 	for (var line : String in nameRef["currentLines"]) {
 		// headerContent = GUIContent(nameRef["name"] as String + ": " );
-		lineContent = GUIContent(nameRef["name"] as String + ": " + line);
+		lineContent = GUIContent(nameRef["name"] as String + ":\n" + line);
 	
 		var newStyle : GUIStyle = new GUIStyle(lineBoxStyle);
 		newStyle.normal.background = nameRef["speechBubble"];

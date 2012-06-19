@@ -173,7 +173,7 @@ function Awake()
 		windowUpdate.push(false);
 	}
 	
-	windowRects[SUBCONTROLS_ID]               = Rect(20, 40, 34, 180); // 127
+	windowRects[SUBCONTROLS_ID]               = Rect(20, 40, 34, 198); // 127
 	windowRects[CHARACTERCONTROLS_ID]         = Rect(20, 40, 34, 61); // 127
 	windowRects[CHARACTERCONTROLS_SUB_ID]     = Rect(20, 40, 100, 34);
 	windowRects[CAMCONTROLS_ID]               = Rect(0,0,0,0);//Rect(20, 190, 128, 163);

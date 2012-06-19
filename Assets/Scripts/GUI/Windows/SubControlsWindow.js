@@ -19,6 +19,8 @@ var characterSitTexture : Texture2D;
 var characterKneelTexture : Texture2D;
 var characterLayTexture : Texture2D;
 
+var separator : Texture2D;
+
 var pointButtonTexture : Texture2D;
 var zoomButtonTexture : Texture2D;
 var trackButtonTexture : Texture2D;
@@ -77,7 +79,7 @@ function OnGUI () {
 				GUI.Window (WindowManager.instance.SUBCONTROLS_ID, 
 							WindowManager.instance.windowRects[WindowManager.instance.SUBCONTROLS_ID], 
 							DoSubControlsWindow, 
-							"");
+							"", "customWindow");
 		}
     }
 }
@@ -98,6 +100,17 @@ function DoSubControlsWindow (windowID : int) {
 	toolPos.y += originRect.y;
 	
 	
+	GUI.DrawTexture(Rect(0, 8, WindowManager.instance.windowRects[windowID].width, separator.height), separator);
+
+	
+	if (GUI.Button (newPos, GUIContent(pointButtonTexture, toolPos+"_POSITION-STYLE_" + "Point"), buttonNormalStyle) ) {
+		__newCameraControls.SetPointer();
+	}
+
+	newPos.y += buttonYStep + 3;
+  	GUI.DrawTexture(Rect(0, newPos.y, WindowManager.instance.windowRects[windowID].width, separator.height), separator);	
+	newPos.y += 6;
+	toolPos.y = newPos.y + originRect.y;
 	
 	if (__floatingCamera) {	
 	    if (GUI.Button (newPos, GUIContent(floatingCameraTexture, toolPos+"_POSITION-STYLE_" + "Floating camera"), buttonNormalStyle) ) {
@@ -115,30 +128,27 @@ function DoSubControlsWindow (windowID : int) {
 	}
 	
 
-  	newPos.y += buttonYStep;
-  	toolPos.y = newPos.y + originRect.y;
+	newPos.y += buttonYStep + 3;
+  	GUI.DrawTexture(Rect(0, newPos.y, WindowManager.instance.windowRects[windowID].width, separator.height), separator);	
+	newPos.y += 6;
+	toolPos.y = newPos.y + originRect.y;
+	
 	// temp
 	if (GUI.Button (newPos, GUIContent(" Map", toolPos+"_POSITION-STYLE_" + "Minimap"), buttonNormalStyle) ) {
 		WindowManager.instance.showMiniMap = ! WindowManager.instance.showMiniMap;
 	}
 	
-  	newPos.y += buttonYStep+5;
-  	toolPos.y = newPos.y + originRect.y;
-
+	newPos.y += buttonYStep + 3;
+  	GUI.DrawTexture(Rect(0, newPos.y, WindowManager.instance.windowRects[windowID].width, separator.height), separator);	
+	newPos.y += 6;
+	toolPos.y = newPos.y + originRect.y;
 	
-	if (GUI.Button (newPos, GUIContent(pointButtonTexture, toolPos+"_POSITION-STYLE_" + "Point"), buttonNormalStyle) ) {
-		__newCameraControls.SetPointer();
-	}
-	
-  	newPos.y += buttonYStep;
-  	toolPos.y = newPos.y + originRect.y;
-
 	
 	if (GUI.Button (newPos, GUIContent(zoomButtonTexture, toolPos+"_POSITION-STYLE_" + "Zoom"), buttonNormalStyle) ) {
 		__newCameraControls.SetZoom();
 	}
 	
-	newPos.y += buttonYStep;
+	newPos.y += buttonYStep + 4;
 	toolPos.y = newPos.y + originRect.y;
 	
 	if (GUI.Button (newPos, GUIContent(tumbleButtonTexture, toolPos+"_POSITION-STYLE_" + "Tumble"), buttonNormalStyle) ) {
@@ -146,7 +156,7 @@ function DoSubControlsWindow (windowID : int) {
 
 	}
 	
-	newPos.y += buttonYStep;
+	newPos.y += buttonYStep+ 4;
 	toolPos.y = newPos.y + originRect.y;
 	
 	if (GUI.Button (newPos, GUIContent(trackButtonTexture, toolPos+"_POSITION-STYLE_" + "Track"), buttonNormalStyle) ) {

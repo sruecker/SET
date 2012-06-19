@@ -142,27 +142,27 @@ class SpeechesWindowControl extends ToolTipSender {
 		var toggleButton:GUIContent;
 		if (__displayMode != BUBBLE_MODE) {
 			toggleButton = __displayMode == READER_MODE ? GUIContent(toggleJumpDisabledButtonTexture, toolTipPreString+"Jumping disabled"):GUIContent(toggleJumpButtonTexture, toolTipPreString+"Jumping enabled");
-			if (GUI.Button(toolPos, toggleButton, dragButtonStyle)) {
+			if (GUI.Button(toolPos, toggleButton, "customButton")) {  // XXX Button
 				if (__displayMode == READER_MODE) __displayMode = JUMP_READER_MODE;
 				else __displayMode = READER_MODE;
 			}
 		} else {
 			GUI.enabled = false;
-			GUI.Button(Rect(winRect.width - 80, 5, 16, 16), GUIContent(toggleJumpDisabledButtonTexture, toolTipPreString+"Jumping disabled"), dragButtonStyle);
+			GUI.Button(Rect(winRect.width - 80, 5, 16, 16), GUIContent(toggleJumpDisabledButtonTexture, toolTipPreString+"Jumping disabled"), "customButton"); // XXX Button
 			GUI.enabled = true;
 		}
 
 		toolPos = Rect(winRect.width - 60, 5, 16, 16);
 		toolTipPreString = Rect(toolPos.x + winRect.x, toolPos.y + winRect.y, toolPos.width, toolPos.height) + styleString;
 		toggleButton = __displayMode == BUBBLE_MODE ? GUIContent(toggleReaderButtonTexture, toolTipPreString+"Show reader view"):GUIContent(toggleBubbleButtonTexture, toolTipPreString+"Show speech bubble view");
-		if (GUI.Button(toolPos, toggleButton, dragButtonStyle)) {
+		if (GUI.Button(toolPos, toggleButton, "customButton")) { // XXX Button
 			if (__displayMode == BUBBLE_MODE) __displayMode = JUMP_READER_MODE;
 			else __displayMode = BUBBLE_MODE;
 		}
 	
 		toolPos = Rect(winRect.width - 40, 5, 16, 16);
 		toolTipPreString = Rect(toolPos.x + winRect.x, toolPos.y + winRect.y, toolPos.width, toolPos.height) + styleString;
-		if (GUI.Button(toolPos, GUIContent(popOutButtonTexture, toolTipPreString+"Show floating reader"), dragButtonStyle)) {
+		if (GUI.Button(toolPos, GUIContent(popOutButtonTexture, toolTipPreString+"Show floating reader"), "customButton")) { // XXX Button
 			__showPopOut = !__showPopOut;
 			//~ GUI.BringWindowToFront(WindowManager.instance.SPEECHES_POPOUT_ID);
 		}
@@ -178,7 +178,7 @@ class SpeechesWindowControl extends ToolTipSender {
 		}
 	
 
-		if (GUI.Button(toolPos, undockingContent, dragButtonStyle)) {
+		if (GUI.Button(toolPos, undockingContent, "customButton")) { 
 			WindowManager.instance.windowFloat[WindowManager.instance.SPEECHES_ID] = ! WindowManager.instance.windowFloat[WindowManager.instance.SPEECHES_ID];
 		
 			if ( WindowManager.instance.windowFloat[WindowManager.instance.SPEECHES_ID] ) {
@@ -271,7 +271,7 @@ class SpeechesWindowControl extends ToolTipSender {
 									}
 								} else {
 									var characterName : String = ApplicationState.instance.playStructure["characters"][line["character"]]["name"];
-									if (GUI.Button(Rect(3, 8, lineWidth-6, mug.height+5), GUIContent(characterName, mug), mugButtonStyle)) {
+									if (GUI.Button(Rect(3, 8, lineWidth-6, mug.height+5), GUIContent(characterName + ":", mug), mugButtonStyle)) {
 										line["showText"] = !line["showText"];
 										if (__speechOpenTracker.ContainsKey(line["character"])) {
 											__speechOpenTracker[line["character"]].Remove(line["startPos"]);

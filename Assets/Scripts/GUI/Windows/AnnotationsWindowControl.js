@@ -60,7 +60,7 @@ class AnnotationsWindowControl extends ToolTipSender {
 	private var __jumpingEnabled : boolean = true;
 	private var __annotationsEnabled : boolean = true;
 	private var __stageDirectionsEnabled : boolean = true;
-	private var __lowerButtonSize : int = 13;
+	private var __lowerButtonSize : int = 14;
 
 	// private var __showStageDirectionsDrawer : boolean;
 	// private var __stageDirectionsDrawerRect : Rect;
@@ -174,7 +174,7 @@ class AnnotationsWindowControl extends ToolTipSender {
 				
 		annotationButtonContent = !__annotationsEnabled ? GUIContent(toggleAnnotationsDisabledButtonTexture, toolTipPreString + "Annotations disabled") : GUIContent(toggleAnnotationsButtonTexture, 
 																																										   toolTipPreString+"Annotations enabled");
-		if (GUI.Button( toolPos, annotationButtonContent, dragButtonStyle )) {
+		if (GUI.Button( toolPos, annotationButtonContent, 'customButton' )) { // XXX Button
 			__annotationsEnabled = ! __annotationsEnabled;
 		
 			// if (!__annotationsEnabled && !__stageDirectionsEnabled) {
@@ -190,7 +190,7 @@ class AnnotationsWindowControl extends ToolTipSender {
 		stageDirectionsButtonContent = !__stageDirectionsEnabled ? GUIContent(toggleSDDisabledButtonTexture, toolTipPreString+"Stage direction disabled") : GUIContent(toggleSDButtonTexture, 
 																																							toolTipPreString+"Stage directions enabled");
 	
-		if (GUI.Button( toolPos, stageDirectionsButtonContent, dragButtonStyle )) {
+		if (GUI.Button( toolPos, stageDirectionsButtonContent, 'customButton' )) { // XXX Button
 			__stageDirectionsEnabled = ! __stageDirectionsEnabled;
 		
 			// if (!__annotationsEnabled && !__stageDirectionsEnabled) {
@@ -205,7 +205,7 @@ class AnnotationsWindowControl extends ToolTipSender {
 		
 		jumpButtonContent = !__jumpingEnabled ? GUIContent(toggleJumpDisabledButtonTexture, toolTipPreString+"Jumping disabled") : GUIContent(toggleJumpButtonTexture, 
 																																			  toolTipPreString+"Jumping enabled");
-		if (GUI.Button( toolPos, jumpButtonContent, dragButtonStyle )) {
+		if (GUI.Button( toolPos, jumpButtonContent, 'customButton' )) { // XXX Button
 			__jumpingEnabled = ! __jumpingEnabled;
 		}
 
@@ -223,7 +223,7 @@ class AnnotationsWindowControl extends ToolTipSender {
 
 	
 		// undock / dock button
-		if (GUI.Button(toolPos, undockingContent, dragButtonStyle)) {
+		if (GUI.Button(toolPos, undockingContent, 'customButton')) { // XXX Button
 			WindowManager.instance.windowFloat[WindowManager.instance.ANNOTATIONS_ID] = ! WindowManager.instance.windowFloat[WindowManager.instance.ANNOTATIONS_ID];
 		
 			if ( WindowManager.instance.windowFloat[WindowManager.instance.ANNOTATIONS_ID] ) {
@@ -376,7 +376,7 @@ class AnnotationsWindowControl extends ToolTipSender {
 							__lowerButtonSize, 
 							__lowerButtonSize),
 					   addButtonTexture,
-					   emptyGUIStyle)) {
+					   'customButton')) {
 						if (!ApplicationState.instance.addAnnotation) {
 							ApplicationState.instance.addAnnotation = true;
 						}

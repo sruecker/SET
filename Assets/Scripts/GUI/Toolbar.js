@@ -5,6 +5,9 @@ public var comboArrow : Texture;
 public var addButton : Texture;
 public var comboStyle : GUIStyle;
 public var loadingStyle : GUIStyle;
+public var menuButtonStyle : GUIStyle;
+
+
 
 private var __toolbarArea : Rect;
 private var __backgroundObject : Transform;
@@ -118,18 +121,18 @@ function DoToolbarMenu() {
 			WindowManager.instance.windowRects[WindowManager.instance.TOOLBAR_MENU_ID] = Rect(0, 23, 80, 100);
 			GUILayout.BeginArea(Rect(0, 0, 80, 100));
 			GUILayout.BeginVertical(style, GUILayout.Width(80));
-			if (GUILayout.Button("Open")) {
+			if (GUILayout.Button("Open", menuButtonStyle)) {
 				__menuClick = -1;
 				__fileBrowser.setFileMode(__fileBrowser.OPEN);
 				__fileBrowser.visible = true;
 			}
 			
-			if (GUILayout.Button("Save")) {
+			if (GUILayout.Button("Save", menuButtonStyle)) {
 				__menuClick = -1;
 				SaveFile(ApplicationState.instance.playToLoad);
 			}
 			
-			if (GUILayout.Button("Save As...")) {
+			if (GUILayout.Button("Save As...", menuButtonStyle)) {
 				__menuClick = -1;
 				__fileBrowser.setFileMode(__fileBrowser.SAVE);
 				__fileBrowser.visible = true;
@@ -163,37 +166,37 @@ function DoToolbarMenu() {
 			}
 			*/
 			
-			if(GUILayout.Button("Toggle minimap")) {
+			if(GUILayout.Button("Toggle minimap", menuButtonStyle)) {
 				ApplicationState.instance.showMinimap = ! ApplicationState.instance.showMinimap;
 				__menuClick = -1;	
 			}
 			
-			if(GUILayout.Button("Toggle annotations window")) {
+			if(GUILayout.Button("Toggle annotations window", menuButtonStyle)) {
 				ApplicationState.instance.showAnnotations = ! ApplicationState.instance.showAnnotations;
 				__menuClick = -1;					
 			}
 			
-			if(GUILayout.Button("Toggle subcontrols")) {
+			if(GUILayout.Button("Toggle subcontrols", menuButtonStyle)) {
 				ApplicationState.instance.showSubcontrols = ! ApplicationState.instance.showSubcontrols;	
 				__menuClick = -1;				
 			}
 			
-			if(GUILayout.Button("Toggle anchors")) {
+			if(GUILayout.Button("Toggle anchors", menuButtonStyle)) {
 				ApplicationState.instance.showAxis = !ApplicationState.instance.showAxis;
 				__menuClick = -1;				
 			}
 			
-			if(GUILayout.Button("Toggle text annotations")) {
+			if(GUILayout.Button("Toggle text annotations", menuButtonStyle)) {
 				ApplicationState.instance.showOnScreenTextAnnotations = !ApplicationState.instance.showOnScreenTextAnnotations;
 				__menuClick = -1;				
 			}
 			
-			if(GUILayout.Button("Toggle image annotations")) {
+			if(GUILayout.Button("Toggle image annotations", menuButtonStyle)) {
 				ApplicationState.instance.showOnScreenImageAnnotations = !ApplicationState.instance.showOnScreenImageAnnotations;
 				__menuClick = -1;				
 			}
 			
-			if (GUILayout.Button("Restore time line")) {
+			if (GUILayout.Button("Restore time line", menuButtonStyle)) {
 				__timeLineWindowControl.resetBottomWindow(200);			
 				__menuClick = -1;
 			}

@@ -328,8 +328,8 @@ private function createSpeedSlider()
 	
 	ApplicationState.instance.playSpeed = GUI.HorizontalSlider( Rect(50, 2, 100, 30 ), ApplicationState.instance.playSpeed, 0.0, 2.0) ;
 
-	GUI.Label(Rect(0, 0, 100, 30 ), "Speed", textSkin); 
-	GUI.Label(Rect(speedStringPosition, 15, 100, 30 ), speedString, textSkin);
+	GUI.Label(Rect(50, 15, 100, 30 ), "Speed", textSkin); 
+	GUI.Label(Rect(120, 15, 100, 30 ), speedString, textSkin);
 
 	GUI.EndGroup();
 	

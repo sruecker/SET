@@ -5,7 +5,7 @@ import WindowManager;
 
 
 class OnStageWindowControl extends ToolTipSender {
-
+	var test : int = 0;
 	var gSkin : GUISkin;
 	var windowWidth : int = 200;
 	var characterRowStyle : GUIStyle;
@@ -88,7 +88,7 @@ class OnStageWindowControl extends ToolTipSender {
 
 	private var __timeLine : TimeLine;
 	private var __mainTimeLine : TimeLine;
-	private var __lowerButtonSize : int = 13;
+	private var __lowerButtonSize : int = 14;
 
 	private var __scrollViewVector : Vector2 = Vector2.zero;
 	private var __blockerComponent : Blocker;
@@ -289,6 +289,60 @@ class OnStageWindowControl extends ToolTipSender {
 	
 		// character labels
 
+		var currentBackgroundStyle : GUIStyle;
+		var currentPathButtonTexture : Texture2D;
+		
+		var i : int = 0;
+		for (var characterKey in __characterKeysShowing) {
+			
+			if (ApplicationState.instance.selectedCharacter != null && 
+				characterKey == ApplicationState.instance.selectedCharacter.name) {
+			
+				currentBackgroundStyle = selectedCharacterRowStyle;		
+			} else {
+				currentBackgroundStyle = characterRowStyle;
+			}
+						
+			var drawCurrentPath : boolean = ApplicationState.instance.playStructure["characters"][characterKey]["drawPath"];
+			
+			// toggle path button
+			currentPathButtonTexture = drawCurrentPath ? eyeOpenTexture : eyeCloseTexture;
+			var currentY : int = 26+i*27; 
+			
+			
+			if (GUI.Button(Rect(0, currentY , 27, 27), currentPathButtonTexture, currentBackgroundStyle)) {
+				ApplicationState.instance.playStructure["characters"][characterKey]["drawPath"] = ! drawCurrentPath;
+				ApplicationState.instance.redrawSurfacePaths = true;
+				if (ApplicationState.instance.editCharacterPaths) {
+					__blockerComponent.resetMarkers();
+				}
+			}
+			
+			
+			// select charcter button
+			
+			var imageStyle : GUIStyle = GUIStyle(currentBackgroundStyle);
+			imageStyle.alignment = TextAnchor.MiddleCenter;
+			
+			var currentStringWidth = WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].width;
+			
+			
+			if (GUI.Button(Rect(27, currentY, 27, 27), ApplicationState.instance.playStructure["characters"][characterKey]["mug"] as Texture, imageStyle) || 
+				GUI.Button(Rect(27*2, currentY, currentStringWidth, 27), ApplicationState.instance.playStructure["characters"][characterKey]["name"] as String, currentBackgroundStyle )) {
+					if (ApplicationState.instance.selectedCharacter == null || 
+						characterKey != ApplicationState.instance.selectedCharacter.name) {
+						ApplicationState.instance.selectedCharacter = ApplicationState.instance.playStructure["characters"][characterKey]["gameObject"]; //characterKey;
+					} else {
+						ApplicationState.instance.selectedCharacter = null;
+					}
+					if (__showPopUpCharMenu) __showPopUpCharMenu = false;
+			}
+			
+			
+			i = i+ 1;
+		}
+
+		/*
 		GUILayout.BeginVertical();
 		var currentBackgroundStyle : GUIStyle;
 		var currentPathButtonTexture : Texture2D;
@@ -310,7 +364,9 @@ class OnStageWindowControl extends ToolTipSender {
 		
 			currentBackgroundStyle.stretchWidth = false;
 		
-			if (GUILayout.Button(currentPathButtonTexture, currentBackgroundStyle) ) {
+			// toggle path button
+		
+			if (GUILayout.Button(currentPathButtonTexture, currentBackgroundStyle, GUILayout.Width(27)) ) {
 				ApplicationState.instance.playStructure["characters"][characterKey]["drawPath"] = ! drawCurrentPath;
 				ApplicationState.instance.redrawSurfacePaths = true;
 				if (ApplicationState.instance.editCharacterPaths) {
@@ -318,7 +374,9 @@ class OnStageWindowControl extends ToolTipSender {
 				}
 			}
 			currentBackgroundStyle.stretchWidth = true;
-		
+			
+			
+			// select charcter button
 		
 			if (GUILayout.Button(GUIContent(ApplicationState.instance.playStructure["characters"][characterKey]["name"] as String, 
 											ApplicationState.instance.playStructure["characters"][characterKey]["mug"] as Texture), 
@@ -335,6 +393,8 @@ class OnStageWindowControl extends ToolTipSender {
 		
 		}
 		GUILayout.EndVertical();
+		*/
+		
 	
 		GUI.EndGroup();
 		GUI.EndGroup();
@@ -367,7 +427,7 @@ class OnStageWindowControl extends ToolTipSender {
 							__lowerButtonSize, 
 							__lowerButtonSize),
 					   addButtonTexture,
-					   emptyGUIStyle)) {
+					   'customButton')) {
 		
 			// TODO give the user control over the adding character functionality
 			// TODO possibly change all the new character handling to another behaviour
@@ -380,7 +440,7 @@ class OnStageWindowControl extends ToolTipSender {
 							__lowerButtonSize, 
 							__lowerButtonSize),
 					   trashButtonTexture,
-					   emptyGUIStyle)) {
+					   'customButton')) {
 			removeSelectedCharacter(3);
 		}
 	
@@ -389,7 +449,7 @@ class OnStageWindowControl extends ToolTipSender {
 		var buttonY : float = 27 / 2.0 - 17 / 2.0;
 		__optionsButtonRect = Rect(WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].width  - 65, buttonY, 55, 19);
 	
-		if (GUI.Button(__optionsButtonRect, "Options" ) ) {		
+		if (GUI.Button(__optionsButtonRect, "Options", 'customButton' ) ) {		
 			__showFirstMenu = !__showFirstMenu;
 			if (__showPopUpCharMenu) __showPopUpCharMenu = false;
 		} 
@@ -482,16 +542,16 @@ class OnStageWindowControl extends ToolTipSender {
 		}
 	
 	
-		GUI.Label(Rect(5,
-					   WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].height - __lowerButtonSize - 4.45,
-					   __lowerButtonSize,
-					   __lowerButtonSize),
-				  circleTextureSmall);
-		GUI.Label(Rect(98,
-				   	   WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].height - __lowerButtonSize - 7.80,
-				       __lowerButtonSize * 2.0 - 4,
-				   	   __lowerButtonSize * 2.0 - 4),
-				  circleTextureBig);
+		// GUI.Label(Rect(5,
+		// 			   WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].height - __lowerButtonSize - 4.45,
+		// 			   __lowerButtonSize,
+		// 			   __lowerButtonSize),
+		// 		  circleTextureSmall);
+		// GUI.Label(Rect(98,
+		// 		   	   WindowManager.instance.windowRects[WindowManager.instance.ONSTAGE_ID].height - __lowerButtonSize - 7.80,
+		// 		       __lowerButtonSize * 2.0 - 4,
+		// 		   	   __lowerButtonSize * 2.0 - 4),
+		// 		  circleTextureBig);
 		// scale timeline slider
 	
 		__breakMainTimeLineInCount = GUI.HorizontalSlider(Rect(15, 
