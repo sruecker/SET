@@ -10,6 +10,8 @@ var lineBoxStyle : GUIStyle;
 var gravity = -0.2;
 var headerBackgroundImage : Texture2D;
 var minSpeechBubbleHeight : int = 55;
+var headerStyle : GUIStyle;
+var lineStyle : GUIStyle;
 
 // temp
 private var __oldScene : Hashtable = null;
@@ -476,11 +478,12 @@ function renderLine( charachterKey : String)
 	var viewWidth;
 	var viewHeight;
 	var windowRect : Rect;
-	var headerStyle : GUIStyle = new GUIStyle();
+	// var headerStyle : GUIStyle = new GUIStyle();
 	
 	for (var line : String in nameRef["currentLines"]) {
-		// headerContent = GUIContent(nameRef["name"] as String + ": " );
-		lineContent = GUIContent(nameRef["name"] as String + ":\n" + line);
+
+		headerContent = GUIContent(nameRef["name"] as String + ": " );
+		lineContent = GUIContent(line);
 	
 		var newStyle : GUIStyle = new GUIStyle(lineBoxStyle);
 		newStyle.normal.background = nameRef["speechBubble"];
@@ -498,12 +501,14 @@ function renderLine( charachterKey : String)
 															nameRef["gameObject"].transform.position.z)); 
 	
 		viewWidth = currentWidth;
-		viewHeight = newStyle.CalcHeight(lineContent, currentWidth);
+		var headerHeight =  headerStyle.CalcHeight(headerContent, currentWidth);
+		var lineHeight = lineStyle.CalcHeight(lineContent, currentWidth);
+		viewHeight = headerHeight + lineHeight;
 	
 		windowRect = Rect(buttonPosn.x + (xOffset), 
 						  		Camera.main.pixelHeight - buttonPosn.y - viewHeight - (yOffset), 
 						  		viewWidth + contentPadding * 2, 
-						  		viewHeight + contentPadding * 2); 
+						  		viewHeight + contentPadding * 2 + headerStyle.padding.top); 
 		
 		if (windowRect.height <minSpeechBubbleHeight) {
 			windowRect.height = minSpeechBubbleHeight;
@@ -513,12 +518,13 @@ function renderLine( charachterKey : String)
 		
 						
 		WindowManager.instance.lineRects[charachterKey] = windowRect;
-		GUI.BeginGroup(windowRect);
+		GUI.BeginGroup(windowRect, newStyle);
 		GUI.depth = 10;
 		
-	
+		// GUI.Label(Rect(0,0,windowRect.width, headerHeight), headerContent, headerStyle);
 		
-		if (GUI.Button(Rect(0,0,windowRect.width, windowRect.height), lineContent, newStyle)) {
+		if (GUI.Button(Rect(0,0,windowRect.width, headerHeight), headerContent, headerStyle) || 
+			GUI.Button(Rect(0,headerHeight,windowRect.width, windowRect.height - headerHeight), lineContent, lineStyle)) {
 			
 			if (ApplicationState.instance.selectedCharacter != nameRef["gameObject"]) {
 				ApplicationState.instance.selectedCharacter = nameRef["gameObject"];

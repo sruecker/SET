@@ -422,7 +422,7 @@ class OnStageWindowControl extends ToolTipSender {
 				  __characterKeysShowing.length + " Characters",
 				  characterCountStyle);
 
-		if (GUI.Button(Rect(WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].width - 50, 
+		if (GUI.Button(Rect(WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].width - 45, 
 							WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].height - __lowerButtonSize - 3, 
 							__lowerButtonSize, 
 							__lowerButtonSize),
@@ -435,7 +435,7 @@ class OnStageWindowControl extends ToolTipSender {
 		
 		}
 	
-		if (GUI.Button(Rect(WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].width - 30,
+		if (GUI.Button(Rect(WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].width - 25,
 							WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].height - __lowerButtonSize - 3, 
 							__lowerButtonSize, 
 							__lowerButtonSize),
@@ -446,8 +446,8 @@ class OnStageWindowControl extends ToolTipSender {
 	
 		// ugly hardcoded menu begins here
 	
-		var buttonY : float = 27 / 2.0 - 17 / 2.0;
-		__optionsButtonRect = Rect(WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].width  - 65, buttonY, 55, 19);
+		var buttonY : float = 27 / 2.0 - 16 / 2.0;
+		__optionsButtonRect = Rect(WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].width  - 65, buttonY, 55, 16);
 	
 		if (GUI.Button(__optionsButtonRect, "Options", 'customButton' ) ) {		
 			__showFirstMenu = !__showFirstMenu;

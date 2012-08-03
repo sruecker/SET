@@ -21,6 +21,7 @@ var characterLayTexture : Texture2D;
 var floatingWindowSkin : GUISkin;
 var characterControlsStyle : GUIStyle;
 var characterControlsWingStyle : GUIStyle;
+var currentActionStyle : GUIStyle;
 
 var characterSubWindowX : int = 0;
 var characterSubWindowY : int = 0;
@@ -172,10 +173,12 @@ function DoSubControlsWindow (windowID : int) {
 	//     // yCurrent += yStep;
 	//     newPos.y += buttonYStep;
 	// toolPos.y = newPos.y + originRect.y;
-	var currentStopTexture : Texture2D = ApplicationState.instance.holdingSelectedCharacter ? stopTextureActive : stopTexture;
+	// var currentStopTexture : Texture2D = ApplicationState.instance.holdingSelectedCharacter ? stopTextureActive : stopTexture;
+
+	
 
     if (GUI.Button (newPos, 
-					GUIContent(currentStopTexture, 
+					GUIContent(stopTexture,
 							   toolPos+"_POSITION-STYLE_" +"Hold character in position"))) {
     	// add standing stop to currentcharacter
     	//__blocker.addStopCurrentCharacter();
@@ -244,7 +247,7 @@ function DoSubControlsWindow (windowID : int) {
 	}
 	
 	
-	if (GUI.Button (newPos, GUIContent(currentActionTexture, toolPos+"_POSITION-STYLE_" +"Stand"))) {
+	if (GUI.Button (newPos, GUIContent(currentActionTexture, toolPos+"_POSITION-STYLE_" +"Stand"), currentActionStyle)) {
 		//__blocker.addActionCurrentCharacterNow(CharacterActions.Stand);
 		
 		__showSubControls = true;	

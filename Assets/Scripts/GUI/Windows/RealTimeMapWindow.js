@@ -47,8 +47,8 @@ class RealTimeMapWindow extends ToolTipSender {
 	    // Register the window. Notice the 3rd parameter	
 		// GUI.skin = emptyGuiSkin;
 		GUI.skin = guiSkin;
-		
-		if (ApplicationState.instance.showMinimap){
+
+		if (WindowManager.instance.showMiniMap){
 			WindowManager.instance.windowRects[WindowManager.instance.REAL_TIME_MAP_ID] = 
 				GUI.Window (WindowManager.instance.REAL_TIME_MAP_ID, 
 							WindowManager.instance.windowRects[WindowManager.instance.REAL_TIME_MAP_ID], 
@@ -198,7 +198,7 @@ class RealTimeMapWindow extends ToolTipSender {
 		*/
 		var buttonSpacing : int = 8;
 		var winRect : Rect = WindowManager.instance.windowRects[WindowManager.instance.REAL_TIME_MAP_ID];
-		toolPos = Rect(__mapWidth - __lowerButtonSize  -22 , newHeight+7 ,__lowerButtonSize,__lowerButtonSize);
+		toolPos = Rect(__mapWidth - __lowerButtonSize - 15 , newHeight+7 ,__lowerButtonSize,__lowerButtonSize);
 		toolTipPreString = Rect(toolPos.x + winRect.x, toolPos.y + winRect.y, toolPos.width, toolPos.height) + styleString;
 
 		if(GUI.Button(toolPos,GUIContent(addLocationTexture, toolTipPreString+"Add position"), 'customButton')) {
@@ -206,7 +206,7 @@ class RealTimeMapWindow extends ToolTipSender {
 		}
 
 
-		toolPos = Rect(__mapWidth - __lowerButtonSize , newHeight+7 ,__lowerButtonSize,__lowerButtonSize);
+		toolPos = Rect(__mapWidth - 10 , newHeight+7 ,__lowerButtonSize,__lowerButtonSize);
 		toolTipPreString = Rect(toolPos.x + winRect.x, toolPos.y + winRect.y, toolPos.width, toolPos.height) + styleString;
 	
 		if(GUI.Button(toolPos, GUIContent(removeLocationTexture, toolTipPreString+"Remove position"), 'customButton')) {

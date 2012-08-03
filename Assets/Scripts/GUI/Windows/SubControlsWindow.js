@@ -22,6 +22,7 @@ var characterLayTexture : Texture2D;
 var separator : Texture2D;
 
 var pointButtonTexture : Texture2D;
+var minimapButtonTexture : Texture2D;
 var zoomButtonTexture : Texture2D;
 var trackButtonTexture : Texture2D;
 var tumbleButtonTexture : Texture2D;
@@ -133,8 +134,8 @@ function DoSubControlsWindow (windowID : int) {
 	newPos.y += 6;
 	toolPos.y = newPos.y + originRect.y;
 	
-	// temp
-	if (GUI.Button (newPos, GUIContent(" Map", toolPos+"_POSITION-STYLE_" + "Minimap"), buttonNormalStyle) ) {
+
+	if (GUI.Button (newPos, GUIContent(minimapButtonTexture, toolPos+"_POSITION-STYLE_" + "Minimap"), buttonNormalStyle) ) {
 		WindowManager.instance.showMiniMap = ! WindowManager.instance.showMiniMap;
 	}
 	

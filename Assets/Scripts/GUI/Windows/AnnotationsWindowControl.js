@@ -48,8 +48,8 @@ class AnnotationsWindowControl extends ToolTipSender {
 	private var __initialClick : Vector2;
 	private var __initialRect : Rect;
 	private var __resizingWindow : boolean = false;
-	private var __headerPointerTextures : Hashtable;
-	private var __headerSquareTextures : Hashtable;
+	var headerPointerTextures : Hashtable;
+	var headerSquareTextures : Hashtable;
 
 	// private var __selectedAnotations : Array;
 	private var __toolTipControl : ToolTipWindow;
@@ -68,8 +68,8 @@ class AnnotationsWindowControl extends ToolTipSender {
 
 	function Awake()
 	{
-		__headerPointerTextures = Hashtable();
-		__headerSquareTextures = Hashtable();
+		headerPointerTextures = Hashtable();
+		headerSquareTextures = Hashtable();
 		// __selectedAnotations = Array();
 		doAutoLayout = true;
 		//__showStageDirectionsDrawer = true;
@@ -119,7 +119,7 @@ class AnnotationsWindowControl extends ToolTipSender {
 		WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID] = GUI.Window (WindowManager.instance.ANNOTATIONS_ID, 
 										   WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID], 
 										   windowFunction, 
-										   "Notes & SDs");
+										   "Notes");
 
 		if (!WindowManager.instance.windowFloat[WindowManager.instance.ANNOTATIONS_ID]) {
 			GUI.BringWindowToBack(WindowManager.instance.ANNOTATIONS_ID);  
@@ -284,7 +284,6 @@ class AnnotationsWindowControl extends ToolTipSender {
 						if (annotation["startTime"] <= ApplicationState.instance.playTime) scrollTo = startPos;
 					}
 			
-					// if (__selectedAnotations[count++]) {
 					if(annotation['isSelected']) {
 						currentBoxStyle = anotationBoxSelectedStyle;
 					} else {
@@ -294,15 +293,15 @@ class AnnotationsWindowControl extends ToolTipSender {
 					GUI.BeginGroup(Rect(0, startPos, availableWidth+10, headerHeight+textHeight), currentBoxStyle);
 					if (annotation.Contains("character")) {
 						if (!annotation["sd"]) {
-							GUI.Label(Rect(5, 0, 18, 18), __headerPointerTextures[annotation["character"]]);
+							GUI.Label(Rect(5, 0, 18, 18), headerPointerTextures[annotation["character"]]);
 						} else {
-							GUI.Label(Rect(5, 0, 18, 18), __headerSquareTextures[annotation["character"]]);
+							GUI.Label(Rect(5, 0, 18, 18), headerSquareTextures[annotation["character"]]);
 						}
 					} else {
 						if (!annotation["sd"]) {
-							GUI.Label(Rect(5, 0, 18, 18), __headerPointerTextures["scene"]);
+							GUI.Label(Rect(5, 0, 18, 18), headerPointerTextures["scene"]);
 						} else {
-							GUI.Label(Rect(5, 0, 18, 18), __headerSquareTextures[annotation["scene"]]);
+							GUI.Label(Rect(5, 0, 18, 18), headerSquareTextures[annotation["scene"]]);
 						}
 					}
 			
@@ -371,7 +370,7 @@ class AnnotationsWindowControl extends ToolTipSender {
 		    WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID] = WindowManager.instance.restrictToWindow(windowRect);
 		}
 		
-		if (GUI.Button(Rect(WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID].width - 30, 
+		if (GUI.Button(Rect(WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID].width - 25, 
 							WindowManager.instance.windowRects[WindowManager.instance.ANNOTATIONS_ID].height - __lowerButtonSize - 3, 
 							__lowerButtonSize, 
 							__lowerButtonSize),
@@ -422,36 +421,36 @@ class AnnotationsWindowControl extends ToolTipSender {
 
 	function createHeaderTextures(characterKeys : Array)
 	{
-		__headerPointerTextures["scene"] = Instantiate(headerSceneTexture);
-		__headerSquareTextures["scene"] = Instantiate(headerSDSceneTexture);
+		headerPointerTextures["scene"] = Instantiate(headerSceneTexture);
+		headerSquareTextures["scene"] = Instantiate(headerSDSceneTexture);
 	
 		for (characterKey in characterKeys) {
 		
 			// annotation
 		
-			__headerPointerTextures[characterKey] = Instantiate(headerTexture);
+			headerPointerTextures[characterKey] = Instantiate(headerTexture);
 		
 			var color : Color = ApplicationState.instance.playStructure["characters"][characterKey]["color"];
 		
-			for (var i:int =0; i<__headerPointerTextures[characterKey].width; i++ ) {
-				for (var j:int =0 ; j<__headerPointerTextures[characterKey].height; j++) {
-					__headerPointerTextures[characterKey].SetPixel(i, j, __headerPointerTextures[characterKey].GetPixel(i,j) * color);
+			for (var i:int =0; i<headerPointerTextures[characterKey].width; i++ ) {
+				for (var j:int =0 ; j<headerPointerTextures[characterKey].height; j++) {
+					headerPointerTextures[characterKey].SetPixel(i, j, headerPointerTextures[characterKey].GetPixel(i,j) * color);
 				}
 			}
-			__headerPointerTextures[characterKey].Apply();
+			headerPointerTextures[characterKey].Apply();
 		
 			// stage direction
 		
-			__headerSquareTextures[characterKey] = Instantiate(headerSDTexture);
+			headerSquareTextures[characterKey] = Instantiate(headerSDTexture);
 
 			color = ApplicationState.instance.playStructure["characters"][characterKey]["color"];
 
-			for (i =0; i<__headerSquareTextures[characterKey].width; i++ ) {
-				for (j =0 ; j<__headerSquareTextures[characterKey].height; j++) {
-					__headerSquareTextures[characterKey].SetPixel(i, j, __headerSquareTextures[characterKey].GetPixel(i,j) * color);
+			for (i =0; i<headerSquareTextures[characterKey].width; i++ ) {
+				for (j =0 ; j<headerSquareTextures[characterKey].height; j++) {
+					headerSquareTextures[characterKey].SetPixel(i, j, headerSquareTextures[characterKey].GetPixel(i,j) * color);
 				}
 			}
-			__headerSquareTextures[characterKey].Apply();
+			headerSquareTextures[characterKey].Apply();
 		
 		}
 	
