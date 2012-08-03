@@ -47,11 +47,12 @@ function StartTracking(start2DPosition : Vector3)
 	__startUp         = getActiveCamUp();
 	__startRight      = getActiveCamRight();
 	__startForward    = getActiveCamForward();	
-	__start2DPosition = start2DPosition;
 	__start3DPosition = getActiveCamPosition();
+
+	__start2DPosition = start2DPosition;
 	__startPivotPoint = __start3DPosition + (__startForward * pivotDistance);
 	__startRotVector  = -1 * __startForward;
-	__startRotation   = __mainCamera.transform.rotation;
+	__startRotation   = __mainCamera.transform.parent.transform.rotation;
 }
 
 function ZoomCamera(new2DPos : Vector3) {
@@ -59,11 +60,14 @@ function ZoomCamera(new2DPos : Vector3) {
 	
 	// Debug.Log(displacement.y);
 	pivotDistance -= (displacement.y * movementSpeed) / 5.0;
-	if (pivotDistance < 1) {
-		pivotDistance = 1;
-	} else {
+	
+	// XXX If you want to have a static pivot distance uncomment the following lines
+	
+	// if (pivotDistance < 1) {
+	// 	pivotDistance = 1;
+	// } else {
 		setActiveCamPosition(__start3DPosition + (__startForward * displacement.y * movementSpeed));
-	}
+	// }
 	
 }
 
@@ -285,15 +289,15 @@ function setActiveCamPosition(pos:Vector3)
 }
 
 function getActiveCamForward() : Vector3 {
-	return __mainCamera.transform.forward;
+	return __mainCamera.transform.parent.transform.forward;
 }
 
 function getActiveCamUp() : Vector3 {
-	return __mainCamera.transform.up;
+	return __mainCamera.transform.parent.transform.up;
 }
 
 function getActiveCamRight() : Vector3 {
-	return __mainCamera.transform.right;
+	return __mainCamera.transform.parent.transform.right;
 }
 
 function getActiveCamRotation(): Vector3
