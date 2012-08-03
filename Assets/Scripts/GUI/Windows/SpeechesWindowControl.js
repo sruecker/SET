@@ -382,7 +382,7 @@ class SpeechesWindowControl extends ToolTipSender {
 							
 								GUI.BeginGroup(Rect(0, startPos, availableWidth+10, headerHeight+textHeight+10));
 							
-								GUI.Label(Rect(4, 0, availableWidth, headerHeight), GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"], mug));
+								GUI.Label(Rect(4, 0, availableWidth, headerHeight), GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"], mug), mugButtonStyle);
 								if (ApplicationState.instance.moveCamera) {
 									GUI.Label(Rect(6, headerHeight+4, availableWidth-12.5, textHeight), line["text"], lineTextStyle);  
 								} else {
@@ -419,7 +419,7 @@ class SpeechesWindowControl extends ToolTipSender {
 						
 							for (line in scene["lines"]) {
 								mug = ApplicationState.instance.playStructure["characters"][line["character"]]["mug"];
-								GUILayout.Label(GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"], mug));
+								GUILayout.Label(GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"], mug), mugButtonStyle);
 							
 								if (ApplicationState.instance.moveCamera) {
 									GUILayout.Label(line["text"], lineTextStyle);  
@@ -518,7 +518,7 @@ class SpeechesWindowControl extends ToolTipSender {
 							for (i = 0; i < __speechCache[actIndex][sceneCount]["lines"].length; i++) {
 								line = __speechCache[actIndex][sceneCount]["lines"][i];
 								mug = ApplicationState.instance.playStructure["characters"][line["character"]]["mug"];
-								GUILayout.Label(GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"], mug));  
+								GUILayout.Label(GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"], mug), mugButtonStyle);  
 								// GUILayout.Label(line["text"], lineTextStyle);  
 								
 								if (ApplicationState.instance.moveCamera) {
@@ -592,7 +592,7 @@ class SpeechesWindowControl extends ToolTipSender {
 							
 								GUI.BeginGroup(Rect(0, startPos, availableWidth+10, headerHeight+textHeight+10));
 
-								GUI.Label(Rect(4, 0, availableWidth, headerHeight), GUIContent(line["character"], mug));
+								GUI.Label(Rect(4, 0, availableWidth, headerHeight), GUIContent(line["character"], mug), mugButtonStyle);
 								if (ApplicationState.instance.moveCamera) {
 									GUI.Label(Rect(6, headerHeight+4, availableWidth-12.5, textHeight), line["text"], lineTextStyle);  
 								} else {
