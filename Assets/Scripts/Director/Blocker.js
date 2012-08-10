@@ -115,8 +115,8 @@ private function canBlock(mouseCoords : Vector2) {
 	}	
 	
 	// if collider belongs to a character set selected and return false	
-	if (!closestCollider || (closestCollider.gameObject.tag == "Character"  && !isHitOnInterface(Input.mousePosition))) {
-		if (closestCollider) {
+	if (!closestCollider || (closestCollider.gameObject.tag == "Character"  && !WindowManager.instance.isHitOnInterface(Input.mousePosition))) {
+		if (ApplicationState.instance.canSelectCharacter && closestCollider) {
 			ApplicationState.instance.selectedCharacter = closestCollider.gameObject;
 		}
 		return false;
@@ -142,8 +142,9 @@ function Update() {
 	if (Input.GetMouseButtonDown(0)) { 
 		
 		mouseCoords	= Input.mousePosition;
-		if (canBlock(mouseCoords) && !isHitOnInterface(mouseCoords)) {
+		if (canBlock(mouseCoords) && !WindowManager.instance.isHitOnInterface(mouseCoords)) {
 			__blocking = true;
+			ApplicationState.instance.canSelectCharacter = false;
 		}
 	}
 
@@ -220,6 +221,7 @@ function Update() {
 	
 	if (__addOnNextMouseUp && Input.GetMouseButtonUp(0)) {
 		finishCharacterMovement();
+		ApplicationState.instance.canSelectCharacter = true;
 	}
 }
 
@@ -309,25 +311,7 @@ public function addDestinationCurrentCharacter(destination : Vector3,
 	// __onStageWindowControl.createPresenceActionBars(Array(ApplicationState.instance.selectedCharacter.name));
 }
 
-function isHitOnInterface(mouseCoords : Vector2) {
-	
-	for (var i:int =0; i < WindowManager.instance.LAST_ID; i++) {
-		
-		// if (i==test) continue;
-		
-		if (WindowManager.isWindowClicked(mouseCoords, WindowManager.instance.windowRects[i])) {
-			return true;
-		}
-	}
-	
-	for (var characterKey in WindowManager.instance.lineRects.Keys) {
-		if (WindowManager.isWindowClicked(mouseCoords, WindowManager.instance.lineRects[characterKey])) {
-			return true;
-		}
-	}
-		
-	return false;
-}
+
 
 
 public function addActionCurrentCharacterNow(type : CharacterActions)

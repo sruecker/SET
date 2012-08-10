@@ -79,7 +79,7 @@ function OnGUI() {
 function Update() {
 	
 	if (ApplicationState.instance.currentMouseCameraState != MouseCameraControlState.NONE) {
-		if (Input.GetMouseButtonDown(0)) {
+		if (Input.GetMouseButtonDown(0) && !WindowManager.instance.isHitOnInterface(Input.mousePosition)) {
 			startingPoint = Input.mousePosition;
 			__cameraManager.StartTracking(startingPoint);
 		}		
