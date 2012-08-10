@@ -37,6 +37,7 @@ static var showOnScreenImageAnnotations : boolean;
 static var movingCharacterKey : String;
 static var loadingNewFile : boolean;
 static var addAnnotation : boolean;
+static var canSelectCharacter : boolean;
 
 var characterMug : Texture2D;
 var speechBubbleTexture : Texture2D;
@@ -124,6 +125,7 @@ function InitValues() {
 	showMinimap = true;
 	showAnnotations = true;
 	showSubcontrols = true;
+	canSelectCharacter = true;
 }
 
 function Awake()

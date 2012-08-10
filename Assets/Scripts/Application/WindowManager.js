@@ -508,5 +508,23 @@ static public function isMouseOnScreen(mousePos : Vector3) : boolean {
 	return true;
 }
 
-
+function isHitOnInterface(mouseCoords : Vector2) {
+	
+	for (var i:int =0; i < LAST_ID; i++) {
+		
+		// if (i==test) continue;
+		
+		if (isWindowClicked(mouseCoords, windowRects[i])) {
+			return true;
+		}
+	}
+	
+	for (var characterKey in lineRects.Keys) {
+		if (isWindowClicked(mouseCoords, lineRects[characterKey])) {
+			return true;
+		}
+	}
+		
+	return false;
+}
 

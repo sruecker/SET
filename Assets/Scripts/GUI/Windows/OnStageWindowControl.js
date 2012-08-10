@@ -331,7 +331,9 @@ class OnStageWindowControl extends ToolTipSender {
 				GUI.Button(Rect(27*2, currentY, currentStringWidth, 27), ApplicationState.instance.playStructure["characters"][characterKey]["name"] as String, currentBackgroundStyle )) {
 					if (ApplicationState.instance.selectedCharacter == null || 
 						characterKey != ApplicationState.instance.selectedCharacter.name) {
-						ApplicationState.instance.selectedCharacter = ApplicationState.instance.playStructure["characters"][characterKey]["gameObject"]; //characterKey;
+						if (ApplicationState.instance.canSelectCharacter) {
+							ApplicationState.instance.selectedCharacter = ApplicationState.instance.playStructure["characters"][characterKey]["gameObject"]; //characterKey;
+						}
 					} else {
 						ApplicationState.instance.selectedCharacter = null;
 					}

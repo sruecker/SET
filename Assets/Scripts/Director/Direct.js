@@ -526,7 +526,8 @@ function renderLine( charachterKey : String)
 		if (GUI.Button(Rect(0,0,windowRect.width, headerHeight), headerContent, headerStyle) || 
 			GUI.Button(Rect(0,headerHeight,windowRect.width, windowRect.height - headerHeight), lineContent, lineStyle)) {
 			
-			if (ApplicationState.instance.selectedCharacter != nameRef["gameObject"]) {
+			if (ApplicationState.instance.canSelectCharacter &&
+				ApplicationState.instance.selectedCharacter != nameRef["gameObject"]) {
 				ApplicationState.instance.selectedCharacter = nameRef["gameObject"];
 			} else {
 				ApplicationState.instance.selectedCharacter = null;
