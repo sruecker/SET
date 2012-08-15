@@ -125,7 +125,7 @@ class SpeechesWindowControl extends ToolTipSender {
 			} else {
 				WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_POPOUT_ID] = Rect(0,0,0,0);
 			}
-			//UpdateToolTip();
+			// UpdateToolTip();
 		}	
 	
 	}
@@ -457,7 +457,7 @@ class SpeechesWindowControl extends ToolTipSender {
 			var windowRect : Rect = WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID];
 		    WindowManager.instance.windowRects[WindowManager.instance.SPEECHES_ID] = WindowManager.instance.restrictToWindow(windowRect);
 		}
-		//UpdateToolTip();
+		UpdateToolTip();
 		
 	}
 
@@ -626,6 +626,7 @@ class SpeechesWindowControl extends ToolTipSender {
 			__initialClick = Input.mousePosition;
 			__initialRect = winRect;
 		}
+		UpdateToolTip();
 		GUI.DragWindow(Rect(0, 0, 1000000, 30));
 	}
 

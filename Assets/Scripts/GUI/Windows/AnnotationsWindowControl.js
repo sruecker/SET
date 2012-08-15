@@ -381,7 +381,7 @@ class AnnotationsWindowControl extends ToolTipSender {
 						}
 		}
 		
-		// UpdateToolTip();
+		UpdateToolTip();
 	
 	
 	}
