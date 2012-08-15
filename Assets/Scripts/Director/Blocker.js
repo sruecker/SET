@@ -228,7 +228,10 @@ function Update() {
 function finishCharacterMovement() {
 	__previousMouseCoords = Vector2(Mathf.Infinity, Mathf.Infinity);
 	if (__startTime > ApplicationState.instance.playTime) {
-		__startTime = ApplicationState.instance.playTime;
+		// __startTime = ApplicationState.instance.playTime;
+		var temp = ApplicationState.instance.playTime;
+		ApplicationState.instance.playTime = __startTime;
+		__startTime = temp;
 	}
 	
 	var thisDelta = (ApplicationState.instance.playTime - __startTime)/ __destinations.length;
@@ -255,7 +258,7 @@ public function addDestinationCurrentCharacter(destination : Vector3,
 											   doRemoval : boolean, 
 											   addMarker : boolean) 
 {
-	
+	Debug.Log(currentTime);
 	// before calling this function we have to make sure the ApplicationState.instance.selectedCharacter.tag
 	// is not a CharacterCam 
 	
