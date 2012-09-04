@@ -12,6 +12,7 @@ class ToolTipSender extends MonoBehaviour {
 	}
 
 	function UpdateToolTip () {
+		// Debug.Log(ApplicationState.instance.currentToolTip);
 		if (Event.current.type == EventType.repaint) {
 			if (GUI.tooltip != "") { // mouseIn
 				ApplicationState.instance.currentToolTip = GUI.tooltip;

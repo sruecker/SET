@@ -273,17 +273,15 @@ function loadSceneFile(fileName_ : String) : Hashtable
 					match = Regex.Match(fileName_, "(.+/)");
 					xmlPath = match.Groups[0].Value;
 					newAnnotation["image"] = shortPath.Replace("file://", "file://"+ xmlPath);
-					Debug.Log(newAnnotation["image"]);
 				} else if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor) {
 					//newAnnotation["image"] = shortPath.Replace("file://", "file:\\\\"+ xmlPath.Replace('/', "\\"));
-					Debug.Log(fileName_);
 					match = Regex.Match(fileName_, '(.+\\\\)');
 					xmlPath = match.Groups[0].Value;
 					newAnnotation["image"] = shortPath.Replace("file://", "file://"+ xmlPath);
-					Debug.Log(newAnnotation["image"]);
+				} else {
+					Debug.Log("FAIL");
+					Debug.Log(Application.platform);
 				}
-				
-				// Debug.Log(newAnnotation["image"]);
 			}
 		
 			newAnnotation["text"] = annotations.Current.InnerText.Trim();

@@ -85,8 +85,12 @@ function AddAnnotation() {
 		//XXX add image texture
 	}
 	
-	if (annotationLinkedTo != '') {
-		newAnnotation['character'] = annotationLinkedTo;
+	// if (annotationLinkedTo != '') {
+	// 	newAnnotation['character'] = annotationLinkedTo;
+	// }
+
+	if (ApplicationState.instance.selectedCharacter != null) {
+		newAnnotation['character'] = ApplicationState.instance.selectedCharacter.name;
 	}
 	
 	newAnnotation['startTime'] = annotationStartTime;
@@ -95,6 +99,8 @@ function AddAnnotation() {
 		newAnnotation['endTime'] = annotationEndTime;
 	} 
 	newAnnotation['isSelected'] = false;
+
+
 
 	annotationsControl.AddAnnotation(newAnnotation);
 

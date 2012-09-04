@@ -366,7 +366,7 @@ class SpeechesWindowControl extends ToolTipSender {
 							for (line in scene["lines"]) {
 								mug = ApplicationState.instance.playStructure["characters"][line["character"]]["mug"];
 							
-								testString = ApplicationState.instance.playStructure["characters"][line["character"]]["name"];
+								testString = ApplicationState.instance.playStructure["characters"][line["character"]]["name"] + ":";
 								headerHeight = speechStyle.CalcHeight(GUIContent(testString, mug), availableWidth);
 							
 								testString = line["text"];
@@ -382,7 +382,7 @@ class SpeechesWindowControl extends ToolTipSender {
 							
 								GUI.BeginGroup(Rect(0, startPos, availableWidth+10, headerHeight+textHeight+10));
 							
-								GUI.Label(Rect(4, 0, availableWidth, headerHeight), GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"], mug), mugButtonStyle);
+								GUI.Label(Rect(4, 0, availableWidth, headerHeight), GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"] + ":", mug), mugButtonStyle);
 								if (ApplicationState.instance.moveCamera) {
 									GUI.Label(Rect(6, headerHeight+4, availableWidth-12.5, textHeight), line["text"], lineTextStyle);  
 								} else {
@@ -419,7 +419,7 @@ class SpeechesWindowControl extends ToolTipSender {
 						
 							for (line in scene["lines"]) {
 								mug = ApplicationState.instance.playStructure["characters"][line["character"]]["mug"];
-								GUILayout.Label(GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"], mug), mugButtonStyle);
+								GUILayout.Label(GUIContent(ApplicationState.instance.playStructure["characters"][line["character"]]["name"]+ ":", mug), mugButtonStyle);
 							
 								if (ApplicationState.instance.moveCamera) {
 									GUILayout.Label(line["text"], lineTextStyle);  
@@ -473,19 +473,19 @@ class SpeechesWindowControl extends ToolTipSender {
 		
 
 		var toggleButton:GUIContent = __popOutDisplayMode == READER_MODE ? GUIContent(toggleJumpDisabledButtonTexture, toolTipPreString+"Jumping disabled"):GUIContent(toggleJumpButtonTexture, toolTipPreString+"Jumping enabled");
-		if (GUI.Button(toolPos, toggleButton, dragButtonStyle)) {
+		if (GUI.Button(toolPos, toggleButton, "customButton")) {
 			if (__popOutDisplayMode == READER_MODE) __popOutDisplayMode = JUMP_READER_MODE;
 			else __popOutDisplayMode = READER_MODE;
 		}
 
 		toolPos = Rect(winRect.width - 40, 5, 16, 16);
 		toolTipPreString = Rect(toolPos.x + winRect.x, toolPos.y + winRect.y, toolPos.width, toolPos.height) + styleString;
-		if (GUI.Button(toolPos, GUIContent(copyButtonTexture, toolTipPreString+"Copy changes"), dragButtonStyle)) {
+		if (GUI.Button(toolPos, GUIContent(copyButtonTexture, toolTipPreString+"Copy changes"), "customButton")) {
 			createSpeechPositions(true);
 		}
 		toolPos = Rect(winRect.width - 20, 5, 16, 16);
 		toolTipPreString = Rect(toolPos.x + winRect.x, toolPos.y + winRect.y, toolPos.width, toolPos.height) + styleString;
-		if (GUI.Button(toolPos, GUIContent(closeButtonTexture, toolTipPreString+"Close window"), dragButtonStyle)) {
+		if (GUI.Button(toolPos, GUIContent(closeButtonTexture, toolTipPreString+"Close window"), "customButton")) {
 			__showPopOut = false;
 		}
 
@@ -576,7 +576,7 @@ class SpeechesWindowControl extends ToolTipSender {
 								line = __speechCache[actIndex][sceneCount]["lines"][i];
 								mug = ApplicationState.instance.playStructure["characters"][line["character"]]["mug"];
 							
-								testString = ApplicationState.instance.playStructure["characters"][line["character"]]["name"];
+								testString = ApplicationState.instance.playStructure["characters"][line["character"]]["name"] + ":";
 								headerHeight = speechStyle.CalcHeight(GUIContent(testString, mug), availableWidth);
 							
 								testString = line["text"];

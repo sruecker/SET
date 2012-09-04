@@ -36,6 +36,10 @@ private var __noPos : Vector2 = Vector2(Mathf.Infinity,0);;
 // private var __projectorMaterial : Material;
 private var __pathPainter : PathPainter;
 private var __previousMouseCoords : Vector2;
+private var __timeStartedWaiting : float;
+private var __waitToAddStop : boolean;
+private var __addStopOnNextMouseUp : boolean;
+private var __addOnNextMouseUp : boolean;
 
 function FinishInitialization() {
 	// var sceneColliders : Array = GameObject.FindObjectsOfType(Collider);
@@ -45,6 +49,9 @@ function FinishInitialization() {
 	__addingDestinations = false;
 	__setStartTime = true;
 	__destinations.Clear();
+	__waitToAddStop = false;
+	__addStopOnNextMouseUp = false;
+	__addOnNextMouseUp = false;
 	finishCharacterMovement();
 	var stages : Array = GameObject.FindGameObjectsWithTag("Stage");		
 	// live drawing
@@ -207,21 +214,87 @@ function Update() {
 			}
 		} 
 	}
-
-	
-	
-	
-	
-	
 	
 	if (__addingDestinations && ApplicationState.instance.scrubberDraged) {
 		__addOnNextMouseUp = true;
 	}
 	
 	
-	if (__addOnNextMouseUp && Input.GetMouseButtonUp(0)) {
-		finishCharacterMovement();
-		ApplicationState.instance.canSelectCharacter = true;
+	
+	
+	if (__waitToAddStop && ApplicationState.instance.scrubberDraged) {
+		__addStopOnNextMouseUp = true;
+		
+	}
+
+	
+	// XXX WORKS
+	// if (__addOnNextMouseUp && Input.GetMouseButtonUp(0)) {
+	// 	finishCharacterMovement();
+	// 	ApplicationState.instance.canSelectCharacter = true;		
+	// }
+	
+	
+	// if (__addStopOnNextMouseUp && Input.GetMouseButtonUp(0)) {
+	// 				finishCharacterStop();
+	// 				ApplicationState.instance.canSelectCharacter = true;
+	// }
+	
+	
+	if ((__addOnNextMouseUp || __addStopOnNextMouseUp) && Input.GetMouseButtonUp(0)) {
+			
+			if (__addOnNextMouseUp) {
+				finishCharacterMovement();
+				ApplicationState.instance.canSelectCharacter = true;
+			} 
+			
+			if (__addStopOnNextMouseUp) {
+				finishCharacterStop();
+				ApplicationState.instance.canSelectCharacter = true;
+				
+			}
+		}
+
+	
+}
+
+
+
+
+private function finishCharacterStop() {
+
+	__destinations.Clear();
+	__destinations.Push(selectedCharacter.transform.position);
+	__destinations.Push(selectedCharacter.transform.position);
+	finishCharacterMovement();
+	__waitToAddStop = false;
+	__addStopOnNextMouseUp = false;
+	// var playTime = ApplicationState.instance.playTime;
+	// var removeTime : float = __timeStartedWaiting < playTime ? __timeStartedWaiting : playTime;
+	// var selectedCharacter : GameObject =  ApplicationState.instance.selectedCharacter;
+	// 
+	// 
+	// // addDestinationCurrentCharacter(selectedCharacter.transform.position, 
+	// //  							   removeTime, 
+	// //   							   true, 
+	// //   							   true);
+	// 
+	// addDestinationCurrentCharacter(selectedCharacter.transform.position, 
+	//  							   playTime, 
+	//   							   true, 
+	//   							   true);
+	// 
+	// __waitToAddStop = false;
+	// __addStopOnNextMouseUp = false;
+}
+
+public function waitToAddStopCurrentCharacter()
+{
+	if (ApplicationState.instance.selectedCharacter != null) {
+		__startTime = ApplicationState.instance.playTime;
+		// 		__previousSelectedCharacter = ApplicationState.instance.selectedCharacter;
+		__waitToAddStop = true;
+		ApplicationState.instance.canSelectCharacter = false;
 	}
 }
 
@@ -258,7 +331,6 @@ public function addDestinationCurrentCharacter(destination : Vector3,
 											   doRemoval : boolean, 
 											   addMarker : boolean) 
 {
-	Debug.Log(currentTime);
 	// before calling this function we have to make sure the ApplicationState.instance.selectedCharacter.tag
 	// is not a CharacterCam 
 	

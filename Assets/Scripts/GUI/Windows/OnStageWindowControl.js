@@ -470,10 +470,11 @@ class OnStageWindowControl extends ToolTipSender {
 		
 		
 			WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_1_ID].x = WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].width  - 53;
-			WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_1_ID].y = WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].y + buttonY + 19;
+			WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_1_ID].y = WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_ID].y + buttonY + 14;
 			WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_1_ID].width = __menu_1_width;
 			WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_1_ID].height = __menu_1_height;
 		
+
 			WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_1_ID] =
 				GUI.Window(WindowManager.instance.CHARACTER_MENU_1_ID,
 						   WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_1_ID],
@@ -1479,7 +1480,9 @@ class OnStageWindowControl extends ToolTipSender {
 		var currentMenuTooltip : String = __lastToolTip;
 	
 
-		if (Event.current.type == EventType.repaint) {
+		// if (true||Event.current.type == EventType.repaint) {
+			Debug.Log(">>"+ApplicationState.instance.currentToolTip );
+
 			if (ApplicationState.instance.currentToolTip == __MENU_1_ONMOUSE) {
 				__menu_1_onmouse = true;
 			}
@@ -1513,7 +1516,7 @@ class OnStageWindowControl extends ToolTipSender {
 				__lastToolTip = currentMenuTooltip;
 				yPos = removeYpos;
 			}
-	
+			Debug.Log("here");
 		
 		
 	
@@ -1541,7 +1544,7 @@ class OnStageWindowControl extends ToolTipSender {
 				ApplicationState.instance.currentToolTip != __REMOVE_ONMOUSE &&
 				! WindowManager.isWindowClicked(Input.mousePosition, WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_2_ID]) ) {
 
-				__showFirstMenu = false;
+				// __showFirstMenu = false;
 				__menu_1_onmouse = false;
 				__menu_2_onmouse = false;
 				__startChangingColor = true;
@@ -1550,7 +1553,7 @@ class OnStageWindowControl extends ToolTipSender {
 				WindowManager.instance.windowRects[WindowManager.instance.CHARACTER_MENU_2_ID] = Rect(0,0,0,0);
 			}
 	
-		}	
+		// }	
 		
 				
 		//}
@@ -1667,6 +1670,8 @@ class OnStageWindowControl extends ToolTipSender {
 	private function createTypeMenu(windowId : int)
 	{
 		GUI.BeginGroup(Rect(5, 5, 100, 140));
+		
+
 		GUILayout.BeginVertical();
 		if (GUILayout.Button("Adult", menuButtonStyle )) {
 			changeSelectedToModel("PersonBigPrefab");
@@ -1688,6 +1693,7 @@ class OnStageWindowControl extends ToolTipSender {
 		}
 	
 		GUILayout.EndVertical();
+		
 		GUI.EndGroup();
 	}
 
